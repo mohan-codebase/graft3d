@@ -1,0 +1,15 @@
+/* Customizing Swiper Pagination */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #166AAF;
+    /* Primary color */
+    width: 25px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}

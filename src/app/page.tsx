@@ -1,9 +1,9 @@
-import Image from "next/image";
+import BannerCarousel from "../components/sections/home/BannerCarousel";
 
 export default function Home() {
   return (
-    <>
-    <h1>Home</h1>
-    </>
+    <main>
+      <BannerCarousel />
+    </main>
   );
 }
