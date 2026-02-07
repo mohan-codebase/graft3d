@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../ui/Button'
+import { Button } from '../ui/Button'
 
 const NavTopBar = () => {
     return (
@@ -22,9 +22,12 @@ const NavTopBar = () => {
                 <div className='h-5 w-[1px] bg-white/100'></div>
 
                 {/* Live Online Button */}
-                <button className='bg-white text-[#1660cf] text-[14px] font-bold  px-3 py-1 rounded font-semibold hover:bg-opacity-90 transition-colors'>
+                <Button
+                    variant="white"
+                    className='text-[#1660cf] text-[14px] font-bold px-3 py-1 rounded font-semibold hover:bg-opacity-90 transition-colors h-auto'
+                >
                     Meet us Live Online
-                </button>
+                </Button>
 
 
                 {/* Work Hours */}

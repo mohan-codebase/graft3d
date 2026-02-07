@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { Button } from '../ui/Button';
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -46,16 +47,17 @@ const Navbar = () => {
                     </div>
 
                     {/* Hamburger Menu Button */}
-                    {/* Hamburger Menu Button (Animated) */}
-                    <button
-                        className="lg:hidden text-primary focus:outline-none p-2 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="lg:hidden text-primary focus:outline-none p-2 w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:bg-transparent"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
                         <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
                         <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                         <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-                    </button>
+                    </Button>
                 </div>
 
                 {/* Mobile Menu Overlay */}
@@ -68,9 +70,9 @@ const Navbar = () => {
                                 placeholder="SEARCH"
                                 className="border border-gray-200 rounded-l px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-black placeholder-gray-400"
                             />
-                            <button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r hover:bg-primary/80 transition-colors flex items-center justify-center">
+                            <Button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                            </button>
+                            </Button>
                         </div>
                     </div>
 
@@ -203,9 +205,9 @@ const Navbar = () => {
                             placeholder="SEARCH"
                             className="border border-gray-200 rounded-l px-4 py-2 text-sm w-[200px] focus:outline-none focus:border-primary text-black placeholder-gray-400"
                         />
-                        <button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r hover:bg-primary/80 transition-colors flex items-center justify-center">
+                        <Button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
