@@ -81,7 +81,7 @@ const RegraftCustomisedPlatesPage = () => {
                         </div>
 
                         {/* Image */}
-                        <div className="order-1 lg:order-2 relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                        <div className="order-1 lg:order-2 relative h-[400px] rounded-lg overflow-hidden ">
                             <Image
                                 src="/images/regraft-customised-plates/image-2.png"
                                 alt="Regraft POS - Virtual Surgical Planning in Orthognathic Surgery"
@@ -97,7 +97,7 @@ const RegraftCustomisedPlatesPage = () => {
                 <div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Image */}
-                        <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                        <div className="relative h-[400px] rounded-lg overflow-hidden ">
                             <Image
                                 src="/images/regraft-customised-plates/image-1.png"
                                 alt="Regraft PFT - Virtual Surgical Planning & Plates for Facial Trauma"
