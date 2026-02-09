@@ -23,7 +23,7 @@ const testimonials = [
 const TestimonialsSection = () => {
     return (
         <section className="w-full py-16 lg:py-24 bg-[#eaf6ff]">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-4">
 
                 {/* Header Content */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">

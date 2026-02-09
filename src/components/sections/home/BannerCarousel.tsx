@@ -92,7 +92,7 @@ const BannerCarousel = () => {
               <Link href="/contact-us" className="block w-full h-full group">
                 <div className="w-full flex flex-col lg:block min-h-[500px] lg:h-[600px] relative ">
                   {/* Content Container */}
-                  <div className={`w-full lg:absolute lg:inset-0 z-20 container mx-auto px-4 flex flex-col items-start justify-center lg:items-start lg:justify-center py-12 lg:py-0 h-full`}>
+                  <div className={`w-full lg:absolute lg:inset-0 z-20 max-w-[1400px] mx-auto px-4 flex flex-col items-start justify-center lg:items-start lg:justify-center py-12 lg:py-0 h-full`}>
                     <div className="max-w-2xl text-left">
                       {slide.subtitle && (
                         typeof slide.subtitle === 'string' ? (

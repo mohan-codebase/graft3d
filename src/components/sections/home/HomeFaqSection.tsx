@@ -35,7 +35,7 @@ const faqItems = [
 const HomeFaqSection = () => {
     return (
         <section className="w-full py-16 bg-white">
-            <div className="container mx-auto px-4 max-w-4xl">
+            <div className="max-w-[1400px] mx-auto px-4 max-w-4xl">
                 <h2 className="text-3xl lg:text-4xl font-bold text-center text-primary mb-12">
                     FAQ
                 </h2>
