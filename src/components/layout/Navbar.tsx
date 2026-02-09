@@ -27,8 +27,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className="w-full bg-white shadow-sm sticky top-0 z-50">
-            <div className="max-w-[1400px] mx-auto px-4 py-4 flex flex-col lg:flex-row items-center justify-between gap-4 relative">
+        <div className="w-full bg-gray-50 shadow-sm sticky top-0 z-50">
+            <div className="max-w-[1400px] mx-auto px-4 py-1 flex flex-col lg:flex-row items-center justify-between gap-4 relative">
 
                 <div className="w-full lg:w-auto flex items-center justify-between">
                     {/* Logo Section */}
@@ -143,7 +143,7 @@ const Navbar = () => {
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
-                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-[#1660cf] min-w-[200px] z-50 animate-fade-in-up">
+                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
                                 <Link href="/products/filaments" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Medical 3D Filaments</Link>
                                 <Link href="/products/printers" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">3D Printers</Link>
@@ -165,7 +165,7 @@ const Navbar = () => {
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
-                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-[#1660cf] min-w-[200px] z-50 animate-fade-in-up">
+                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
                                 <Link href="/resources/case-studies" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Case Studies</Link>
                                 <Link href="/resources/blogs" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Blogs</Link>
@@ -180,7 +180,7 @@ const Navbar = () => {
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
-                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-[#1660cf] min-w-[200px] z-50 animate-fade-in-up">
+                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
                                 <Link href="/services/design" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Design Services</Link>
                                 <Link href="/services/printing" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Printing Services</Link>
