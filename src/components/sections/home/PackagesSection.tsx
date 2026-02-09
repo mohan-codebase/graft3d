@@ -18,10 +18,10 @@ const packages = [
 
 const PackagesSection = () => {
     return (
-        <section className="w-full py-16 bg-[#eaf6ff]">
-            <div className="container mx-auto px-4">
-                <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#1660cf] mb-12">
-                    Our 3D Packages
+        <section className="w-full py-8 md:py-16 bg-[#eaf6ff]">
+            <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-black">
+                    Our 3D <span className="text-primary">Packages</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -35,7 +35,7 @@ const PackagesSection = () => {
                                     className="object-cover"
                                 />
                             </div>
-                            <h3 className="text-lg font-bold text-[#1660cf] text-center mb-2">
+                            <h3 className="text-lg font-bold text-primary text-center mb-2">
                                 {pkg.title}
                             </h3>
                         </div>

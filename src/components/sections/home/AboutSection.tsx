@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
 
 const AboutSection = () => {
     return (
@@ -22,8 +23,10 @@ const AboutSection = () => {
                             To deliver Medical 3D printing-based products tailored for hospitals, surgeons, and patients. Leveraging the expertise of our in-house doctors and engineers, we also design, develop, and promote futuristic Medical 3D printing and scanning-based products. We are committed to advancing medical 3D Printing technology, improving patient outcomes, and driving the future of healthcare through cutting-edge 3D printing technologies. Discover how we're shaping the future of healthcare at Graft3D Healthcare.
                         </p>
 
-                        <Link href="/about-us" className="inline-flex items-center text-primary font-bold hover:underline gap-1 mt-auto">
-                            Know More <span className="text-lg">›</span>
+                        <Link href="/about-us" className="mt-auto">
+                            <Button variant="ghost" className="text-primary font-bold hover:underline p-0 flex items-center gap-1 h-auto">
+                                Know More <span className="text-lg">›</span>
+                            </Button>
                         </Link>
                     </div>
 

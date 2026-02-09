@@ -5,6 +5,7 @@ import NavTopBar from "../components/layout/NavTopBar";
 import Navbar from "../components/layout/Navbar";
 
 import Footer from "../components/layout/Footer";
+import FloatingButtons from "../components/common/FloatingButtons";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   );

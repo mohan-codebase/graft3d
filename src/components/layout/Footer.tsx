@@ -19,7 +19,7 @@ const Footer = () => {
                                 className="object-contain object-left"
                             />
                         </div>
-                        <p className="text-sm leading-relaxed text-[#1660cf] font-medium">
+                        <p className="text-sm leading-relaxed text-primary font-medium">
                             Graft3D is a healthcare solution provider helping hospitals with disruptive & unique technologies. We do this by collaborating with global technology firms to make technology products for hospitals, surgeons & end patients. We believe user friendly technology is the key to success in planning & executing complex surgeries.
                         </p>
                         <div className="flex gap-3 mt-2">
@@ -41,14 +41,16 @@ const Footer = () => {
                                 <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                             </a>
                         </div>
-                        <Button className="w-fit mt-2 font-bold px-6">
-                            More About Us &rarr;
-                        </Button>
+                        <Link href="/about-us">
+                            <Button className="w-fit mt-2 font-bold px-6">
+                                More About Us &rarr;
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Column 2: Quick Links */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-[#1660cf] font-bold text-lg">Quick Links</h3>
+                        <h3 className="text-primary font-bold text-lg">Quick Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <li><Link href="#" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
@@ -63,7 +65,7 @@ const Footer = () => {
 
                     {/* Column 3: Important Links */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-[#1660cf] font-bold text-lg">Important Links</h3>
+                        <h3 className="text-primary font-bold text-lg">Important Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <li><Link href="#" className="hover:text-primary transition-colors">About us</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Shop</Link></li>
@@ -76,41 +78,43 @@ const Footer = () => {
 
                     {/* Column 4: Contact Us */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-[#1660cf] font-bold text-lg">Contact Us</h3>
+                        <h3 className="text-primary font-bold text-lg">Contact Us</h3>
                         <div className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <div className="flex items-start gap-2">
-                                <span className="mt-1 text-[#1660cf]"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
+                                <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
                                 <div>Sales: +91 98404 78347</div>
                             </div>
                             <div className="flex items-start gap-2">
-                                <span className="mt-1 text-[#1660cf]"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
+                                <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
                                 <div>Sales: +91 63744 10703</div>
                             </div>
                             <div className="flex items-start gap-2">
-                                <span className="mt-1 text-[#1660cf]"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg></span>
+                                <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg></span>
                                 <div>Email : sales@graft3d.com</div>
                             </div>
                             <div className="flex items-start gap-2">
-                                <span className="mt-1 text-[#1660cf]"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg></span>
+                                <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg></span>
                                 <div className="leading-relaxed">
                                     <span className="font-bold block text-gray-800">Reach Us</span>
-                                    <span className="text-[#1660cf] font-semibold block">Graft3D Health Care Solutions Pvt. Ltd.</span>
+                                    <span className="text-primary font-semibold block">Graft3D Health Care Solutions Pvt. Ltd.</span>
                                     4/261, 1st Floor, Rajas Towers Medavakkam Main Road, Kovilambakkam Chennai - 600129, Tamil Nadu, India.
                                 </div>
                             </div>
                         </div>
 
-                        <Button className="w-fit mt-2 font-bold px-6 bg-[#1660cf] hover:bg-[#114b9f]">
-                            Meet us live online
-                        </Button>
+                        <Link href="/contact-us">
+                            <Button className="w-fit mt-2 font-bold px-6">
+                                Meet us live online
+                            </Button>
+                        </Link>
                     </div>
 
                 </div>
 
                 {/* Bottom Bar */}
                 <div className="border-t border-blue-200/50 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-xs font-semibold text-gray-400 gap-4 text-center md:text-left">
-                    <p>© 2025. All Rights Reserved. Graft3D Health Care Solutions Pvt. Ltd.</p>
-                    <div className="flex gap-1 text-[#1660cf]">
+                    <p>© {new Date().getFullYear()}. All Rights Reserved. Graft3D Health Care Solutions Pvt. Ltd.</p>
+                    <div className="flex gap-1 text-primary">
                         <a href="#" className="hover:underline">Disclaimer</a> | <a href="#" className="hover:underline">Terms & Conditions</a>
                     </div>
                 </div>
