@@ -60,16 +60,17 @@ const ServicesSection = () => {
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap justify-center gap-4 mb-16 w-full max-w-5xl">
                     {services.map((service, index) => (
-                        <button
+                        <Button
                             key={service.id}
                             onClick={() => setActiveTab(index)}
-                            className={`px-6 py-3 rounded-lg font-medium text-sm lg:text-base transition-all duration-300 ${activeTab === index
-                                    ? 'bg-primary text-white shadow-lg scale-105'
-                                    : 'bg-[#f3f3f3] text-gray-700 hover:bg-gray-200'
+                            variant={activeTab === index ? "default" : "ghost"}
+                            className={`rounded-lg px-6 py-3 h-auto font-medium text-sm lg:text-base transition-all duration-300 ${activeTab === index
+                                ? 'shadow-lg scale-105'
+                                : 'bg-[#f3f3f3] text-gray-700 hover:bg-gray-200'
                                 }`}
                         >
                             {service.title}
-                        </button>
+                        </Button>
                     ))}
                 </div>
 
@@ -84,8 +85,10 @@ const ServicesSection = () => {
                             </p>
                         ))}
 
-                        <Link href={services[activeTab].link} className="inline-flex items-center text-primary font-bold text-lg hover:underline gap-1 mt-2">
-                            Know More &rsaquo;
+                        <Link href={services[activeTab].link} className="mt-2">
+                            <Button variant="ghost" className="text-primary font-bold text-lg hover:underline p-0 flex items-center gap-1 h-auto">
+                                Know More &rsaquo;
+                            </Button>
                         </Link>
                     </div>
 
