@@ -34,7 +34,7 @@ const customers = [
 const CustomersSection = () => {
     return (
         <section className="w-full py-16 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-4">
 
                 {/* Section Header */}
                 <div className="text-center md:mb-22 mb-16">

@@ -43,7 +43,7 @@ const ServicesSection = () => {
 
     return (
         <section className="w-full py-16 lg:py-24 bg-white">
-            <div className="container mx-auto px-4 flex flex-col items-center">
+            <div className="max-w-[1400px] mx-auto px-4 flex flex-col items-center">
 
                 {/* Header */}
                 <div className="inline-block bg-secondary text-primary px-4 py-1.5 rounded-full text-sm font-bold mb-4">
