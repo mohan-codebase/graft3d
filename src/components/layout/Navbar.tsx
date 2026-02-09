@@ -36,7 +36,7 @@ const Navbar = () => {
                         <Link href="/" className="flex items-center gap-2">
                             <div className="relative w-[180px] h-[50px]">
                                 <Image
-                                    src="/images/logo.png"
+                                    src="/images/logo/logo.png"
                                     alt="Graft Logo Horizontal"
                                     fill
                                     className="object-contain"
