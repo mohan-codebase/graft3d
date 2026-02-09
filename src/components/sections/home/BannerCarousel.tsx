@@ -48,7 +48,7 @@ const BannerCarousel = () => {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-full relative opacity-30">
                   <Image
-                    src="/images/home/medical-banner-mobile.png"
+                    src="/images/home/banner/banner-filaments.png"
                     alt="Medical 3D Filaments Mobile"
                     fill
                     className="object-cover"
@@ -57,7 +57,7 @@ const BannerCarousel = () => {
                 {/* Desktop Image */}
                 <div className="hidden lg:block w-full h-full relative">
                   <Image
-                    src="/images/home/medical-banner-desktop.png"
+                    src="/images/home/banner/banner-filaments.png"
                     alt="Medical 3D Filaments Desktop"
                     fill
                     className="object-cover object-right"
@@ -88,7 +88,7 @@ const BannerCarousel = () => {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-full relative opacity-30">
                   <Image
-                    src="/images/home/medical-banner-mobile.png"
+                    src="/images/home/banner/medical-banner-mobile.png"
                     alt="Geomagic Freeform Mobile"
                     fill
                     className="object-cover"
@@ -97,7 +97,7 @@ const BannerCarousel = () => {
                 {/* Desktop Image */}
                 <div className="hidden lg:block w-full h-full relative">
                   <Image
-                    src="/images/home/medical-banner-desktop.png"
+                    src="/images/home/banner/medical-banner-desktop.png"
                     alt="Geomagic Freeform Desktop"
                     fill
                     className="object-cover object-right"
@@ -157,7 +157,7 @@ const BannerCarousel = () => {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-full relative opacity-30">
                   <Image
-                    src="/images/home/landing-hero-mobile.png"
+                    src="/images/home/banner/landing-hero-mobile.png"
                     alt="Graft3D Healthcare Mobile"
                     fill
                     className="object-cover"
@@ -167,7 +167,7 @@ const BannerCarousel = () => {
                 {/* Desktop Image - Adjusted to keep image visible on right */}
                 <div className="hidden lg:block w-full h-full relative">
                   <Image
-                    src="/images/home/landing-hero-desktop.png"
+                    src="/images/home/banner/landing-hero-desktop.png"
                     alt="Graft3D Healthcare Desktop"
                     fill
                     className="object-cover object-right"
@@ -199,7 +199,7 @@ const BannerCarousel = () => {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-full relative opacity-30">
                   <Image
-                    src="/images/home/medical-banner-mobile.png"
+                    src="/images/home/banner/medical-banner-mobile.png"
                     alt="EinScan Medixa Mobile"
                     fill
                     className="object-cover"
@@ -208,7 +208,7 @@ const BannerCarousel = () => {
                 {/* Desktop Image */}
                 <div className="hidden lg:block w-full h-full relative">
                   <Image
-                    src="/images/home/medical-banner-desktop.png"
+                    src="/images/home/banner/medical-banner-desktop.png"
                     alt="EinScan Medixa Desktop"
                     fill
                     className="object-cover object-right"
@@ -239,7 +239,7 @@ const BannerCarousel = () => {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-full relative opacity-30">
                   <Image
-                    src="/images/home/landing-hero-mobile.png"
+                    src="/images/home/banner/banner-funmat.png"
                     alt="Funmat Pro 410 Mobile"
                     fill
                     className="object-cover"
@@ -248,7 +248,7 @@ const BannerCarousel = () => {
                 {/* Desktop Image */}
                 <div className="hidden lg:block w-full h-full relative">
                   <Image
-                    src="/images/home/landing-hero-desktop.png"
+                    src="/images/home/banner/banner-funmat.png"
                     alt="Funmat Pro 410 Desktop"
                     fill
                     className="object-cover object-right"
