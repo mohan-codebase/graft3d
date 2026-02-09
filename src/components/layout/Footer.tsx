@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className="flex flex-col gap-4">
                         <div className="relative w-48 h-16 mb-2">
                             <Image
-                                src="/images/logo.png"
+                                src="/images/logo/logo.png"
                                 alt="Graft 3D Logo"
                                 fill
                                 className="object-contain object-left"
