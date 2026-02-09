@@ -27,13 +27,13 @@ const steps = [
 const ProcessSection = () => {
     return (
         <section className="w-full py-4 md:py-8 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-4">
 
                 {/* Header Content */}
                 <div className="flex flex-col lg:flex-row justify-center items-center mb-16 gap-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-center mb-1 leading-tight text-black">
-                    Healthcare 3D Printing Service In India <br /> <span className="text-primary">(Online Platform )</span>
-                </h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-center mb-1 leading-tight text-black">
+                        Healthcare 3D Printing Service In India <br /> <span className="text-primary">(Online Platform )</span>
+                    </h2>
                 </div>
 
                 {/* Steps Grid */}

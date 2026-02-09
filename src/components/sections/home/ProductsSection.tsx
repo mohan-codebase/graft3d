@@ -19,7 +19,7 @@ const packages = [
 const ProductsSection = () => {
     return (
         <section className="w-full py-8 md:py-16 ">
-            <div className="container mx-auto px-4 text-center">
+            <div className="max-w-[1400px] mx-auto px-4 text-center">
                 <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-black">
                     Our 3D Printed <span className="text-primary">Products</span>
                 </h2>

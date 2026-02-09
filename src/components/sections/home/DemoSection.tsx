@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 const DemoSection = () => {
     return (
         <section className="w-full py-16 lg:py-24 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1400px] mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
                     {/* Column 1: Informative Text */}
