@@ -52,14 +52,14 @@ const Footer = () => {
                     <div className="flex flex-col gap-4">
                         <h3 className="text-primary font-bold text-lg">Quick Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
-                            <li><Link href="#" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">3D Packages</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">3D Services</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Explore DICOM to 3D</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Events</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Collaborate with Us</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Blogs</Link></li>
+                            <li><Link href="/healthcare-3d-products" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
+                            <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
+                            <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Packages</Link></li>
+                            <li><Link href="/medical-3d-printing-service" className="hover:text-primary transition-colors">3D Services</Link></li>
+                            <li><Link href="/medical-image-segmentation-service" className="hover:text-primary transition-colors">Explore DICOM to 3D</Link></li>
+                            <li><Link href="/contact-us" className="hover:text-primary transition-colors">Events</Link></li>
+                            <li><Link href="/contact-us" className="hover:text-primary transition-colors">Collaborate with Us</Link></li>
+                            <li><Link href="/resources/blogs" className="hover:text-primary transition-colors">Blogs</Link></li>
                         </ul>
                     </div>
 

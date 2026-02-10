@@ -78,14 +78,29 @@ const Navbar = () => {
 
                     <Link href="/" className={`font-semibold ${isActive('/') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '150ms' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
 
+
                     {/* Mobile Dropdown: 3D Products */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                        <button onClick={() => toggleDropdown('products')} className={`flex items-center justify-between w-full font-semibold ${isActive('/products') ? 'text-primary' : 'text-black'}`}>
-                            <span>3D Products</span>
-                            <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
+                        <div className="flex items-center justify-between w-full font-semibold">
+                            <Link
+                                href="/healthcare-3d-products"
+                                className={`flex-grow ${isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                3D Products
+                            </Link>
+                            <button
+                                onClick={() => toggleDropdown('products')}
+                                className={`p-2 ${isActive('/products') || isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}
+                            >
+                                <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
                         {activeDropdown === 'products' && (
                             <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
+                                <Link href="/healthcare-3d-products" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Healthcare 3D Products</Link>
                                 <Link href="/products/filaments" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Medical 3D Filaments</Link>
                                 <Link href="/products/printers" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printers</Link>
                                 <Link href="/products/accessories" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Accessories</Link>
@@ -112,15 +127,27 @@ const Navbar = () => {
 
                     {/* Mobile Dropdown: 3D Service */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '350ms' }}>
-                        <button onClick={() => toggleDropdown('services')} className={`flex items-center justify-between w-full font-semibold ${isActive('/services') ? 'text-primary' : 'text-black'}`}>
-                            <span>3D Service</span>
-                            <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
+                        <div className="flex items-center justify-between w-full font-semibold">
+                            <Link
+                                href="/medical-3d-printing-service"
+                                className={`flex-grow ${isActive('/medical-3d-printing-service') || isActive('/medical-image-segmentation-service') || isActive('/bio-cad-modeling-service') ? 'text-primary' : 'text-black'}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                3D Service
+                            </Link>
+                            <button
+                                onClick={() => toggleDropdown('services')}
+                                className={`p-2 ${isActive('/medical-3d-printing-service') || isActive('/medical-image-segmentation-service') || isActive('/bio-cad-modeling-service') ? 'text-primary' : 'text-black'}`}
+                            >
+                                <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
                         {activeDropdown === 'services' && (
                             <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
-                                <Link href="/services/design" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Design Services</Link>
-                                <Link href="/services/printing" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Printing Services</Link>
-                                <Link href="/services/consultation" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Consultation</Link>
+                                <Link href="/medical-image-segmentation-service" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Medical Image Segmentation Service</Link>
+                                <Link href="/bio-cad-modeling-service" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Graft3D Bio CAD Modeling</Link>
                             </div>
                         )}
                     </div>
@@ -138,8 +165,10 @@ const Navbar = () => {
                     </Link>
 
                     {/* 3D Products Dropdown */}
-                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/products') ? 'text-primary' : 'text-black'}`}>
-                        <span>3D Products</span>
+                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/products') || isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}>
+                        <Link href="/healthcare-3d-products" className="hover:text-primary transition-colors">
+                            3D Products
+                        </Link>
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
@@ -175,16 +204,17 @@ const Navbar = () => {
                     </div>
 
                     {/* 3D Service Dropdown */}
-                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/services') ? 'text-primary' : 'text-black'}`}>
-                        <span>3D Service</span>
+                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/medical-3d-printing-service') || isActive('/medical-image-segmentation-service') || isActive('/bio-cad-modeling-service') ? 'text-primary' : 'text-black'}`}>
+                        <Link href="/medical-3d-printing-service" className="hover:text-primary transition-colors">
+                            3D Service
+                        </Link>
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
                         <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
-                                <Link href="/services/design" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Design Services</Link>
-                                <Link href="/services/printing" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Printing Services</Link>
-                                <Link href="/services/consultation" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Consultation</Link>
+                                <Link href="/medical-image-segmentation-service" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Medical Image Segmentation </Link>
+                                <Link href="/bio-cad-modeling-service" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Graft3D Bio CAD Modeling</Link>
                             </div>
                         </div>
                     </div>
