@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/common/PageHero';
 import ProductCategories from '@/components/sections/healthcare-3d-products/ProductCategories';
 import FeaturedProducts from '@/components/sections/healthcare-3d-products/FeaturedProducts';
+import ProductTabs from '@/components/sections/healthcare-3d-products/ProductTabs';
 
 export const metadata: Metadata = {
     title: 'Healthcare 3D Products | Medical 3D Scanners, Printers & Software | Graft3D',
@@ -36,6 +37,9 @@ export default function Healthcare3DProductsPage() {
 
             {/* Featured Products Section */}
             <FeaturedProducts />
+
+            {/* Product Tabs Section */}
+            <ProductTabs />
 
         </main>
     );
