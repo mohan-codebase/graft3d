@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 interface FaqItem {
     question: string;
-    answer: string;
+    answer: string | React.ReactNode;
 }
 
 interface FaqAccordionProps {
