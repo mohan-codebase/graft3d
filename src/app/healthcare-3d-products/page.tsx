@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import PageHero from '@/components/common/PageHero';
-import ProductCategories from '@/components/sections/healthcare-3d-products/ProductCategories';
+import HealthcareHero from '@/components/sections/healthcare-3d-products/HealthcareHero';
 import FeaturedProducts from '@/components/sections/healthcare-3d-products/FeaturedProducts';
 import ProductTabs from '@/components/sections/healthcare-3d-products/ProductTabs';
 
@@ -26,14 +25,7 @@ export default function Healthcare3DProductsPage() {
     return (
         <main className="w-full">
             {/* Hero Section */}
-            <PageHero
-                title="HEALTHCARE"
-                titleAccent="3D PRODUCTS"
-                description="3D SCANNER | 3D PRINTER | 3D SOFTWARE"
-            />
-
-            {/* Product Categories Section */}
-            <ProductCategories />
+            <HealthcareHero />
 
             {/* Featured Products Section */}
             <FeaturedProducts />

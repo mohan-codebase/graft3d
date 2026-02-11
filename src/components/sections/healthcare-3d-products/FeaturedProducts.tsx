@@ -39,7 +39,7 @@ const FeaturedProducts = () => {
                     {featuredProducts.map((product, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                            className="bg-white rounded-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2"
                         >
                             {/* Product Image */}
                             <div className="aspect-square relative bg-gray-100">
@@ -56,7 +56,7 @@ const FeaturedProducts = () => {
                                 <Button
                                     variant="default"
                                     size="lg"
-                                    className="rounded-lg font-semibold shadow-md hover:shadow-lg"
+                                    className="rounded-lg font-semibold"
                                 >
                                     {product.buttonText}
                                 </Button>
