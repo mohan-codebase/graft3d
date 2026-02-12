@@ -52,7 +52,7 @@ const Footer = () => {
                     <div className="flex flex-col gap-4">
                         <h3 className="text-primary font-bold text-lg">Quick Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
-                            <li><Link href="/healthcare-3d-products" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
+                            <li><Link href="/healthcare-3d-printed-products" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
                             <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
                             <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Packages</Link></li>
                             <li><Link href="/medical-3d-printing-service" className="hover:text-primary transition-colors">3D Services</Link></li>

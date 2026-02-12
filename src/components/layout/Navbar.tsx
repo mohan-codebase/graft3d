@@ -100,8 +100,7 @@ const Navbar = () => {
                         </div>
                         {activeDropdown === 'products' && (
                             <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
-                                <Link href="/healthcare-3d-products" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Healthcare 3D Products</Link>
-                                <Link href="/products/filaments" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Medical 3D Filaments</Link>
+                                <Link href="/healthcare-3d-printed-products" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printed Products</Link>
                                 <Link href="/products/printers" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printers</Link>
                                 <Link href="/products/accessories" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Accessories</Link>
                             </div>
@@ -174,7 +173,7 @@ const Navbar = () => {
                         {/* Dropdown Menu */}
                         <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
-                                <Link href="/products/filaments" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Medical 3D Filaments</Link>
+                                <Link href="/healthcare-3d-printed-products" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">3D Printed Products</Link>
                                 <Link href="/products/printers" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">3D Printers</Link>
                                 <Link href="/products/accessories" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Accessories</Link>
                             </div>
