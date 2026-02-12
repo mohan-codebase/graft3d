@@ -10,12 +10,33 @@ const Navbar = () => {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null);
+    const [activeSubDropdown, setActiveSubDropdown] = React.useState<string | null>(null);
+    const [activeSubSubDropdown, setActiveSubSubDropdown] = React.useState<string | null>(null);
 
     const toggleDropdown = (name: string) => {
         if (activeDropdown === name) {
             setActiveDropdown(null);
+            setActiveSubDropdown(null);
+            setActiveSubSubDropdown(null);
         } else {
             setActiveDropdown(name);
+        }
+    };
+
+    const toggleSubDropdown = (name: string) => {
+        if (activeSubDropdown === name) {
+            setActiveSubDropdown(null);
+            setActiveSubSubDropdown(null);
+        } else {
+            setActiveSubDropdown(name);
+        }
+    };
+
+    const toggleSubSubDropdown = (name: string) => {
+        if (activeSubSubDropdown === name) {
+            setActiveSubSubDropdown(null);
+        } else {
+            setActiveSubSubDropdown(name);
         }
     };
 
@@ -76,12 +97,12 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <Link href="/" className={`font-semibold ${isActive('/') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '150ms' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                    <Link href="/" className={`font-bold ${isActive('/') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '150ms' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
 
 
                     {/* Mobile Dropdown: 3D Products */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                        <div className="flex items-center justify-between w-full font-semibold">
+                        <div className="flex items-center justify-between w-full font-bold">
                             <Link
                                 href="/healthcare-3d-products"
                                 className={`flex-grow ${isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}
@@ -99,19 +120,83 @@ const Navbar = () => {
                             </button>
                         </div>
                         {activeDropdown === 'products' && (
-                            <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
-                                <Link href="/healthcare-3d-printed-products" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printed Products</Link>
-                                <Link href="/products/printers" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printers</Link>
-                                <Link href="/products/accessories" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMobileMenuOpen(false)}>Accessories</Link>
+                            <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20 bg-[#1a1a1a] p-4 text-white">
+                                <div className="flex flex-col gap-4">
+                                    {/* 3D Printed Products Section */}
+                                    <div>
+                                        <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
+                                            <Link href="/healthcare-3d-printed-products" className="text-sm font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>3D Printed Products</Link>
+                                            <button onClick={() => toggleSubDropdown('printed')} className="p-2">
+                                                <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'printed' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        {activeSubDropdown === 'printed' && (
+                                            <div className="pl-4 flex flex-col gap-2 pt-1">
+                                                <div className="flex items-center justify-between w-full border-b border-gray-800 pb-1">
+                                                    <Link href="/regraft" className="text-xs text-gray-400 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Regraft</Link>
+                                                    <button onClick={() => toggleSubSubDropdown('regraft')} className="p-1">
+                                                        <svg className={`w-3 h-3 transition-transform ${activeSubSubDropdown === 'regraft' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                {activeSubSubDropdown === 'regraft' && (
+                                                    <div className="pl-4 flex flex-col gap-2 pt-1 border-l border-gray-800 text-xs">
+                                                        <Link href="/regraft-customised-plates" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Customised Plates</Link>
+                                                        <Link href="/regraft-artibone" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft ArtiBone</Link>
+                                                        <Link href="/regraft-bonerip" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft BoneRip</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Graft3DX Prost</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Dental Surgical Guide</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Anatomical Model</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Ankle Foot Orthosis</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Amb Limbs</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Crown and Bridges</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Gingival Mask</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Head Splints</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Aligner</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Longterm Denture</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="text-gray-400 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Orthodontics</Link>
+                                                    </div>
+                                                )}
+                                                <Link href="/healthcare-3d-printed-products" className="text-xs text-gray-400 hover:text-primary transition-colors border-b border-gray-800 pb-1" onClick={() => setIsMobileMenuOpen(false)}>Patient Specific Implant</Link>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* 3D Tech Products Section */}
+                                    <div>
+                                        <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
+                                            <Link href="/products/printers" className="text-sm font-bold text-white hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>3D Tech Products</Link>
+                                            <button onClick={() => toggleSubDropdown('tech')} className="p-2">
+                                                <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'tech' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        {activeSubDropdown === 'tech' && (
+                                            <div className="pl-4 flex flex-col gap-2 pt-2">
+                                                <Link href="/products/printers" className="text-xs text-gray-400 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>3D Printers</Link>
+                                                <Link href="/products/accessories" className="text-xs text-gray-400 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Accessories</Link>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Medical Filaments Section */}
+                                    <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
+                                        <Link href="/products/materials" className="text-sm font-bold text-white hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Medical Filaments</Link>
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </div>
 
-                    <Link href="/3d-packages" className={`font-semibold ${isActive('/3d-packages') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '250ms' }} onClick={() => setIsMobileMenuOpen(false)}>3D Packages</Link>
+                    <Link href="/3d-packages" className={`font-bold ${isActive('/3d-packages') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '250ms' }} onClick={() => setIsMobileMenuOpen(false)}>3D Packages</Link>
 
                     {/* Mobile Dropdown: Resources */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-                        <button onClick={() => toggleDropdown('resources')} className={`flex items-center justify-between w-full font-semibold ${isActive('/resources') ? 'text-primary' : 'text-black'}`}>
+                        <button onClick={() => toggleDropdown('resources')} className={`flex items-center justify-between w-full font-bold ${isActive('/resources') ? 'text-primary' : 'text-black'}`}>
                             <span>Resources</span>
                             <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
@@ -126,7 +211,7 @@ const Navbar = () => {
 
                     {/* Mobile Dropdown: 3D Service */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '350ms' }}>
-                        <div className="flex items-center justify-between w-full font-semibold">
+                        <div className="flex items-center justify-between w-full font-bold">
                             <Link
                                 href="/medical-3d-printing-service"
                                 className={`flex-grow ${isActive('/medical-3d-printing-service') || isActive('/medical-image-segmentation-service') || isActive('/bio-cad-modeling-service') ? 'text-primary' : 'text-black'}`}
@@ -151,11 +236,11 @@ const Navbar = () => {
                         )}
                     </div>
 
-                    <Link href="/contact-us" className={`font-semibold ${isActive('/contact-us') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '400ms' }} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+                    <Link href="/contact-us" className={`font-bold ${isActive('/contact-us') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '400ms' }} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
                 </div>
 
                 {/* Navigation Links */}
-                <nav className="hidden lg:flex items-center gap-8 font-semibold text-[15px]">
+                <nav className="hidden lg:flex items-center gap-8 font-bold text-[15px]">
                     <Link
                         href="/"
                         className={`hover:text-primary transition-colors ${isActive('/') ? 'text-primary' : 'text-black'}`}
@@ -164,18 +249,66 @@ const Navbar = () => {
                     </Link>
 
                     {/* 3D Products Dropdown */}
-                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/products') || isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}>
+                    <div className={`group relative cursor-pointer h-full  flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/products') || isActive('/healthcare-3d-products') ? 'text-primary' : 'text-black'}`}>
                         <Link href="/healthcare-3d-products" className="hover:text-primary transition-colors">
                             3D Products
                         </Link>
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
 
                         {/* Dropdown Menu */}
-                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
+                        <div className="hidden group-hover:block absolute top-full left-0 bg-[#1a1a1a] font-bold shadow-xl border-t-2  border-primary min-w-[280px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
-                                <Link href="/healthcare-3d-printed-products" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">3D Printed Products</Link>
-                                <Link href="/products/printers" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">3D Printers</Link>
-                                <Link href="/products/accessories" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Accessories</Link>
+                                {/* 3D Printed Products */}
+                                <div className="group/sub font-bold relative border-b border-gray-800 last:border-0">
+                                    <Link href="/healthcare-3d-printed-products" className="flex  items-center justify-between px-6 py-4 hover:bg-black/20 text-[15px] font-medium text-primary transition-colors">
+                                        <span>3D Printed Products</span>
+                                        <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </Link>
+                                    <div className="hidden group-hover/sub:block absolute left-full top-0 bg-[#1a1a1a] shadow-xl border-l border-gray-800 min-w-[250px] animate-fade-in-right">
+                                        <div className="py-2 flex flex-col">
+                                            <div className="group/sub2 relative">
+                                                <Link href="/regraft" className="flex items-center justify-between px-6 py-4 hover:bg-black/20 text-[14px] text-white hover:text-primary transition-colors border-b border-gray-800">
+                                                    <span>Regraft</span>
+                                                    <svg className="w-3 h-3 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                                </Link>
+                                                <div className="hidden group-hover/sub2:block absolute left-full top-0 bg-[#1a1a1a] shadow-xl border-l border-gray-800 min-w-[240px] animate-fade-in-right">
+                                                    <div className="py-2 flex flex-col max-h-[400px] overflow-y-auto custom-scrollbar">
+                                                        <Link href="/regraft-artibone" className="px-6 py-3 hover:bg-black/20 text-[13px] text-gray-400 hover:text-primary transition-colors border-b border-gray-800">Recraft Airbone</Link>
+                                                        <Link href="/regraft-bonerip" className="px-6 py-3 hover:bg-black/20 text-[13px] text-gray-400 hover:text-primary transition-colors border-b border-gray-800">Recraft Bonerip</Link>
+                                                        <Link href="/regraft-customised-plates" className="px-6 py-3 hover:bg-black/20 text-[13px] text-gray-400 hover:text-primary transition-colors border-b border-gray-800">Recraft Customised Plates</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="px-6 py-3 hover:bg-black/20 text-[13px] text-gray-400 hover:text-primary transition-colors border-b border-gray-800">Recraft Arti nose & Arti ear</Link>
+                                                        <Link href="/healthcare-3d-printed-products" className="px-6 py-3 hover:bg-black/20 text-[13px] text-gray-400 hover:text-primary transition-colors border-b border-gray-800">Regraft Digilumin</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <Link href="/healthcare-3d-printed-products" className="px-6 py-4 hover:bg-black/20 text-[14px] text-white hover:text-primary transition-colors">
+                                                Patient specific implant
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* 3D Tech Products */}
+                                <div className="group/sub relative border-b border-gray-800 last:border-0">
+                                    <Link href="/products/printers" className="flex items-center justify-between px-6 py-4 hover:bg-black/20 text-[15px] font-medium text-white hover:text-primary transition-colors">
+                                        <span>3D Tech Products</span>
+                                        <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </Link>
+                                    <div className="hidden group-hover/sub:block absolute left-full top-0 bg-[#1a1a1a] shadow-xl border-l border-gray-800 min-w-[200px] animate-fade-in-right">
+                                        <div className="py-2 flex flex-col">
+                                            <Link href="/products/printers" className="px-6 py-3 hover:bg-black/20 text-[14px] text-white hover:text-primary transition-colors border-b border-gray-800 last:border-0">3D Printers</Link>
+                                            <Link href="/products/accessories" className="px-6 py-3 hover:bg-black/20 text-[14px] text-white hover:text-primary transition-colors">Accessories</Link>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Medical Filaments */}
+                                <div className="group/sub relative border-b border-gray-800 last:border-0">
+                                    <Link href="/products/materials" className="flex items-center justify-between px-6 py-4 hover:bg-black/20 text-[15px] font-medium text-white hover:text-primary transition-colors">
+                                        <span>Medical Filaments</span>
+                                        <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
