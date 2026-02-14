@@ -71,8 +71,8 @@ const Footer = () => {
                             <li><Link href="#" className="hover:text-primary transition-colors">Shop</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Shipping policy</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Refund Policy</Link></li>
+                            <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
+                            <li><Link href="/refund_returns" className="hover:text-primary transition-colors">Refund Policy</Link></li>
                         </ul>
                     </div>
 
@@ -115,7 +115,7 @@ const Footer = () => {
                 <div className="border-t border-blue-200/50 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-xs font-semibold text-gray-400 gap-4 text-center md:text-left">
                     <p>© {new Date().getFullYear()}. All Rights Reserved. Graft3D Health Care Solutions Pvt. Ltd.</p>
                     <div className="flex gap-1 text-primary">
-                        <a href="#" className="hover:underline">Disclaimer</a> | <a href="#" className="hover:underline">Terms & Conditions</a>
+                        <a href="#" className="hover:underline">Disclaimer</a> | <Link href="/terms-conditions" className="hover:underline">Terms & Conditions</Link>
                     </div>
                 </div>
             </div>

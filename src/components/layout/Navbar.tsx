@@ -47,6 +47,11 @@ const Navbar = () => {
         return pathname?.startsWith(path);
     };
 
+    const isResourcesActive =
+        isActive('/resources') ||
+        isActive('/artificial-nasal-prosthesis-case-study') ||
+        isActive('/virtual-surgical-planning-mandibular-reconstruction');
+
     return (
         <div className="w-full bg-gray-50 shadow-sm sticky top-0 z-50">
             <div className="max-w-[1400px] mx-auto px-4 py-1 flex flex-col lg:flex-row items-center justify-between gap-4 relative">
@@ -151,7 +156,7 @@ const Navbar = () => {
                                                         <Link href="/healthcare-3d-printed-products" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Digilumin</Link>
                                                     </div>
                                                 )}
-                                                <Link href="/healthcare-3d-printed-products" className="transition-colors border-b border-gray-800 pb-1" onClick={() => setIsMobileMenuOpen(false)}>Patient Specific Implant</Link>
+                                                <Link href="/3d-printed-patient-specific-implant" className="transition-colors border-b border-gray-800 pb-1" onClick={() => setIsMobileMenuOpen(false)}>Patient Specific Implant</Link>
                                             </div>
                                         )}
                                     </div>
@@ -206,14 +211,51 @@ const Navbar = () => {
 
                     {/* Mobile Dropdown: Resources */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-                        <button onClick={() => toggleDropdown('resources')} className={`flex items-center justify-between w-full font-bold ${isActive('/resources') ? 'text-primary' : 'text-black'}`}>
+                        <button onClick={() => toggleDropdown('resources')} className={`flex items-center justify-between w-full font-bold ${isResourcesActive ? 'text-primary' : 'text-black'}`}>
                             <span>Resources</span>
                             <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         {activeDropdown === 'resources' && (
                             <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
-                                <Link href="/resources/case-studies" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Blogs</Link>
-                                <Link href="about-us" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">About Us</Link>
+                                <div className="flex items-center justify-between w-full">
+                                    <Link
+                                        href="/resources/case-studies"
+                                        className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        Blogs
+                                    </Link>
+                                    <button onClick={() => toggleSubDropdown('blogs')} className="p-2 text-black">
+                                        <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'blogs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                {activeSubDropdown === 'blogs' && (
+                                    <div className="pl-6 flex flex-col gap-1">
+                                        <Link
+                                            href="/artificial-nasal-prosthesis-case-study"
+                                            className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                        >
+                                            Nasal Prosthesis
+                                        </Link>
+                                        <Link
+                                            href="/virtual-surgical-planning-mandibular-reconstruction"
+                                            className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                        >
+                                            Virtual Surgical Planning
+                                        </Link>
+                                    </div>
+                                )}
+                                <Link
+                                    href="/about-us"
+                                    className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    About Us
+                                </Link>
                             </div>
                         )}
                     </div>
@@ -290,7 +332,7 @@ const Navbar = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <Link href="/healthcare-3d-printed-products" className="px-6 py-4 text-[14px]  transition-colors">
+                                            <Link href="/3d-printed-patient-specific-implant" className="px-6 py-4 text-[14px]  transition-colors">
                                                 Patient specific implant
                                             </Link>
                                         </div>
@@ -327,7 +369,6 @@ const Navbar = () => {
                                             <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polyetheretherketone (PEEK)</Link>
                                             <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polymethyl Methacrylate (PMMA)</Link>
                                             <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polycorbante (PC)</Link>
-
                                         </div>
                                     </div>
                                 </div>
@@ -343,13 +384,26 @@ const Navbar = () => {
                     </Link>
 
                     {/* Resources Dropdown */}
-                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isActive('/resources') ? 'text-primary' : 'text-black'}`}>
+                    <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isResourcesActive ? 'text-primary' : 'text-black'}`}>
                         <span>Resources</span>
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         {/* Dropdown Menu */}
-                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[200px] z-50 animate-fade-in-up">
+                        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[240px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
-                                <Link href="/resources/case-studies" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Blogs</Link>
+                                <div className="group/blogs relative">
+                                    <Link href="/resources/case-studies" className="flex items-center justify-between px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">
+                                        <span>Blogs</span>
+                                        <svg className="w-3 h-3 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </Link>
+                                    <div className="hidden group-hover/blogs:block absolute left-full top-0 bg-white shadow-xl border-l border-gray-200 min-w-[320px] animate-fade-in-right">
+                                        <div className="py-2 flex flex-col">
+                                            <Link href="/artificial-nasal-prosthesis-case-study" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Nasal Prosthesis</Link>
+                                            <Link href="/virtual-surgical-planning-mandibular-reconstruction" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Virtual Surgical Planning</Link>
+                                        </div>
+                                    </div>
+                                </div>
                                 <Link href="/about-us" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">About Us</Link>
                             </div>
                         </div>
