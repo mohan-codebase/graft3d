@@ -69,8 +69,8 @@ const Footer = () => {
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <li><Link href="#" className="hover:text-primary transition-colors">About us</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Shop</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Shipping policy</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/shipping-policy" className="hover:text-primary transition-colors">Shipping policy</Link></li>
                             <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
                             <li><Link href="/refund_returns" className="hover:text-primary transition-colors">Refund Policy</Link></li>
                         </ul>

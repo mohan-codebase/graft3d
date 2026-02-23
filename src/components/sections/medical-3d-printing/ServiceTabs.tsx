@@ -84,26 +84,22 @@ const ServiceTabs = () => {
                                 Learn More
                                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                             </Button>
-                            {/* Watch Video Button - Blue */}
-                            {/* Matches screenshot bottom right roughly, or just inline here */}
+                            <Button className="bg-[#1e73be] hover:bg-[#155a96] text-white px-6 py-2 text-base font-semibold rounded shadow-sm">
+                                <Play className="w-4 h-4 mr-2" />
+                                Watch Video
+                            </Button>
                         </div>
                     </div>
 
                     {/* Image Content */}
-                    <div className="relative h-[300px] md:h-[400px] w-full rounded-lg shadow-lg animate-fade-in ">
+                    <div className="relative h-[300px] md:h-[400px] w-full rounded-lg shadow-lg animate-fade-in overflow-hidden">
                         <Image
                             src={activeContent?.image || '/images/3d-service/landingPage.png'}
                             alt={activeContent?.title || ''}
                             fill
                             className="object-cover"
                         />
-                        {/* Watch Video Button Overlay (recreating the screenshot look if needed, or just placing it) */}
-                        <div className="absolute bottom-0 -left-22">
-                            <Button className="bg-[#1e73be] hover:bg-[#155a96] text-white rounded-none px-6 py-6 text-lg">
-                                <Play className="w-4 h-4 mr-2" />
-                                Watch Video
-                            </Button>
-                        </div>
+
                     </div>
                 </div>
             </div>

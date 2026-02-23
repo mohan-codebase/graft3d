@@ -6,23 +6,23 @@ import FaqAccordion from '@/components/common/FaqAccordion';
 const faqItems = [
     {
         question: "What is Healthcare 3D Printing?",
-        answer: "Healthcare 3d printing is an advanced technic of additive manufacturing. It uses Healthcare 3D printers to make live medical devices and replicas of human body parts from 3D files, which doctors and bio cad modelers usually design. As it advances, experts are in the process of developing direct human organs."
+        answer: "Healthcare 3d Printing Is An Advanced Technic Of Additive Manufacturing. It Uses Healthcare 3D Printers To Make Live Medical Devices And Replicas Of Human Body Parts From 3D Files, Which Doctors And Bio Cad Modelers Usually Design. As It Advances, Experts Are In The Process Of Developing Direct Human Organs."
     },
     {
         question: "Do I need to register an account to avail Graft3d online healthcare 3D service?",
-        answer: "We don’t require any registration. You can directly upload the files to avail any of our online services."
+        answer: "We Don't Require Any Registration. You Can Directly Upload The Files To Avail Any Of Our Online Services."
     },
     {
         question: "How do you collect payment after the service?",
-        answer: "You can pay for the services using our payment link or directly transfer the bank to our account."
+        answer: "You Can Pay For The Services Using Our Payment Link Or Directly Transfer The Bank To Our Account."
     },
     {
         question: "How do I review the files before 3d printing?",
-        answer: "We will schedule an online meeting with you before we send the files. We will upload the files for you to review on our platform"
+        answer: "We Will Schedule An Online Meeting With You Before We Send The Files. We Will Upload The Files For You To Review On Our Platform"
     },
     {
         question: "I am an individual. Can I still avail myself of your online 3d services?",
-        answer: "Graft3D online Healthcare 3D service is for doctors, surgeons, hospitals, or individuals and students who need to avail of any of our healthcare 3d services."
+        answer: "Graft3D Online Healthcare 3D Service Is For Doctors, Surgeons, Hospitals, Or Individuals And Students Who Need To Avail Of Any Of Our Healthcare 3d Services."
     }
 ];
 
