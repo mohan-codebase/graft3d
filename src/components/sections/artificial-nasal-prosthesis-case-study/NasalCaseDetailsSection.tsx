@@ -64,10 +64,7 @@ export default function NasalCaseDetailsSection() {
             </div>
 
             <p className="mb-8 text-[15px] leading-7 text-gray-700">
-                We reached the patient with an advanced 3D technology workflow and delivered an adhesive-retained,
-                medical-grade silicone prosthesis (MDX4-4210 RTV silicone). A special dermal adhesive was used for
-                retention. The prosthesis matched the patient&apos;s skin color, tone, and texture and was personally
-                overseen by our doctor.
+               Immediately We Went To His Doorstep With The Help Of Highly Accurate Advanced 3D Technology Silicone Prosthesis [Adhesive Retained Medical-Grade (MDX4-4210 RTV Silicone)] Was Made Which Is Made Up Of Biocompatible Material and attached With A Special Dermal Adhesive [Daro Hydrobond]. The Prosthesis Matches Accurate With The Person Skin Color Tone And Texture Which Was Overviewed By Our Doctor Personally, Dr. Sanketh K Reddy A Master Maxillofacial Prosthodontics And A Leading Implantologist In The Country.
             </p>
         </>
     );
