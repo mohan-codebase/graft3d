@@ -1,0 +1,85 @@
+"use client";
+
+import React, { useState } from 'react';
+import { Plus, Minus } from 'lucide-react';
+
+const faqs = [
+    {
+        question: 'What is D2P ( DICOM TO PRINT ) Modelling Software?',
+        answer: 'It is an Advanced Visualization Software that allows surgeons, radiologists, lab technicians, and device designers to create diagnostic-quality digital 3D models and physical 3D prints easily and quickly. Virtual reality (VR) visualization allows clinicians and point-of-care (POC) staff to minimize the effort and time associated with the creation of patient-specific anatomic models.'
+    },
+    {
+        question: 'What all things can we segment using D2P?',
+        answer: 'D2P software has three modules: 1. Bone, 2. Teeth, 3. Vascular. It has an auto segmentation feature where you can directly segment the part in one click.'
+    },
+    {
+        question: 'Can we directly print from D2P?',
+        answer: 'Yes, we can directly print the segmented part from any 3D Systems verified printer.'
+    },
+    {
+        question: 'What is the use of Virtual Reality in D2P Software?',
+        answer: 'Virtual Reality is used to perform preoperative surgical planning, improve patient education, help patients manage stress, provide more detailed medical imaging, and achieve faster rehabilitation.'
+    },
+    {
+        question: 'What Different Scanned Data can be imported to Create 3D Models?',
+        answer: 'D2P uses DICOM images created by CT scans, CBCT scans, and MRI scans for creating 3D models.'
+    },
+    {
+        question: 'What Outputs can be obtained using D2P Software?',
+        answer: 'We can obtain PLY, OBJ, STL, IGES, and PDF files using D2P software. These files can be used directly in Geomagic Freeform or sent directly for 3D printing.'
+    },
+    {
+        question: 'Is D2P Software A Perpetual Or Yearly Subscription?',
+        answer: 'D2P is a one-time purchase perpetual license application; it is not available as a rental or yearly subscription.'
+    },
+    {
+        question: 'Where can I buy D2P Software in India?',
+        answer: 'You can buy D2P Software from 3D Systems authorized resellers in India. Graft3D Healthcare is one of the authorized distributors and resellers in India.'
+    }
+];
+
+const FaqSection = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    return (
+        <section className="py-20 bg-[#f8fbff]">
+            <div className="max-w-4xl mx-auto px-4">
+                <h2 className="text-3xl font-extrabold text-[#1a365d] text-center mb-12 uppercase tracking-tightLine">
+                    Frequently Asked Questions
+                </h2>
+
+                <div className="space-y-4">
+                    {faqs.map((faq, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl border border-blue-50 shadow-sm overflow-hidden transition-all duration-300"
+                        >
+                            <button
+                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+                            >
+                                <span className="font-bold text-[#1a365d] pr-8">{faq.question}</span>
+                                {openIndex === index ? (
+                                    <Minus className="text-[#1e73be] shrink-0" size={20} />
+                                ) : (
+                                    <Plus className="text-[#1e73be] shrink-0" size={20} />
+                                )}
+                            </button>
+
+                            <div
+                                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                                    }`}
+                            >
+                                <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-50">
+                                    {faq.answer}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default FaqSection;

@@ -7,6 +7,7 @@ import Benefits from '@/components/sections/3d-printing-packagefor-po-devices/Be
 import FaqSection from '@/components/sections/3d-printing-packagefor-po-devices/FaqSection';
 import BookDemo from '@/components/sections/3d-printing-packagefor-po-devices/BookDemo';
 import BlogsSection from '@/components/sections/3d-printing-packagefor-po-devices/BlogsSection';
+import GallerySection from '@/components/sections/3d-printing-packagefor-po-devices/GallerySection';
 
 export const metadata = {
     title: '3D Printing Package for P&O Devices | Graft3D Healthcare',
@@ -23,6 +24,7 @@ export default function PODevicesPage() {
             <Benefits />
             <BookDemo />
             <BlogsSection />
+            <GallerySection />
             <FaqSection />
         </main>
     );

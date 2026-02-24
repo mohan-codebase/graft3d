@@ -43,7 +43,7 @@ const products = [
     {
         id: 4,
         title: 'Geomagic CX: Quality Control & Inspection of Medical Devices.',
-        image: '/images/3d-printing-packagefor-po-devices/image-6.png',
+        image: 'https://graft3d.com/wp-content/uploads/2023/08/image-6.png',
         imageLeft: false,
         features: [
             '3D inspect the final P&O devices after production.',
@@ -57,7 +57,7 @@ const products = [
 const ProductBundles = () => {
     return (
         <section className="py-16 bg-white">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
                 <h2 className="text-[28px] font-extrabold text-gray-900 text-center uppercase tracking-widest mb-12">
                     Products Bundles
                 </h2>
@@ -66,7 +66,7 @@ const ProductBundles = () => {
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className="bg-[#ddeef9] rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch border border-blue-100"
+                            className="bg-[#ddeef9] p-5 rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch border border-blue-100"
                             style={{ flexDirection: product.imageLeft ? 'row' : 'row-reverse' }}
                         >
                             {/* Image */}
@@ -75,6 +75,7 @@ const ProductBundles = () => {
                                     src={product.image}
                                     alt={product.title}
                                     fill
+                                    unoptimized
                                     className="object-cover"
                                 />
                             </div>
@@ -86,7 +87,7 @@ const ProductBundles = () => {
                                 </h3>
                                 <ul className="flex flex-col gap-3">
                                     {product.features.map((feature, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-gray-700 text-[13px] leading-relaxed">
+                                        <li key={i} className="flex items-start gap-3 text-gray-700 text-[18px] leading-relaxed">
                                             <span className="mt-1.5 w-2 h-2 rounded-full bg-[#4db6f5] flex-shrink-0" />
                                             {feature}
                                         </li>

@@ -14,9 +14,9 @@ const steps = [
     {
         id: 2,
         stepLabel: 'Step 2',
-        label: '3D DESIGN',
+        label: 'Custom Design',
         circleImage: '/images/3d-printing-packagefor-po-devices/Group-24.png',
-        description: 'Use Geomagic Freeform software with the haptic touch device to design and customize P&O devices based on the patient\'s body scan. Intuitive virtual sculpting tools make device customization fast and accurate.',
+        description: 'Utilize the Geomagic Freeform CAD system with a haptic touch device to create the patient-specific P&O Devices.',
     },
     {
         id: 3,
