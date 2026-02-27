@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronUp, MessageCircle } from 'lucide-react';
+import { ChevronUp } from 'lucide-react';
 
 const FloatingButtons = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -38,16 +38,6 @@ const FloatingButtons = () => {
                 <ChevronUp className="text-primary w-6 h-6 md:w-8 md:h-8" />
             </button>
 
-            {/* WhatsApp Button */}
-            <a
-                href="https://wa.me/911234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba59] transition-all duration-300 hover:scale-110"
-                aria-label="Contact on WhatsApp"
-            >
-                <MessageCircle className="w-6 h-6 md:w-8 md:h-8 fill-white" />
-            </a>
         </div>
     );
 };
