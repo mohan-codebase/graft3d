@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, Video } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 const ContactFormDetails = () => {
     return (
@@ -92,7 +93,7 @@ const ContactFormDetails = () => {
                                 <Video className="w-5 h-5 text-[#166AAF]" /> Meet Us Live
                             </h4>
                             <Button className="w-full bg-[#166AAF] hover:bg-primary-600 text-white shadow-md transition-all font-bold">
-                                Contact us on zoom
+                                <Link href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success"> Contact us on zoom</Link>
                             </Button>
                         </div>
                     </div>

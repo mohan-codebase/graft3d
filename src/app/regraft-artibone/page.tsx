@@ -1,20 +1,31 @@
-import React from 'react';
-import ArtiboneHero from '@/components/sections/regraft/ArtiboneHero';
-import ArtiboneFeatures from '@/components/sections/regraft/ArtiboneFeatures';
-import ArtiboneMaterials from '@/components/sections/regraft/ArtiboneMaterials';
+import React from "react";
+import ArtiboneHero from "@/components/sections/regraft-artibone/ArtiboneHero";
+import TmjSection from "@/components/sections/regraft-artibone/TmjSection";
+import RrtcSection from "@/components/sections/regraft-artibone/RrtcSection";
+import ObrSection from "@/components/sections/regraft-artibone/ObrSection";
+import CvrSection from "@/components/sections/regraft-artibone/CvrSection";
+import RrmmSection from "@/components/sections/regraft-artibone/RrmmSection";
+import BaSection from "@/components/sections/regraft-artibone/BaSection";
+import FdSection from "@/components/sections/regraft-artibone/FdSection";
+import MaterialsSection from "@/components/sections/regraft-artibone/MaterialsSection";
 
 export const metadata = {
-    title: 'ReGraft Artibone | Patient-Specific Bone Reconstruction | Graft3D',
-    description: 'Artibone represents the next generation of digitally planned, patient-specific bone regrafts designed to restore anatomy, function, and aesthetics.',
+    title: "Regraft Artibone - Graft 3D",
+    description: "Artibone represents the next generation of digitally planned, patient-specific bone regrafts designed to restore anatomy, function, and aesthetics.",
 };
 
 export default function RegraftArtibonePage() {
     return (
-        <main>
+        <main className="flex min-h-screen flex-col items-center justify-between w-full font-poppins">
             <ArtiboneHero />
-            <ArtiboneFeatures />
-            <ArtiboneMaterials />
-            {/* Additional sections can be added here later */}
+            <TmjSection />
+            <RrtcSection />
+            <ObrSection />
+            <CvrSection />
+            <RrmmSection />
+            <BaSection />
+            <FdSection />
+            <MaterialsSection />
         </main>
     );
 }

@@ -5,17 +5,17 @@ const products = [
     {
         title: 'Geomagic Freeform',
         image: 'https://graft3d.com/wp-content/uploads/2021/12/geomagic-freeform-01-3.png',
-        href: '/geomagic-freeform'
+        href: '#'
     },
     {
         title: 'Einscan HX',
         image: 'https://graft3d.com/wp-content/uploads/2022/03/Einscan-Hx-e1651750527325.png',
-        href: '/einscan-hx'
+        href: '/human-body-parts-3d-scanner'
     },
     {
         title: 'Haptic Device',
         image: 'https://graft3d.com/wp-content/uploads/2021/12/HapticDevice-1.jpg',
-        href: '/haptic-device'
+        href: '/geomagic-touch-x-haptic-device'
     }
 ];
 

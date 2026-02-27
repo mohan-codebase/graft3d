@@ -29,8 +29,7 @@ const Hero = () => {
             <Button asChild className="rounded-full px-6 py-5">
               <a
                 href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09"
-                target="_blank"
-                rel="noreferrer"
+            
               >
                 <Video className="w-4 h-4 mr-2" />
                 Meet Us Live Online
@@ -40,7 +39,7 @@ const Hero = () => {
               asChild
               className="rounded-full px-6 py-5 bg-white text-primary border border-primary hover:bg-blue-50"
             >
-              <a href="https://graft3d.com/get-quote/" target="_blank" rel="noreferrer">
+              <a href="/get-quote">
                 Get a Quote Now
               </a>
             </Button>

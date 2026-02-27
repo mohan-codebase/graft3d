@@ -7,14 +7,14 @@ const rangeItems = [
     description: "The portion of the skull that encloses and protects the brain",
     image:
       "/images/asthi-bone-like-3d-printed-training-models/Rectangle-25-q5h1xhcq50ulk4iwmc895ibfxpsfbqfyys4kx7f45g.png",
-    href: "/product/cranium/",
+    href: "https://graft3d.com/product/cranium/",
   },
   {
     title: "Mandible",
     description: "The lower jawbone",
     image:
       "/images/asthi-bone-like-3d-printed-training-models/Rectangle-11-q5h1x7yc8ohqc0wk585zgkotzv2r6renlhlq4ft1vo.png",
-    href: "/product/mandible/",
+    href: "https://graft3d.com/product/mandible/",
   },
   {
     title: "Clavicle",

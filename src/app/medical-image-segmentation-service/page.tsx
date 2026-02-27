@@ -50,10 +50,10 @@ export default function MedicalImageSegmentationServicePage() {
 
                         <div className="flex gap-4 pt-4">
                             <Button className="bg-[#1e73be] hover:bg-[#155a96] text-white px-8 py-6 text-lg rounded shadow-md">
-                                Try Us Now
+                                <Link href="/upload-dicom-data">Try Us Now</Link>
                             </Button>
                             <Button variant="white" className="border border-gray-200 text-[#0f6cbd] hover:bg-gray-50 px-8 py-6 text-lg rounded shadow-md">
-                                Book A Demo
+                                <Link href="/book-a-demo">Book A Demo</Link>
                             </Button>
                         </div>
 

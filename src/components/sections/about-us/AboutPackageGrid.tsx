@@ -1,18 +1,22 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const packages = [
     {
         name: "Anatomical model+message (AMT)",
-        image: "/images/home/our-3d-packages/image-1.png"
+        image: "/images/home/our-3d-packages/image-1.png",
+        link: "#" // Fallback to main packages page if no specific page exists
     },
     {
         name: "R&D Device Package",
-        image: "/images/home/our-3d-packages/image-2.png"
+        image: "/images/home/our-3d-packages/image-2.png",
+        link: "/3d-printing-packagefor-po-devices" // Fallback to main packages page
     },
     {
         name: "P&O Package",
-        image: "/images/home/our-3d-packages/image-3.png"
+        image: "/images/home/our-3d-packages/image-3.png",
+        link: "/3d-printing-packagefor-po-devices"
     }
 ];
 
@@ -26,7 +30,7 @@ const AboutPackageGrid = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {packages.map((pkg, index) => (
-                        <div key={index} className="group cursor-pointer">
+                        <Link href={pkg.link} key={index} className="group cursor-pointer block">
                             <div className="relative h-[250px] md:h-[300px] rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white p-4">
                                 <div className="relative w-full h-full overflow-hidden rounded-2xl">
                                     <Image
@@ -42,7 +46,7 @@ const AboutPackageGrid = () => {
                                     {pkg.name}
                                 </h3>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

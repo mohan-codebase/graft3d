@@ -11,21 +11,21 @@ const blogs = [
         title: "OralCase Study on replacing Cancer infected Nose with Artificial Nose Prosthesis",
         date: "June 21, 2021",
         image: "/images/home/blogs/blog-1.png",
-        link: "/blogs/case-study-nose-prosthesis"
+        link: "/artificial-nasal-prosthesis-case-study"
     },
     {
         id: 2,
         title: "OralCase Study on replacing Cancer infected Nose with Artificial Nose Prosthesis",
         date: "June 21, 2021",
         image: "/images/home/blogs/blog-2.png",
-        link: "/blogs/case-study-nose-prosthesis"
+        link: "#"
     },
     {
         id: 3,
         title: "OralCase Study on replacing Cancer infected Nose with Artificial Nose Prosthesis",
         date: "June 21, 2021",
         image: "/images/home/blogs/blog-3.png",
-        link: "/blogs/case-study-nose-prosthesis"
+        link: "#"
     },
 ];
 

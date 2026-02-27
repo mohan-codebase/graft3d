@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Phone, Mail, Video } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/images/einscan-medixa/wave-bg.png"
-                    alt="Wave Background"
+                    alt=""
                     fill
                     className="object-cover object-center opacity-70"
                     priority
@@ -29,11 +30,15 @@ const Hero = () => {
 
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                                 <Button className="flex-1 sm:flex-initial rounded-full px-8 py-6 text-[15px] font-semibold bg-[#0066b2] hover:bg-[#005596] text-white flex items-center gap-2">
-                                    Meet Us Live Online
-                                    <Video size={18} className="ml-1" />
+                                    <Link href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success">
+                                        Meet Us Live Online
+                                        <Video size={18} className="ml-1" />
+                                    </Link>
                                 </Button>
                                 <Button className="flex-1 sm:flex-initial rounded-full px-8 py-6 text-[15px] font-semibold bg-white text-[#0066b2] border-2 border-[#0066b2] hover:bg-blue-50">
-                                    Get a Quote Now
+                                    <Link href="/get-quote">
+                                        Get a Quote Now
+                                    </Link>
                                 </Button>
                             </div>
                         </div>

@@ -13,28 +13,41 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const BANNER_SLIDES = [
+
+  // 1. Geomagic Freeform With Haptic
   {
-    id: 1,
-
-    title: "Medical 3D Filaments",
-    description: "Polyetheretherketone (PEEK), Polymethyl Methacrylate (PMMA), Polycarbonate (PC)",
-    desktopImage: "/images/home/banner/slide-5.png",
-    mobileImage: "/images/home/banner/slide-5.png",
-    imageAlt: "Medical 3D Filaments",
-
-
-  },
-  {
-    id: 2,
-    subtitle: <span className="text-gray-500 font-medium text-lg block mb-2 text-left">Medical 3D Printer</span>,
-    title: "Funmat Pro 410",
-    description: "Self-Developed FFF (Fused Filament Fabrication) Core Technologies",
-    desktopImage: "/images/home/banner/slide-4.png",
-    mobileImage: "/images/home/banner/slide-4.png",
-    imageAlt: "Funmat Pro 410 Medical 3D Printer",
+    id: 4,
+    title: <>Geomagic Freeform <span className="text-black">With</span><br /><span className="text-black">Haptic</span></>,
+    description: "Comprehensive Medical Design Software For Custom Medical Devices",
+    desktopImage: "/images/home/banner/slide-1-mobile.png",
+    mobileImage: "/images/home/banner/slide-1-mobile.png",
+    imageAlt: "Geomagic Freeform Medical Design Software",
     titlePrimary: true,
-    imageRight: true,
+    extraButtons: (
+      <Button asChild variant="default" className="rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/30 mb-8">
+        <Link href="/geomagic-freeform-with-haptic">Know More</Link>
+      </Button>
+    )
   },
+
+  // 2. Medical 3D Printing Solution Provider
+  {
+    id: 5,
+    subtitle: "Graft3D Healthcare",
+    title: <>Medical 3D Printing<br />Solution Provider</>,
+    description: "We Design and Develop Custom Healthcare 3D printed products, Healthcare 3D printing packages and Healthcare 3D services for hospitals and surgeons.",
+    desktopImage: "/images/home/banner/slide-3-mobile.png",
+    mobileImage: "/images/home/banner/slide-3-mobile.png",
+    imageAlt: "Graft3D Healthcare Solution Provider",
+    contentAlignCenter: false, // For lg:items-start
+    extraButtons: (
+      <Button asChild variant="default" className="rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/30 mb-8">
+        <Link href="/medical-3d-printing-service">Know More</Link>
+      </Button>
+    )
+  },
+
+  // 3. EinScan Medixa
   {
     id: 3,
     title: "EinScan Medixa",
@@ -45,34 +58,67 @@ const BANNER_SLIDES = [
     titleLarge: true,
     extraButtons: (
       <div className="flex flex-wrap justify-start gap-4 mb-8">
-        <Button className="rounded-full px-6 py-5" variant="default">
-          Meet Us Live Online
+        <Button asChild className="rounded-full px-6 py-5" variant="default">
+          <Link href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success">Meet Us Live Online</Link>
         </Button>
-        <Button className="rounded-full px-6 py-5 bg-white text-primary border border-primary hover:bg-blue-50">
-          Get a Quote Now
+        <Button asChild className="rounded-full px-6 py-5 bg-white text-primary border border-primary hover:bg-blue-50">
+          <Link href="/get-quote">Get a Quote Now</Link>
+        </Button>
+        <Button asChild className="rounded-full px-6 py-5 bg-white text-primary border border-primary hover:bg-blue-50">
+          <Link href="/einscan-medixa">Know More</Link>
         </Button>
       </div>
     )
   },
+  
+  // 4. Funmat Pro 410
   {
-    id: 4,
-    title: <>Geomagic Freeform <span className="text-black">With</span><br /><span className="text-black">Haptic</span></>,
-    description: "Comprehensive Medical Design Software For Custom Medical Devices",
-    desktopImage: "/images/home/banner/slide-1-mobile.png",
-    mobileImage: "/images/home/banner/slide-1-mobile.png",
-    imageAlt: "Geomagic Freeform Medical Design Software",
+    id: 2,
+    subtitle: <span className="text-gray-500 font-medium text-lg block mb-2 text-left">Medical 3D Printer</span>,
+    title: "Funmat Pro 410",
+    description: "Self-Developed FFF (Fused Filament Fabrication) Core Technologies",
+    desktopImage: "/images/home/banner/slide-4.png",
+    mobileImage: "/images/home/banner/slide-4.png",
+    imageAlt: "Funmat Pro 410 Medical 3D Printer",
     titlePrimary: true,
+    imageRight: true,
+    extraButtons: (
+      <Button asChild variant="default" className="rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/30 mb-8">
+        <Link href="/funmat-pro-410">Know More</Link>
+      </Button>
+    )
   },
+  // 5. Medical 3D Filaments
   {
-    id: 5,
-    subtitle: "Graft3D Healthcare",
-    title: <>Medical 3D Printing<br />Solution Provider</>,
-    description: "We Design and Develop Custom Healthcare 3D printed products, Healthcare 3D printing packages and Healthcare 3D services for hospitals and surgeons.",
-    desktopImage: "/images/home/banner/slide-3-mobile.png",
-    mobileImage: "/images/home/banner/slide-3-mobile.png",
-    imageAlt: "Graft3D Healthcare Solution Provider",
-    contentAlignCenter: false, // For lg:items-start
+    id: 1,
+    title: "Medical 3D Filaments",
+    desktopImage: "/images/home/banner/slide-5.png",
+    mobileImage: "/images/home/banner/slide-5.png",
+    imageAlt: "Medical 3D Filaments",
+    extraButtons: (
+      <div className="flex flex-col gap-4 mb-8">
+        <Button
+          asChild
+          className="rounded-full px-8 py-4 h-auto font-bold text-lg bg-white text-primary border border-primary hover:bg-blue-50 w-fit"
+        >
+          <Link href="/polyetheretherketone-peek">Polyetheretherketone (PEEK)</Link>
+        </Button>
+        <Button
+          asChild
+          className="rounded-full px-8 py-4 h-auto font-bold text-lg bg-white text-primary border border-primary hover:bg-blue-50 w-fit"
+        >
+          <Link href="/polymethyl-methacrylate-pmma">Polymethyl Methacrylate (PMMA)</Link>
+        </Button>
+        <Button
+          asChild
+          className="rounded-full px-8 py-4 h-auto font-bold text-lg bg-white text-primary border border-primary hover:bg-blue-50 w-fit"
+        >
+          <Link href="/polycarbonate-pc">Polycarbonate (PC)</Link>
+        </Button>
+      </div>
+    )
   }
+
 ];
 
 const BannerCarousel = () => {
@@ -89,7 +135,7 @@ const BannerCarousel = () => {
         >
           {BANNER_SLIDES.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <Link href="/contact-us" className="block w-full h-full group">
+              <div className="block w-full h-full group">
                 <div className="w-full flex flex-col lg:block min-h-[500px] lg:h-[600px] relative ">
                   {/* Content Container */}
                   <div className={`w-full lg:absolute lg:inset-0 z-20 max-w-[1400px] mx-auto px-4 flex flex-col items-start justify-center lg:items-start lg:justify-center py-12 lg:py-0 h-full`}>
@@ -113,10 +159,6 @@ const BannerCarousel = () => {
                       {slide.extraButtons}
 
                       <BannerContactInfo />
-
-                      <Button variant="default" className="rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/30">
-                        Know More
-                      </Button>
                     </div>
                   </div>
 
@@ -142,7 +184,7 @@ const BannerCarousel = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

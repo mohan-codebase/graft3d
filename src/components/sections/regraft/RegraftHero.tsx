@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 const RegraftHero = () => {
   return (
@@ -36,10 +37,10 @@ const RegraftHero = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button className="flex-1 sm:flex-initial rounded-md px-8 py-6 text-base font-semibold shadow-md bg-[#0066b2] hover:bg-[#005596]">
-                Enquire now
+                <Link href="/get-quote">Enquire now</Link>
               </Button>
               <Button className="flex-1 sm:flex-initial rounded-md px-8 py-6 text-base font-semibold shadow-md bg-[#0066b2] hover:bg-[#005596]">
-                Book 3D Scanning Appointment
+                <Link href="/get-quote">Book 3D Scanning Appointment</Link>
               </Button>
             </div>
 

@@ -12,13 +12,12 @@ const Specifications = () => {
                 <div className="mx-auto max-w-5xl">
                     <div className="relative aspect-[16/10] w-full overflow-hidden">
                         <Image
-                            src="/images/einscan-h2/specification.png"
+                            src="/images/einscan-h2-human-body-bodyparts-3d-scanner/Table.png"
                             alt="Einscan H2 Specifications"
                             fill
                             className="object-contain"
                         />
                     </div>
-                    <p className="text-center text-sm text-gray-600 mt-4">* Volumetric accuracy refers to the relationship between 3D data accuracy and object size; the accuracy is reduced by 0.1mm per 100cm(standard scan & body scan). The conclusion is obtained by measuring the center of sphere under marker alignment.</p>
                 </div>
             </div>
         </section>

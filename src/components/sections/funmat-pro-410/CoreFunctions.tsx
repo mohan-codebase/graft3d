@@ -30,29 +30,43 @@ const tableData = {
 
 const CoreFunctions = () => {
   return (
-    <section className="w-full py-16 bg-[#f5f9ff]">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <h2 className="text-3xl font-bold text-black mb-2">Core Functions</h2>
-        <p className="text-gray-600 mb-8">INTAM Cloud Smart Manufacturing Ecology</p>
+    <section className="w-full py-16 bg-[#f4f8fc]">
+      <div className="max-w-[1200px] mx-auto px-4 flex flex-col items-center">
+        {/* Titles */}
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1f6cbd] mb-4 text-center">
+          Core Functions
+        </h2>
+        <p className="text-gray-800 text-lg md:text-xl font-bold mb-10 text-center">
+          INTAM™ Cloud Smart Manufacturing Ecology
+        </p>
 
-        <div className="overflow-x-auto bg-white rounded-2xl shadow-sm">
-          <table className="w-full min-w-[720px]">
+        {/* Table Container */}
+        <div className="w-full overflow-x-auto bg-[#fafafa] rounded-2xl border border-gray-200 shadow-sm max-w-[1000px]">
+          <table className="w-full min-w-[720px] table-fixed">
+            {/* Headers */}
             <thead>
-              <tr className="bg-[#e6f4ff] text-black">
-                {tableData.headers.map((header) => (
-                  <th key={header} className="text-left p-4 text-sm font-semibold">
+              <tr className="bg-[#1f73b7] text-white">
+                {tableData.headers.map((header, idx) => (
+                  <th
+                    key={header}
+                    className={`py-5 px-6 text-center text-sm md:text-base font-bold ${idx !== tableData.headers.length - 1 ? "border-r border-[#438bc5]" : ""
+                      }`}
+                  >
                     {header}
                   </th>
                 ))}
               </tr>
             </thead>
+
+            {/* Body */}
             <tbody>
-              <tr className="align-top">
-                {tableData.columns.map((items, idx) => (
-                  <td key={tableData.headers[idx]} className="p-4">
-                    <ul className="list-disc pl-5 text-gray-700 space-y-2 text-sm">
+              <tr className="align-top divide-x divide-gray-100">
+                {tableData.columns.map((items, colIdx) => (
+                  <td key={tableData.headers[colIdx]} className="p-6 md:p-8 w-1/3">
+                    <ul className={`list-disc pl-5 space-y-3 text-sm font-medium ${colIdx === 2 ? "text-gray-500" : "text-gray-800"
+                      }`}>
                       {items.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item} className="leading-snug">{item}</li>
                       ))}
                     </ul>
                   </td>
@@ -62,8 +76,9 @@ const CoreFunctions = () => {
           </table>
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <Button asChild className="rounded-full px-6 py-4">
+        {/* Action Button */}
+        <div className="mt-12 flex justify-center">
+          <Button asChild className="rounded-full px-8 py-6 bg-white text-[#1f73b7] border-2 border-[#1f73b7] hover:bg-blue-50 font-bold text-[15px] shadow-sm transition-colors">
             <a
               href="https://graft3d.com/wp-content/uploads/2026/01/Intamsys-EN-Brochure-FUNMAT-PRO-41O_compressed.pdf"
               download

@@ -10,6 +10,7 @@ const products = [
         image: '/images/regraft-customised-plates/image-2.png',
         alt: 'Regraft POS - Virtual Surgical Planning in Orthognathic Surgery',
         reverse: false,
+        link: '/virtual-surgical-planning-in-orthognathic-surgery'
     },
     {
         title: 'Regraft PFT - Virtual Surgical Planning & Plates for Facial Trauma',
@@ -18,6 +19,7 @@ const products = [
         image: '/images/regraft-customised-plates/image-1.png',
         alt: 'Regraft PFT - Virtual Surgical Planning & Plates for Facial Trauma',
         reverse: true,
+        link: '/virtual-surgical-planning-in-orthognathic-surgery'
     },
 ];
 
@@ -42,7 +44,7 @@ export default function RegraftCustomisedPlatesProducts() {
                         <div className={product.reverse ? '' : 'order-2 lg:order-1'}>
                             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{product.title}</h2>
                             <p className="mb-6 text-lg leading-relaxed text-gray-700">{product.description}</p>
-                            <Link href="/contact-us">
+                            <Link href={product.link || "/contact-us"}>
                                 <Button className="px-8 py-3 text-lg font-semibold">Know more</Button>
                             </Link>
                         </div>

@@ -18,19 +18,28 @@ const locations = [
         city: "Bengaluru",
         type: "Branch Office",
         address: "No. 2501, IV Phase, 2nd Floor, 8th Cross Rd, Ganapathi Nagar, Phase 2, Peenya, Bengaluru, Karnataka 560058.",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.000000000000!3d13.010000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d8800000001%3A0x0000000000000000!2sPeenya!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7774.421285342143!2d77.514055!3d13.022254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d468e2f9eb3%3A0x7f0432eccd16b9ce!2sPrecise3DM%20Bangalore%20-%203D%20Scanning%20Service%20%7C%20Reverse%20Engineering%20Service%20%7C%203D%20Printing%20Service!5e0!3m2!1sen!2sin!4v1772187543706!5m2!1sen!2sin"
     }
 ];
 
 const ContactLocations = () => {
     return (
-        <section className="w-full py-20 bg-primary">
-            <div className="max-w-[1400px] mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="w-full py-20 bg-[#2270AF]">
+            <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                     {locations.map((loc, index) => (
-                        <div key={index} className="bg-white  overflow-hidden shadow-xl border border-blue-100 group hover:-translate-y-2 transition-transform duration-500">
-                            {/* Map Placeholder */}
-                            <div className="relative h-[250px] w-full overflow-hidden">
+                        <div key={index} className="flex flex-col text-white">
+                            {/* Headings */}
+                            <h2 className="text-[26px] font-extrabold mb-3 tracking-wide">Office locations</h2>
+                            <div className="text-[17px] font-medium opacity-90 mb-5">{loc.type}</div>
+
+                            {/* City Title with Icon */}
+                            <h3 className="text-xl font-bold flex items-center gap-2 mb-4">
+                                <MapPin className="w-5 h-5" strokeWidth={2.5} /> {loc.city}
+                            </h3>
+
+                            {/* Map */}
+                            <div className="relative h-[280px] w-full overflow-hidden rounded mb-6">
                                 <iframe
                                     src={loc.mapUrl}
                                     width="100%"
@@ -39,21 +48,14 @@ const ContactLocations = () => {
                                     allowFullScreen={true}
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    className="grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    className="grayscale-[20%] transition-all duration-700"
                                 ></iframe>
                             </div>
 
-                            <div className="p-8 space-y-4">
-                                <div>
-                                    <div className="text-[#166AAF] font-bold text-sm uppercase tracking-wider mb-1">{loc.type}</div>
-                                    <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                                        <MapPin className="w-6 h-6 text-[#166AAF]" /> {loc.city}
-                                    </h3>
-                                </div>
-                                <p className="text-gray-600 leading-relaxed text-[15px] font-medium min-h-[80px]">
-                                    {loc.address}
-                                </p>
-                            </div>
+                            {/* Address */}
+                            <p className="text-[14px] leading-relaxed font-bold tracking-wide w-[90%]">
+                                {loc.address}
+                            </p>
                         </div>
                     ))}
                 </div>

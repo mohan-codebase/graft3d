@@ -46,7 +46,7 @@ const TechnicalSpecifications = () => {
                 {/* Download Brochure Button */}
                 <div className="flex justify-center mt-10">
                     <a
-                        href="#"
+                        href="https://graft3d.com/wp-content/uploads/2026/01/EinScan-Medixa-Graft3D.pdf"
                         className="inline-flex items-center gap-2 bg-[#1b4e8e] hover:bg-[#153d72] text-white font-semibold text-[15px] px-8 py-3 rounded-full transition-colors duration-200 shadow-md"
                     >
                         Download Brochure

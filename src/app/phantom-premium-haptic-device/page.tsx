@@ -11,6 +11,7 @@ import FaqAccordion from '@/components/common/FaqAccordion';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 interface CaseStudy {
     image: string;
@@ -35,20 +36,24 @@ const caseStudies: CaseStudy[] = [
 interface RelatedProduct {
     image: string;
     name: string;
+    link: string;
 }
 
 const relatedProducts: RelatedProduct[] = [
     {
         image: "/images/gio-touch/gio9.png",
-        name: "Geomagic Freeform"
+        name: "Geomagic Freeform",
+        link: "#"
     },
     {
         image: "/images/gio-touch/gio10.png",
-        name: "Einscan HX"
+        name: "Einscan HX",
+        link: "/human-body-parts-3d-scanner"
     },
     {
         image: "/images/gio-touch/gio11.jpg",
-        name: "Haptic Device"
+        name: "Haptic Device",
+        link: "/dicom-to-3d-model-conversion-software"
     }
 ];
 
@@ -157,9 +162,9 @@ export default function PhantomPremiumPage() {
                         <div className="max-w-2xl">
                             {/* Note: The image already contains "Phantom Premium" text */}
                             <div>
-                                <button className="rounded-md bg-[#336699] px-8 py-3 text-lg font-bold text-white transition-all hover:bg-[#285580] hover:shadow-lg active:scale-95">
+                                <Link href="/get-quote" className="rounded-md bg-[#336699] px-8 py-3 text-lg font-bold text-white transition-all hover:bg-[#285580] hover:shadow-lg active:scale-95">
                                     Enquire Now
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -436,7 +441,7 @@ export default function PhantomPremiumPage() {
 
                                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
                                     {relatedProducts.map((product, index) => (
-                                        <div key={index} className="flex flex-col items-center group">
+                                        <Link href={product.link} key={index} className="flex flex-col items-center group">
                                             <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-blue-50 bg-white transition-all duration-500 hover:shadow-xl">
                                                 <Image
                                                     src={product.image}
@@ -450,7 +455,7 @@ export default function PhantomPremiumPage() {
                                                     {product.name}
                                                 </button>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>

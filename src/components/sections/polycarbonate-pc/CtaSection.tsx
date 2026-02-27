@@ -19,7 +19,7 @@ const CtaSection = () => {
             Polycarbonate <span className="text-[#565656]">(PC)</span>
           </h2>
           <Button asChild className="rounded-full px-6 py-4 mt-6">
-            <a href="https://graft3d.com/contact-us/" target="_blank" rel="noreferrer">
+            <a href="/contact-us">
               Book a Live Demo
             </a>
           </Button>

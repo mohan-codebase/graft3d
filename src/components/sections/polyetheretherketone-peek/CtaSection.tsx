@@ -25,9 +25,7 @@ const CtaSection = () => {
             </h2>
             <div>
               <a
-                href="https://graft3d.com/contact-us/"
-                target="_blank"
-                rel="noreferrer"
+                href="/contact-us"
                 className="inline-block bg-[#1b4e8e] hover:bg-[#153d72] text-white font-semibold text-[15px] px-6 py-3 rounded-full transition-colors duration-200 shadow-md"
               >
                 Book a Live Demo

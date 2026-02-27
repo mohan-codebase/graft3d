@@ -18,7 +18,7 @@ const CtaSection = () => {
           <h2 className="text-3xl font-bold text-black">Polymethyl Methacrylate</h2>
           <h3 className="text-3xl font-bold text-primary mb-6">(PMMA)</h3>
           <Button asChild className="rounded-full px-6 py-4">
-            <a href="https://graft3d.com/contact-us/" target="_blank" rel="noreferrer">
+            <a href="/contact-us">
               Book a Live Demo
             </a>
           </Button>

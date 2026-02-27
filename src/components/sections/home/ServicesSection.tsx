@@ -14,7 +14,7 @@ const services = [
             "Medical professionals can use our segmented models for 3D printing, visualization, pre-surgical planning, and patient education. Our 3D models can also be used as a source to design Custom Implants or Medical Devices in any medical design software."
         ],
         image: "/images/home/services-section/image-1.png",
-        link: "/medical-image-segmentation-service"
+        link: "/dicom-to-3d-model-conversion-software"
     },
     {
         id: 1,
@@ -24,7 +24,7 @@ const services = [
             "We work closely with surgeons to develop solutions that improve surgical outcomes and reduce recovery times. Our design process integrates seamlessly with clinical workflows."
         ],
         image: "/images/home/services-section/image-2.png",
-        link: "/bio-cad-modeling-service"
+        link: "/medical-image-segmentation-service"
     },
     {
         id: 2,
@@ -34,7 +34,7 @@ const services = [
             "Our facility is equipped to handle various printing technologies including SLA, SLS, and FDM, ensuring the right material properties for every medical application."
         ],
         image: "/images/home/services-section/image-3.png",
-        link: "/medical-3d-printing-service"
+        link: "/bio-cad-modeling-service"
     }
 ];
 

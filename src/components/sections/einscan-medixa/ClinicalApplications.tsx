@@ -45,7 +45,7 @@ const ClinicalApplications = () => {
                     {applications.map((app, index) => (
                         <div
                             key={index}
-                            className="relative w-full h-[200px] rounded-2xl overflow-hidden group"
+                            className="relative w-full h-[400px] rounded-2xl overflow-hidden group"
                         >
                             {/* Background Image */}
                             <Image

@@ -53,13 +53,13 @@ const Footer = () => {
                         <h3 className="text-primary font-bold text-lg">Quick Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <li><Link href="/healthcare-3d-printed-products" className="hover:text-primary transition-colors">3D Printed Products</Link></li>
-                            <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
+                            <li><Link href="/healthcare-3d-tech-products" className="hover:text-primary transition-colors">3D Tech Products</Link></li>
                             <li><Link href="/3d-packages" className="hover:text-primary transition-colors">3D Packages</Link></li>
                             <li><Link href="/medical-3d-printing-service" className="hover:text-primary transition-colors">3D Services</Link></li>
-                            <li><Link href="/medical-image-segmentation-service" className="hover:text-primary transition-colors">Explore DICOM to 3D</Link></li>
-                            <li><Link href="/contact-us" className="hover:text-primary transition-colors">Events</Link></li>
-                            <li><Link href="/contact-us" className="hover:text-primary transition-colors">Collaborate with Us</Link></li>
-                            <li><Link href="/resources/blogs" className="hover:text-primary transition-colors">Blogs</Link></li>
+                            <li><Link href="/" className="hover:text-primary transition-colors">Explore DICOM to 3D</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Events</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Collaborate with Us</Link></li>
+                            <li><Link href="/artificial-nasal-prosthesis-case-study" className="hover:text-primary transition-colors">Blogs</Link></li>
                         </ul>
                     </div>
 
@@ -67,8 +67,8 @@ const Footer = () => {
                     <div className="flex flex-col gap-4">
                         <h3 className="text-primary font-bold text-lg">Important Links</h3>
                         <ul className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
-                            <li><Link href="#" className="hover:text-primary transition-colors">About us</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Shop</Link></li>
+                            <li><Link href="/about-us" className="hover:text-primary transition-colors">About us</Link></li>
+                            <li><Link href="/shop" className="hover:text-primary transition-colors">Shop</Link></li>
                             <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="/shipping-policy" className="hover:text-primary transition-colors">Shipping policy</Link></li>
                             <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
@@ -82,28 +82,28 @@ const Footer = () => {
                         <div className="flex flex-col gap-3 font-medium text-gray-600 text-[15px]">
                             <div className="flex items-start gap-2">
                                 <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
-                                <div>Sales: +91 98404 78347</div>
+                                <div>Sales: <a href="tel:+919840478347" className="hover:text-primary transition-colors hover:underline">+91 98404 78347</a></div>
                             </div>
                             <div className="flex items-start gap-2">
                                 <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg></span>
-                                <div>Sales: +91 63744 10703</div>
+                                <div>Sales: <a href="tel:+916374410703" className="hover:text-primary transition-colors hover:underline">+91 63744 10703</a></div>
                             </div>
                             <div className="flex items-start gap-2">
                                 <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg></span>
-                                <div>Email : sales@graft3d.com</div>
+                                <div>Email : <a href="mailto:sales@graft3d.com" className="hover:text-primary transition-colors hover:underline">sales@graft3d.com</a></div>
                             </div>
                             <div className="flex items-start gap-2">
                                 <span className="mt-1 text-primary"><svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg></span>
-                                <div className="leading-relaxed">
-                                    <span className="font-bold block text-gray-800">Reach Us</span>
-                                    <span className="text-primary font-semibold block">Graft3D Health Care Solutions Pvt. Ltd.</span>
-                                    4/261, 1st Floor, Rajas Towers Medavakkam Main Road, Kovilambakkam Chennai - 600129, Tamil Nadu, India.
-                                </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer" className="leading-relaxed hover:text-primary transition-colors group">
+                                    <span className="font-bold block text-gray-800 group-hover:text-primary transition-colors">Reach Us</span>
+                                    <span className="text-primary font-semibold block group-hover:underline">Graft3D Health Care Solutions Pvt. Ltd.</span>
+                                    <span className="group-hover:underline">4/261, 1st Floor, Rajas Towers Medavakkam Main Road, Kovilambakkam Chennai - 600129, Tamil Nadu, India.</span>
+                                </a>
                             </div>
                         </div>
 
-                        <Link href="/contact-us">
-                            <Button className="w-fit mt-2 font-bold px-6">
+                        <Link className='pointer' href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success">
+                            <Button className="w-fit mt-2 font-bold px-6 pointer">
                                 Meet us live online
                             </Button>
                         </Link>
