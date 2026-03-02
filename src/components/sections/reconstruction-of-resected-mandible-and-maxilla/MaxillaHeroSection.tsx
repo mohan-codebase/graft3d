@@ -26,7 +26,7 @@ const MaxillaHeroSection = () => {
                                 </Link>
                             </Button>
                             <Button asChild className="rounded-full border-2 border-[#1a5b9e] bg-transparent text-[#1a5b9e] hover:bg-[#f0f7fb] font-bold px-8 py-6 w-fit shadow-md text-[15px] transition-colors">
-                                <Link href="/contact-us">
+                                <Link href="/get-a-quote">
                                     Get a Quote Now
                                 </Link>
                             </Button>

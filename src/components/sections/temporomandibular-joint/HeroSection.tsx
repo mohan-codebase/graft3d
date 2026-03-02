@@ -27,7 +27,7 @@ const HeroSection = () => {
                                 Meet Us Live Online
                             </Link>
                             <Link
-                                href="/contact-us"
+                                href="/get-a-quote"
                                 className="rounded-full border-2 border-[#005696] px-8 py-3 text-lg font-semibold text-[#005696] transition-all hover:bg-[#005696] hover:text-white"
                             >
                                 Get a Quote Now
