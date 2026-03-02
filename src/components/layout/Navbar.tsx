@@ -245,7 +245,7 @@ const Navbar = () => {
                                             className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
-                                            Virtual Surgical Planning
+                                           Virtual Surgical Planning for Mandibular Reconstruction
                                         </Link>
                                     </div>
                                 )}
@@ -400,7 +400,7 @@ const Navbar = () => {
                                     <div className="hidden group-hover/blogs:block absolute left-full top-0 bg-white shadow-xl border-l border-gray-200 min-w-[320px] animate-fade-in-right">
                                         <div className="py-2 flex flex-col">
                                             <Link href="/artificial-nasal-prosthesis-case-study" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Nasal Prosthesis</Link>
-                                            <Link href="/virtual-surgical-planning-mandibular-reconstruction" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Virtual Surgical Planning</Link>
+                                            <Link href="/virtual-surgical-planning-mandibular-reconstruction" className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">Virtual Surgical Planning for Mandibular Reconstruction</Link>
                                         </div>
                                     </div>
                                 </div>

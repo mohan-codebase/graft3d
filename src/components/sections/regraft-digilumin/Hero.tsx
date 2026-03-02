@@ -22,7 +22,7 @@ const Hero = () => {
                     </h1>
                     <div className="mt-6">
                         <a
-                            href="/contact-us"
+                            href="/get-a-quote"
                             className="inline-block bg-[#041b4d] text-white font-bold text-[15px] px-8 py-3 rounded-sm hover:bg-[#0a2d6e] transition-colors duration-200 shadow-md"
                         >
                             Enquire Now
