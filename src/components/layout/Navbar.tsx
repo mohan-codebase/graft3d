@@ -149,11 +149,11 @@ const Navbar = () => {
                                                 </div>
                                                 {activeSubSubDropdown === 'regraft' && (
                                                     <div className="pl-4 flex flex-col gap-2 pt-1 border-l border-gray-200">
-                                                        <Link href="/regraft-artibone" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Recraft Airbone</Link>
-                                                        <Link href="/regraft-bonerip" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Recraft Bonerip</Link>
-                                                        <Link href="/regraft-customised-plates" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Recraft Customised Plates</Link>
-                                                        <Link href="/healthcare-3d-printed-products" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Recraft Arti nose & Arti ear</Link>
-                                                        <Link href="/healthcare-3d-printed-products" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Digilumin</Link>
+                                                        <Link href="/regraft-artibone" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Airbone</Link>
+                                                        <Link href="/regraft-bonerip" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Bonerip</Link>
+                                                        <Link href="/regraft-customised-plates" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Customised Plates</Link>
+                                                        <Link href="/regraft-arti-nose-arti-ear" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Arti nose & Arti ear</Link>
+                                                        <Link href="/regraft-digilumin" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Digilumin</Link>
                                                     </div>
                                                 )}
                                                 <Link href="/3d-printed-patient-specific-implant" className="transition-colors border-b border-gray-800 pb-1" onClick={() => setIsMobileMenuOpen(false)}>Patient Specific Implant</Link>
@@ -324,11 +324,11 @@ const Navbar = () => {
                                                 </Link>
                                                 <div className="hidden group-hover/sub2:block absolute left-full bg-white top-0 shadow-xl  border-gray-800 min-w-[240px] animate-fade-in-right">
                                                     <div className="py-2 flex flex-col max-h-[400px] overflow-y-auto custom-scrollbar">
-                                                        <Link href="/regraft-artibone" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Recraft Airbone</Link>
-                                                        <Link href="/regraft-bonerip" className="px-6 py-3  text-[13px]  transition-colors border-b border-gray-800">Recraft Bonerip</Link>
-                                                        <Link href="/regraft-customised-plates" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Recraft Customised Plates</Link>
-                                                        <Link href="/healthcare-3d-printed-products" className="px-6 py-3 text-[13px]  transition-colors border-b border-gray-800">Recraft Arti nose & Arti ear</Link>
-                                                        <Link href="/healthcare-3d-printed-products" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Digilumin</Link>
+                                                        <Link href="/regraft-artibone" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Airbone</Link>
+                                                        <Link href="/regraft-bonerip" className="px-6 py-3  text-[13px]  transition-colors border-b border-gray-800">Regraft Bonerip</Link>
+                                                        <Link href="/regraft-customised-plates" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Customised Plates</Link>
+                                                        <Link href="/regraft-arti-nose-arti-ear" className="px-6 py-3 text-[13px]  transition-colors border-b border-gray-800">Regraft Arti nose & Arti ear</Link>
+                                                        <Link href="/regraft-digilumin" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Digilumin</Link>
                                                     </div>
                                                 </div>
                                             </div>
