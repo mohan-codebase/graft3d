@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 };
 
-import GetQuoteForm from "../components/sections/get-quote/GetQuoteForm";
+
 
 export default function RootLayout({
   children,
@@ -50,16 +50,7 @@ export default function RootLayout({
         <Navbar />
         {children}
 
-        {/* Global Quote Form Section */}
-        <section className="w-full bg-[#f4f7f8] py-16 px-4">
-          <div className="max-w-[800px] mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-[#1e73be] mb-3">Get a Quote</h2>
-              <p className="text-gray-600">Fill out the form below and our team will get back to you shortly.</p>
-            </div>
-            <GetQuoteForm />
-          </div>
-        </section>
+
 
         <Footer />
         <FloatingButtons />
