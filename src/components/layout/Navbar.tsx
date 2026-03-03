@@ -173,13 +173,13 @@ const Navbar = () => {
                                         </div>
                                         {activeSubDropdown === 'tech' && (
                                             <div className="pl-4 flex flex-col gap-2 pt-2 border-l border-gray-200">
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan-medixa</Link>
+                                                <Link href="/einscan-medixa" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan-medixa</Link>
                                                 <Link href="/funmat-pro-410" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Funmat pro 410</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Freeform</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>D2P</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Touch & Touch X</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan H2</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Phantom Premium</Link>
+                                                <Link href="/geomagic-freeform" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Freeform</Link>
+                                                <Link href="/d2p" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>D2P</Link>
+                                                <Link href="/geomagic-touch-touch-x" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Touch & Touch X</Link>
+                                                <Link href="/einscan-h2" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan H2</Link>
+                                                <Link href="/phantom-premium" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Phantom Premium</Link>
                                             </div>
                                         )}
                                     </div>
@@ -347,13 +347,13 @@ const Navbar = () => {
                                     </Link>
                                     <div className="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-xl border-l border-gray-800 min-w-[200px] animate-fade-in-right">
                                         <div className="py-2 flex flex-col">
-                                            <Link href="/" className="px-6 py-3  text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan-medixa</Link>
+                                            <Link href="/einscan-medixa" className="px-6 py-3  text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan-medixa</Link>
                                             <Link href="/funmat-pro-410" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Funmat pro 410</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Freeform</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">D2P</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Touch & Touch X</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan H2</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Phantom Premium</Link>
+                                            <Link href="/geomagic-freeform" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Freeform</Link>
+                                            <Link href="/d2p" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">D2P</Link>
+                                            <Link href="/geomagic-touch-touch-x" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Touch & Touch X</Link>
+                                            <Link href="/einscan-h2" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan H2</Link>
+                                            <Link href="/phantom-premium" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Phantom Premium</Link>
                                         </div>
                                     </div>
                                 </div>
