@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 const packages = [
     {
-        name: "Anatomical model+message (AMT)",
+        name: "Anatomical Model Package (AMP)",
         image: "/images/home/our-3d-packages/image-1.png",
-        link: "#" // Fallback to main packages page if no specific page exists
+        link: "/asthi-bone-like-3d-printed-training-models"
     },
     {
         name: "R&D Device Package",

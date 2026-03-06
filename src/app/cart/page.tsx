@@ -13,7 +13,7 @@ export default function CartPage() {
                     YOUR CART IS CURRENTLY EMPTY.
                 </div>
                 <Button asChild className="uppercase text-[12px] font-bold px-6 py-2.5 tracking-wider w-fit">
-                    <Link href="/shop" className="flex items-center gap-2">
+                    <Link href="/healthcare-3d-products" className="flex items-center gap-2">
                         <ChevronLeft size={16} strokeWidth={3} className="mr-0.5" /> RETURN TO SHOP
                     </Link>
                 </Button>

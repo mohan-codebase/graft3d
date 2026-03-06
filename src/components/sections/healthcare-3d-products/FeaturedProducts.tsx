@@ -11,21 +11,21 @@ const featuredProducts = [
         image: "/images/healthcare-3d-products/regraft.jpg",
         buttonText: "Regraft",
         description: "Custom orthotic solutions",
-        link: "/regraft-product"
+        link: "/regraft"
     },
     {
         name: "Graft3DX Prost",
         image: "/images/healthcare-3d-products/graft3dx-prost.png",
         buttonText: "Graft3DX Prost",
         description: "Prosthetic ear and nose solutions",
-        link: "#"
+        link: "/regraft-arti-nose-arti-ear"
     },
     {
         name: "Dental Surgical Guide",
         image: "/images/healthcare-3d-products/dental-surgical-guide.png",
         buttonText: "Dental Surgical Guide",
         description: "Precision dental surgical guides",
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Patient Specific Implant",

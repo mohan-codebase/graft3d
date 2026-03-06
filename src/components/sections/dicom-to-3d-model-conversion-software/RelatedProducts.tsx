@@ -5,7 +5,7 @@ const products = [
     {
         title: 'Geomagic Freeform',
         image: 'https://graft3d.com/wp-content/uploads/2021/12/geomagic-freeform-01-3.png',
-        href: '#'
+        href: '/geomagic-freeform'
     },
     {
         title: 'Einscan HX',

@@ -10,7 +10,7 @@ const products = [
     {
         title: 'Einscan HX',
         image: 'https://graft3d.com/wp-content/uploads/2022/03/Einscan-Hx-e1651750527325.png',
-        href: '#'
+        href: '/einscan-h2-human-body-bodyparts-3d-scanner'
     },
     {
         title: 'Haptic Device',

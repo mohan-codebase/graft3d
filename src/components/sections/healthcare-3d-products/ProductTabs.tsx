@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const categories = [
     "All",
@@ -17,49 +18,56 @@ const products = [
         name: "Einscan Medixa",
         title: "Human Body Scanner",
         category: "Healthcare 3D Scanners",
-        image: "/images/healthcare-3d-products/einscan-medixa.png"
+        image: "/images/healthcare-3d-products/funmat-pro-410.webp",
+        link: "/einscan-medixa"
     },
     {
         id: 2,
         name: "Funmat pro 410",
         title: "Medical 3D Printer",
         category: "All",
-        image: "/images/healthcare-3d-products/funmat-pro-410.webp"
+        image: "/images/healthcare-3d-products/einscan-hx.jpg",
+        link: "/funmat-pro-410"
     },
     {
         id: 3,
         name: "Einscan HX",
         title: "Human Body Scanner",
         category: "Healthcare 3D Scanners",
-        image: "/images/healthcare-3d-products/einscan-hx.jpg"
+        image: "/images/healthcare-3d-products/einscan-medixa.png",
+        link: "/human-body-parts-3d-scanner"
     },
     {
         id: 4,
         name: "D2P – Bone, Vascular, Teeth",
         title: "Medical Image Conversion",
         category: "Medical Image Conversion",
-        image: "/images/healthcare-3d-products/d2p-medical-conversion.jpg"
+        image: "/images/healthcare-3d-products/d2p-medical-conversion.jpg",
+        link: "/dicom-to-3d-model-conversion-software"
     },
     {
         id: 5,
         name: "Geomagic Freeform",
         title: "Bio CAD Modeling",
         category: "Bio CAD Modeling",
-        image: "/images/healthcare-3d-products/geomagic-freeform.jpg"
+        image: "/images/healthcare-3d-products/geomagic-freeform.jpg",
+        link: "/geomagic-freeform"
     },
     {
         id: 6,
         name: "Geomagic Touch & Touch X",
         title: "Haptic Devices",
         category: "Haptic Devices",
-        image: "/images/healthcare-3d-products/geomagic-touch-02.jpg"
+        image: "/images/healthcare-3d-products/geomagic-touch-02.jpg",
+        link: "/geomagic-touch-x-haptic-device"
     },
     {
         id: 7,
         name: "Phantom Premium",
         title: "Haptic Device",
         category: "Haptic Devices",
-        image: "/images/healthcare-3d-products/phantom-premium-01.jpg"
+        image: "/images/healthcare-3d-products/phantom-premium-01.jpg",
+        link: "/phantom-premium-haptic-device"
     }
 ];
 
@@ -79,9 +87,9 @@ const ProductTabs = () => {
                         <button
                             key={category}
                             onClick={() => setActiveTab(category)}
-                            className={`px-4 md:px-8 py-3 rounded-sm font-semibold transition-all text-sm uppercase tracking-wide shadow-sm ${activeTab === category
-                                ? "bg-[#3b71ca] text-white"
-                                : "bg-[#f2f2f2] text-[#333] "
+                            className={`px-6 md:px-10 py-3.5 rounded-none font-medium transition-all text-sm tracking-wide ${activeTab === category
+                                ? "bg-[#3366cc] text-white"
+                                : "bg-[#eeeeee] text-[#333] hover:bg-[#e5e5e5]"
                                 }`}
                         >
                             {category}
@@ -92,27 +100,28 @@ const ProductTabs = () => {
                 {/* Products Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {filteredProducts.map((product) => (
-                        <div
+                        <Link
                             key={product.id}
-                            className="bg-white rounded-lg overflow-hidden group border border-[#eee] transition-all duration-300 hover:shadow-xl"
+                            href={product.link}
+                            className="bg-white rounded-[2px] overflow-hidden group border border-[#eee] transition-all duration-300 hover:shadow-md"
                         >
-                            <div className="aspect-[4/3] relative bg-[#f8f9fb] group-hover:bg-white transition-colors overflow-hidden">
+                            <div className="aspect-[4/3] relative bg-[#f2f5f9] group-hover:bg-white transition-colors overflow-hidden">
                                 <Image
                                     src={product.image}
                                     alt={product.name}
                                     fill
-                                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                    className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <div className="p-6 text-center bg-[#eff4fb]">
-                                <h3 className="text-[#0a2357] font-extrabold text-lg md:text-xl mb-1 tracking-tight">
+                            <div className="p-8 text-center bg-[#eff4fb]">
+                                <h3 className="text-[#082c6c] font-bold text-lg md:text-xl mb-1 tracking-tight">
                                     {product.title}
                                 </h3>
-                                <p className="text-[#444] text-sm md:text-base font-medium opacity-80">
+                                <p className="text-[#4b5563] text-sm md:text-base font-medium">
                                     {product.name}
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

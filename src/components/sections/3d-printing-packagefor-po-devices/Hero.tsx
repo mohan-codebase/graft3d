@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ChevronRight, Download } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -22,20 +23,20 @@ const Hero = () => {
             />
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#"
+            <Link
+              href="#book-demo"
               className="inline-flex items-center gap-2 rounded bg-[#166AAF] px-6 py-3 text-white text-sm font-medium"
             >
               <ChevronRight size={16} />
               Book Demo
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/contact-us"
               className="inline-flex items-center gap-2 rounded border border-[#166AAF] bg-white px-6 py-3 text-[#166AAF] text-sm font-medium"
             >
               <Download size={16} />
               Download Brochure
-            </a>
+            </Link>
           </div>
         </div>
 

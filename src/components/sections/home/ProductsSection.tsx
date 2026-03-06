@@ -6,7 +6,7 @@ const packages = [
     {
         title: "Graft3DX Prost",
         image: "/images/home/our-3d-printed-products/image-1.png", // Placeholder - Replace with actual image
-        link: "/3d-printed-facial-prosthetics-in-india"
+        link: "/regraft-arti-nose-arti-ear"
     },
     {
         title: "Asthi Anatomical Models",

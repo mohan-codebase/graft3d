@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = [
     "All",
@@ -15,31 +16,36 @@ const products = [
         category: "Healthcare 3D Scanners",
         title: "Human Body Scanner",
         subtitle: "Einscan H2",
-        image: "/images/einscan-h2/ein14.png"
+        image: "/images/einscan-h2/ein14.png",
+        link: "/human-body-parts-3d-scanner"
     },
     {
         category: "Medical Image Conversion",
         title: "Medical Image Conversion",
         subtitle: "D2P – Bone , Vascular , Teeth",
-        image: "/images/einscan-h2/ein15.jpg"
+        image: "/images/einscan-h2/ein15.jpg",
+        link: "/dicom-to-3d-model-conversion-software"
     },
     {
         category: "Bio CAD Modeling",
         title: "Bio CAD Modeling",
         subtitle: "Geomagic Freeform",
-        image: "/images/einscan-h2/ein16.jpg"
+        image: "/images/einscan-h2/ein16.jpg",
+        link: "/geomagic-freeform"
     },
     {
         category: "Haptic Devices",
         title: "Haptic Device",
         subtitle: "Geomagic Touch & Touch X",
-        image: "/images/einscan-h2/ein17.jpg"
+        image: "/images/einscan-h2/ein17.jpg",
+        link: "/geomagic-touch-x-haptic-device"
     },
     {
         category: "Haptic Devices",
         title: "Haptic Device",
         subtitle: "Phantom Premium",
-        image: "/images/einscan-h2/ein18.jpg"
+        image: "/images/einscan-h2/ein18.jpg",
+        link: "/phantom-premium-haptic-device"
     }
 ];
 
@@ -71,7 +77,7 @@ const RelatedProducts = () => {
                     {products
                         .filter(product => activeCategory === "All" || product.category === activeCategory)
                         .map((product, index) => (
-                            <div key={index} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md border border-gray-100">
+                            <Link key={index} href={product.link} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md border border-gray-100">
                                 <div className="relative aspect-[4/3] w-full bg-[#E6F3FF]/30 p-4">
                                     <Image
                                         src={product.image}
@@ -84,7 +90,7 @@ const RelatedProducts = () => {
                                     <h3 className="text-lg font-bold text-[#003366] mb-2">{product.title}</h3>
                                     <p className="text-gray-600">{product.subtitle}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                 </div>
             </div>

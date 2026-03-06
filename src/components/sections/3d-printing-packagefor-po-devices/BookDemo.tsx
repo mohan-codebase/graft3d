@@ -24,6 +24,7 @@ const BookDemo = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        window.location.href = '/contact-us';
     };
 
     const inputClass = 'w-full bg-white border border-gray-200 rounded px-4 py-3 text-[13px] text-gray-600 placeholder-gray-400 focus:outline-none focus:border-[#166AAF]';
@@ -31,13 +32,13 @@ const BookDemo = () => {
     return (
         <>
             {/* Blue brochure banner */}
-            <div className="bg-[#1a5fa8] py-5 px-6">
+            <div id="download-brochure" className="bg-[#1a5fa8] py-5 px-6">
                 <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
                     <p className="text-white font-bold text-[16px] leading-snug">
                         Download 3D Printing Package<br />Devices Brochure
                     </p>
                     <a
-                        href="#"
+                        href="/contact-us"
                         className="flex-shrink-0 bg-[#29a8e0] hover:bg-[#1e8fc0] text-white text-[13px] font-semibold px-5 py-2 rounded-full transition-colors flex items-center gap-2"
                     >
                         Download Brochure ⬇
@@ -46,7 +47,7 @@ const BookDemo = () => {
             </div>
 
             {/* Book A Demo form */}
-            <section className="py-14 bg-[#d8ebf7] relative overflow-hidden">
+            <section id="book-demo" className="py-14 bg-[#d8ebf7] relative overflow-hidden">
                 {/* Decorative blobs */}
                 <div className="absolute left-0 top-10 w-24 h-36 bg-[#7bbde4] rounded-r-full opacity-60" />
                 <div className="absolute right-0 bottom-10 w-24 h-36 bg-[#7bbde4] rounded-l-full opacity-60" />

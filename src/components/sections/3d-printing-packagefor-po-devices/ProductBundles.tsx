@@ -30,7 +30,7 @@ const products = [
     {
         id: 3,
         title: 'EXT 1070 Tital Pellet LT* (ATLAS 2.5) – Prosthetic 3D Printer',
-        image: '/images/3d-printing-packagefor-po-devices/Group-85.png',
+        image: '/images/3d-printing-packagefor-po-devices/Image.png',
         imageLeft: true,
         features: [
             '3D Print P&O devices with PEBA Flexible nylon pellets and mineral-filled polypropylene pellets.',

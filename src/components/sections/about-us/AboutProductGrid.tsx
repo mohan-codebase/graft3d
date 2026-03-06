@@ -6,7 +6,7 @@ const products = [
     {
         name: "Graft3DX Prost",
         image: "/images/home/our-3d-printed-products/image-1.png",
-        link: "#"
+        link: "/regraft-arti-nose-arti-ear"
     },
     {
         name: "Arti Bone and Arti ear",

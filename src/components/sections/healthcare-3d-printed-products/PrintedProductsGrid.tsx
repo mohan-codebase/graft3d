@@ -10,19 +10,19 @@ const products = [
         name: "Regraft",
         image: "/images/healthcare-3d-printed-products/regraft.jpg",
         isComingSoon: false,
-        link: "/regraft-product"
+        link: "/regraft"
     },
     {
         name: "Graft3DX Prost",
         image: "/images/healthcare-3d-printed-products/graft3dx-prost.png",
         isComingSoon: false,
-        link: "/3D-printed-facial-prosthetics-in-India"
+        link: "/regraft-arti-nose-arti-ear"
     },
     {
         name: "Dental Surgical Guide",
         image: "/images/healthcare-3d-printed-products/dental-surgical-guide.png",
         isComingSoon: false,
-        link: "/dental-surgical-guide"
+        link: "/get-quote"
     },
     {
         name: "Patient Specific Implant",
@@ -34,55 +34,55 @@ const products = [
         name: "Anatomical Model",
         image: "/images/healthcare-3d-printed-products/anatomical-model.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Ankle Foot Orthosis",
         image: "/images/healthcare-3d-printed-products/ankle-foot-orthosis.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
-        name: "Amb Limbs",
+        name: "Artificial Limbs",
         image: "/images/healthcare-3d-printed-products/amb-limbs.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Crown and Bridges",
         image: "/images/healthcare-3d-printed-products/crown-and-bridges.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Gingival Mask",
         image: "/images/healthcare-3d-printed-products/gingival-mask.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Head Splints",
         image: "/images/healthcare-3d-printed-products/head-splints.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Aligner",
         image: "/images/healthcare-3d-printed-products/aligner.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
-        name: "Longterm Denture",
+        name: "Long-term Denture",
         image: "/images/healthcare-3d-printed-products/longterm-denture.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     },
     {
         name: "Orthodontics",
         image: "/images/healthcare-3d-printed-products/orthodontics.png",
         isComingSoon: false,
-        link: "#"
+        link: "/get-quote"
     }
 ];
 

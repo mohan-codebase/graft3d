@@ -43,7 +43,7 @@ const relatedProducts: RelatedProduct[] = [
     {
         image: "/images/gio-touch/gio9.png",
         name: "Geomagic Freeform",
-        link: "#"
+        link: "https://graft3d.com/geomagic-freeform/"
     },
     {
         image: "/images/gio-touch/gio10.png",

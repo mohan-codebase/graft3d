@@ -25,7 +25,7 @@ const BANNER_SLIDES = [
     titlePrimary: true,
     extraButtons: (
       <Button asChild variant="default" className="rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/30 mb-8">
-        <Link href="/geomagic-freeform-with-haptic">Know More</Link>
+        <Link href="/geomagic-freeform">Know More</Link>
       </Button>
     )
   },
@@ -201,7 +201,11 @@ const BannerContactInfo = () => (
       </div>
       <div className="text-left">
         <p className="text-primary font-bold text-lg">Call us now</p>
-        <p className="text-gray-700 text-sm font-medium">+91 6374410703 | +91 98404 78347</p>
+        <p className="text-gray-700 text-sm font-medium">
+          <a href="tel:+916374410703" className="hover:text-primary transition-colors">+91 6374410703</a>
+          {" | "}
+          <a href="tel:+919840478347" className="hover:text-primary transition-colors">+91 98404 78347</a>
+        </p>
       </div>
     </div>
     <div className="flex items-center gap-3">
@@ -210,7 +214,9 @@ const BannerContactInfo = () => (
       </div>
       <div className="text-left">
         <p className="text-primary font-bold text-lg">Email Us at</p>
-        <p className="text-gray-700 text-sm font-medium">sales@graft3d.com</p>
+        <p className="text-gray-700 text-sm font-medium">
+          <a href="mailto:sales@graft3d.com" className="hover:text-primary transition-colors">sales@graft3d.com</a>
+        </p>
       </div>
     </div>
   </div>

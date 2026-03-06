@@ -26,7 +26,7 @@ const HeroSection = () => {
               asChild
               className="rounded-full px-6 py-5 bg-white text-primary border border-primary hover:bg-blue-50"
             >
-              <a href="/get-a-quote" target="_blank" rel="noreferrer">
+              <a href="/get-quote" target="_blank" rel="noreferrer">
                 Get a Quote Now
               </a>
             </Button>

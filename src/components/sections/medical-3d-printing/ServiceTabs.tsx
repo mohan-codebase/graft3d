@@ -14,7 +14,7 @@ const tabs = [
         heading: 'DICOM File Conversion',
         description: `Graft3D medical image conversion service makes it easy for doctors, surgeons, and hospitals to convert Dicom files from medical scanners into accurate, true-size 3D models of human anatomy such as soft tissues, hard tissues, and any part of the body. The resulting high-quality models can be used by anyone Who needs to generate 3D models for virtual surgical planning, healthcare 3d printing, and bio cad modeling applications.`,
         image: '/images/3d-service/tab1.png', // Placeholder, using landingPage or generic
-        link: '#',
+        link: '/dicom-to-3d-model-conversion-software',
     },
     {
         id: 'biocad',
@@ -23,7 +23,7 @@ const tabs = [
         heading: 'Bio CAD Modeling Services',
         description: `Graft3D Online-Bio CAD modeling service supports highly advanced personalized healthcare solutions which can be used during surgical operations, patient rehabilitation, and functional restoration. Our online service uses uploaded patient medical scans files or 3d models of scanned human body parts directly from medical 3d scanners. Then in the backend, we can design and develop any medical devices that can be directly 3D printed for guided surgery or can be grafted in the human body as custom implants more precisely for the better operation outcome.`,
         image: '/images/3d-service/tab1.png', // Placeholder
-        link: '#',
+        link: '/bio-cad-modeling-service',
     },
     {
         id: 'printing',
@@ -85,7 +85,7 @@ const ServiceTabs = () => {
                         </p>
                         <div className="flex gap-4">
                             <Button asChild variant="white" className="border border-[#0f6cbd] text-[#0f6cbd] hover:bg-[#0f6cbd] hover:text-white transition-colors">
-                                <Link href={activeContent?.link || '#'}>
+                                <Link href={activeContent?.link || '/contact-us'}>
                                     Learn More
                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                                 </Link>

@@ -48,7 +48,7 @@ const Navbar = () => {
     };
 
     const isResourcesActive =
-        isActive('/resources') ||
+        isActive('/geomagic-freeform') ||
         isActive('/artificial-nasal-prosthesis-case-study') ||
         isActive('/virtual-surgical-planning-mandibular-reconstruction');
 
@@ -149,11 +149,12 @@ const Navbar = () => {
                                                 </div>
                                                 {activeSubSubDropdown === 'regraft' && (
                                                     <div className="pl-4 flex flex-col gap-2 pt-1 border-l border-gray-200">
-                                                        <Link href="/regraft-artibone" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Airbone</Link>
+                                                        <Link href="/regraft-artibone" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Artibone</Link>
                                                         <Link href="/regraft-bonerip" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Bonerip</Link>
                                                         <Link href="/regraft-customised-plates" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Customised Plates</Link>
                                                         <Link href="/regraft-arti-nose-arti-ear" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Arti nose & Arti ear</Link>
                                                         <Link href="/regraft-digilumin" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Digilumin</Link>
+                                                        <Link href="/regraft-digiprun" className="text-sm text-gray-500 hover:text-primary transition-colors italic" onClick={() => setIsMobileMenuOpen(false)}>Regraft Digiprun</Link>
                                                     </div>
                                                 )}
                                                 <Link href="/3d-printed-patient-specific-implant" className="transition-colors border-b border-gray-800 pb-1" onClick={() => setIsMobileMenuOpen(false)}>Patient Specific Implant</Link>
@@ -164,7 +165,7 @@ const Navbar = () => {
                                     {/* 3D Tech Products Section */}
                                     <div>
                                         <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
-                                            <Link href="/products/printers" className=" font-bold  transition-colors" onClick={() => setIsMobileMenuOpen(false)}>3D Tech Products</Link>
+                                            <Link href="/healthcare-3d-tech-products" className=" font-bold  transition-colors" onClick={() => setIsMobileMenuOpen(false)}>3D Tech Products</Link>
                                             <button onClick={() => toggleSubDropdown('tech')} className="p-2">
                                                 <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'tech' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -176,10 +177,10 @@ const Navbar = () => {
                                                 <Link href="/einscan-medixa" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan-medixa</Link>
                                                 <Link href="/funmat-pro-410" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Funmat pro 410</Link>
                                                 <Link href="/geomagic-freeform" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Freeform</Link>
-                                                <Link href="/d2p" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>D2P</Link>
-                                                <Link href="/geomagic-touch-touch-x" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Touch & Touch X</Link>
-                                                <Link href="/einscan-h2" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan H2</Link>
-                                                <Link href="/phantom-premium" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Phantom Premium</Link>
+                                                <Link href="/dicom-to-3d-model-conversion-software" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>D2P</Link>
+                                                <Link href="/geomagic-touch-x-haptic-device" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Geomagic Touch & Touch X</Link>
+                                                <Link href="/einscan-h2-human-body-bodyparts-3d-scanner" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Einscan H2</Link>
+                                                <Link href="/phantom-premium-haptic-device" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Phantom Premium</Link>
                                             </div>
                                         )}
                                     </div>
@@ -187,7 +188,7 @@ const Navbar = () => {
                                     {/* Medical Filaments Section */}
                                     <div>
                                         <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
-                                            <Link href="/products/materials" className=" font-bold transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Medical Filaments</Link>
+                                            <Link href="/polyetheretherketone-peek" className=" font-bold transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Medical Filaments</Link>
                                             <button onClick={() => toggleSubDropdown('filaments')} className="p-2">
                                                 <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'filaments' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -198,7 +199,7 @@ const Navbar = () => {
                                             <div className="pl-4 flex flex-col gap-2 pt-2 border-l border-gray-200">
                                                 <Link href="/polyetheretherketone-peek" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Polyetheretherketone (PEEK)</Link>
                                                 <Link href="/polymethyl-methacrylate-pmma" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Polymethyl Methacrylate (PMMA)</Link>
-                                                <Link href="/" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Polycorbante (PC)</Link>
+                                                <Link href="/polycarbonate-pc" className="text-sm text-gray-500 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Polycarbonate (PC)</Link>
                                             </div>
                                         )}
                                     </div>
@@ -212,14 +213,14 @@ const Navbar = () => {
                     {/* Mobile Dropdown: Resources */}
                     <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
                         <button onClick={() => toggleDropdown('resources')} className={`flex items-center justify-between w-full font-bold ${isResourcesActive ? 'text-primary' : 'text-black'}`}>
-                            <span>Resources</span>
+                            <Link href="/geomagic-freeform"><span>Resources</span></Link>
                             <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         {activeDropdown === 'resources' && (
                             <div className="pl-4 mt-2 flex flex-col gap-2 border-l-2 border-primary/20">
                                 <div className="flex items-center justify-between w-full">
                                     <Link
-                                        href="/resources/case-studies"
+                                        href="/artificial-nasal-prosthesis-case-study"
                                         className="px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
@@ -324,11 +325,12 @@ const Navbar = () => {
                                                 </Link>
                                                 <div className="hidden group-hover/sub2:block absolute left-full bg-white top-0 shadow-xl  border-gray-800 min-w-[240px] animate-fade-in-right">
                                                     <div className="py-2 flex flex-col max-h-[400px] overflow-y-auto custom-scrollbar">
-                                                        <Link href="/regraft-artibone" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Airbone</Link>
+                                                        <Link href="/regraft-artibone" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Artibone</Link>
                                                         <Link href="/regraft-bonerip" className="px-6 py-3  text-[13px]  transition-colors border-b border-gray-800">Regraft Bonerip</Link>
                                                         <Link href="/regraft-customised-plates" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Customised Plates</Link>
                                                         <Link href="/regraft-arti-nose-arti-ear" className="px-6 py-3 text-[13px]  transition-colors border-b border-gray-800">Regraft Arti nose & Arti ear</Link>
                                                         <Link href="/regraft-digilumin" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Digilumin</Link>
+                                                        <Link href="/regraft-digiprun" className="px-6 py-3  text-[13px]   transition-colors border-b border-gray-800">Regraft Digiprun</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -341,7 +343,7 @@ const Navbar = () => {
 
                                 {/* 3D Tech Products */}
                                 <div className="group/sub relative border-b border-gray-800 last:border-0 bg-white">
-                                    <Link href="/" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
+                                    <Link href="/healthcare-3d-tech-products" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
                                         <span className='font-bold'>3D Tech Products</span>
                                         <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                                     </Link>
@@ -350,17 +352,17 @@ const Navbar = () => {
                                             <Link href="/einscan-medixa" className="px-6 py-3  text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan-medixa</Link>
                                             <Link href="/funmat-pro-410" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Funmat pro 410</Link>
                                             <Link href="/geomagic-freeform" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Freeform</Link>
-                                            <Link href="/d2p" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">D2P</Link>
-                                            <Link href="/geomagic-touch-touch-x" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Touch & Touch X</Link>
-                                            <Link href="/einscan-h2" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan H2</Link>
-                                            <Link href="/phantom-premium" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Phantom Premium</Link>
+                                            <Link href="/dicom-to-3d-model-conversion-software" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">D2P</Link>
+                                            <Link href="/geomagic-touch-x-haptic-device" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Geomagic Touch & Touch X</Link>
+                                            <Link href="/einscan-h2-human-body-bodyparts-3d-scanner" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Einscan H2</Link>
+                                            <Link href="/phantom-premium-haptic-device" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Phantom Premium</Link>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Medical Filaments */}
                                 <div className="group/sub relative border-b border-gray-800 last:border-0 bg-white">
-                                    <Link href="/products/materials" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
+                                    <Link href="/polyetheretherketone-peek" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
                                         <span className='font-bold'>Medical Filaments</span>
                                         <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                                     </Link>
@@ -368,7 +370,7 @@ const Navbar = () => {
                                         <div className="py-2 flex flex-col">
                                             <Link href="/polyetheretherketone-peek" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polyetheretherketone (PEEK)</Link>
                                             <Link href="/polymethyl-methacrylate-pmma" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polymethyl Methacrylate (PMMA)</Link>
-                                            <Link href="/" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polycorbante (PC)</Link>
+                                            <Link href="/polycarbonate-pc" className="px-6 py-3 text-[14px] transition-colors border-b border-gray-800 last:border-0">Polycarbonate (PC)</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -385,13 +387,13 @@ const Navbar = () => {
 
                     {/* Resources Dropdown */}
                     <div className={`group relative cursor-pointer h-full flex items-center gap-1 hover:text-primary transition-colors py-4 ${isResourcesActive ? 'text-primary' : 'text-black'}`}>
-                        <span>Resources</span>
+                       <Link href="/geomagic-freeform"><span>Resources</span></Link>
                         <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         {/* Dropdown Menu */}
                         <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg border-t-2 border-primary min-w-[240px] z-50 animate-fade-in-up">
                             <div className="py-2 flex flex-col">
                                 <div className="group/blogs relative">
-                                    <Link href="/resources/case-studies" className="flex items-center justify-between px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">
+                                    <Link href="/artificial-nasal-prosthesis-case-study" className="flex items-center justify-between px-4 py-2 hover:bg-gray-50 text-sm text-black hover:text-primary transition-colors">
                                         <span>Blogs</span>
                                         <svg className="w-3 h-3 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>

@@ -30,7 +30,7 @@ const CranialHeroSection = () => {
                                 </Link>
                             </Button>
                             <Button asChild className="rounded-[40px] border-2 border-[#1a5b9e] bg-white text-[#1a5b9e] hover:bg-[#f0f7fb] font-bold px-10 py-7 shadow-md text-[16px] transition-colors">
-                                <Link href="/get-a-quote">
+                                <Link href="/get-quote">
                                     Get a Quote Now
                                 </Link>
                             </Button>

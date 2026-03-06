@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const categories = ["All", "Healthcare 3D Scanners", "Medical Image Conversion", "Bio CAD Modeling", "Haptic Devices"];
 
@@ -11,30 +12,35 @@ const items = [
         title: 'Human Body Scanner',
         subtitle: 'Einscan Medixa',
         image: '/images/healthcare-3d-tech-products/einscan-medixa.png',
+        link: '/einscan-medixa',
     },
     {
         category: 'Medical Image Conversion',
         title: 'Medical Image Conversion',
         subtitle: 'D2P – Bone , Vascular , Teeth',
         image: '/images/healthcare-3d-tech-products/d2p.jpg',
+        link: '/dicom-to-3d-model-conversion-software',
     },
     {
         category: 'Bio CAD Modeling',
         title: 'Bio CAD Modeling',
         subtitle: 'Geomagic Freeform',
         image: '/images/healthcare-3d-tech-products/geomagic-freeform.jpg',
+        link: '/geomagic-freeform',
     },
     {
         category: 'Haptic Devices',
         title: 'Haptic Device',
         subtitle: 'Geomagic Touch & Touch X',
         image: '/images/healthcare-3d-tech-products/geomagic-touch.jpg',
+        link: '/geomagic-touch-x-haptic-device',
     },
     {
         category: 'Haptic Devices',
         title: 'Haptic Device',
         subtitle: 'Phantom Premium',
         image: '/images/healthcare-3d-tech-products/phantom-premium.jpg',
+        link: '/phantom-premium-haptic-device',
     },
 ];
 
@@ -46,7 +52,7 @@ const TechProductsTabs = () => {
         : items.filter(item => item.category === activeCategory);
 
     return (
-        <section className="w-full py-20 bg-white">
+        <section id="tech-products" className="w-full py-20 bg-white">
             <div className="max-w-[1200px] mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -77,8 +83,9 @@ const TechProductsTabs = () => {
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredItems.map((item, index) => (
-                        <div
+                        <Link
                             key={index}
+                            href={item.link}
                             className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
                         >
                             {/* Image Placeholder/Container */}
@@ -101,7 +108,7 @@ const TechProductsTabs = () => {
                                     {item.subtitle}
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
