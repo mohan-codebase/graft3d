@@ -28,7 +28,7 @@ const NavTopBar = () => {
                     variant="white"
                     className='text-primary text-[14px] font-bold px-3 py-1 rounded font-semibold hover:bg-opacity-90 transition-colors h-auto'
                 >
-                    <a href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success">Meet us Live Online</a>
+                    <Link href="/book-demo">Meet us Live Online</Link>
                 </Button>
 
 
