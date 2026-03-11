@@ -8,9 +8,19 @@ import { Phone, Mail } from 'lucide-react';
 
 const MaxillaHeroSection = () => {
     return (
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-white via-[#f0f7fb] to-white py-16 lg:py-24">
-            <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <section className="relative w-full overflow-hidden p-5 ">
+            <div className="container relative overflow-hidden mx-auto px-4 lg:py-20 lg:px-1 max-w-[1400px] bg-[#CBE4F9] rounded-3xl">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 z-0 opacity-40">
+                    <Image
+                        src="/images/reconstruction-of-the-maxilla-and-mandible/Line-6.png"
+                        alt="Background Pattern"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 md:p-15 p-2 ">
 
                     {/* Left Content Area */}
                     <div className="w-full lg:w-1/2 flex flex-col items-start z-20">
@@ -61,10 +71,10 @@ const MaxillaHeroSection = () => {
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end z-10 mt-12 lg:mt-0 relative">
                         <div className="relative w-full max-w-[600px] aspect-[4/3]">
                             <Image
-                                src="/images/reconstruction-of-resected-mandible-and-maxilla/Frame-427319419.png"
+                                src="/images/reconstruction-of-resected-mandible-and-maxilla/8-1.png"
                                 alt="Reconstruction of Resected Mandible and Maxilla"
                                 fill
-                                className="object-contain"
+                                className="object-cover h"
                                 priority
                             />
                         </div>

@@ -1,0 +1,58 @@
+import Image from "next/image";
+import { ChevronRight, Download } from "lucide-react";
+import Link from "next/link";
+
+const Hero = () => {
+  return (
+    <section className="w-full bg-[#DEF0FF] py-[100px]">
+      <div className="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#222223]">
+            <span className="text-[#166AAF]">3D PRINTING</span> PACKAGE FOR FACIAL PROSTHESIS
+          </h1>
+          <p className="mt-4 text-[#222223] text-base">
+            Graft3D Healthcare for the utmost precision and care in facial prosthesis
+          </p>
+          <div className="mt-6">
+            <Image
+              src="/images/3d-printing-packagefor-po-devices/Group-54.png"
+              alt="3D printing package logo"
+              width={352}
+              height={91}
+              className="w-auto h-auto"
+            />
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="#book-demo"
+              className="inline-flex items-center gap-2 rounded bg-[#166AAF] px-6 py-3 text-white text-sm font-medium"
+            >
+              <ChevronRight size={16} />
+              Book Demo
+            </Link>
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center gap-2 rounded border border-[#166AAF] bg-white px-6 py-3 text-[#166AAF] text-sm font-medium"
+            >
+              <Download size={16} />
+              Download Brochure
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <Image
+            src="/images/3d-printing-package-for-facial-prosthesis/back-image-1024x548.png"
+            alt="3D printing package for facial prosthesis"
+            width={1024}
+            height={548}
+            className="w-full max-w-[520px] h-auto object-contain"
+            priority
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

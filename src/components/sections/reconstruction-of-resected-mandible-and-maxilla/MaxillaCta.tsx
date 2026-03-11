@@ -14,10 +14,10 @@ const MaxillaCta = () => {
                     {/* Left: Image Block */}
                     <div className="w-full lg:w-1/2 relative min-h-[350px] lg:min-h-[450px]">
                         <Image
-                            src="/images/reconstruction-of-resected-mandible-and-maxilla/Frame-427319434.png"
+                            src="/images/reconstruction-of-resected-mandible-and-maxilla/Frame-427319419.png"
                             alt="3D Printed Patient-Specific Implants"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                         />
                         {/* Overlay to ensure image blends well if needed */}
                         <div className="absolute inset-0 bg-black/10"></div>

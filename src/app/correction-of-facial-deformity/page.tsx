@@ -364,7 +364,7 @@ export default function CorrectionOfFacialDeformityPage() {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-20 lg:py-32 bg-white">
+            <section className="py-10 lg:py-8 bg-white">
                 <div className="mx-auto px-6 lg:px-12 max-w-[1200px]">
                     <div className="relative overflow-hidden rounded-[40px] bg-[#f0f9ff] flex flex-col lg:flex-row items-center border border-blue-100/50 shadow-2xl">
                         <div className="lg:w-1/2 relative aspect-square w-full p-8 lg:p-16">
@@ -377,10 +377,10 @@ export default function CorrectionOfFacialDeformityPage() {
                         </div>
                         <div className="lg:w-1/2 p-8 lg:p-16 space-y-6 text-center lg:text-left">
                             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Digital Solutions</p>
-                            <h2 className="text-3xl lg:text-5xl font-extrabold text-[#003c6e]">3D Printing in the Management of Facial Deformities</h2>
-                            <Button className="bg-[#005696] hover:bg-[#003c6e] text-white px-10 py-6 h-auto text-lg rounded-full shadow-lg transition-all hover:scale-105 active:scale-95">
-                                Read More
-                            </Button>
+                            <h2 className="text-3xl lg:text-3xl font-extrabold text-[#003c6e]">3D Printing in the Management of Facial Deformities</h2>
+                            <Link href='/get-quote' className="bg-[#005696] hover:bg-[#003c6e] text-white px-6 py-2 h-auto text-lg rounded-full shadow-lg transition-all hover:scale-105 active:scale-95">
+                                Get Quote Now
+                            </Link>
                         </div>
                     </div>
                 </div>

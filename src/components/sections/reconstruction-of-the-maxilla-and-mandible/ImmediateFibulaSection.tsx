@@ -41,7 +41,7 @@ const ImmediateFibulaSection = () => {
                             <div className="absolute inset-0 bg-[#005696] rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
                             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                                 <Image
-                                    src="/images/reconstruction-of-the-maxilla-and-mandible/Rectangle-41928.png"
+                                    src="/images/reconstruction-of-the-maxilla-and-mandible/Group-1171275183-2.png"
                                     alt="Immediate Fibula Free Flap"
                                     fill
                                     className="object-cover"

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const BookDemoPage = () => {
     return (
         <main>
-            <div className='pt-[120px]'>
+            <div>
                 <BookDemoContent />
             </div>
         </main>

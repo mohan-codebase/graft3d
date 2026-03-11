@@ -39,7 +39,7 @@ const PrePlannedImplants = () => {
                             <div className="absolute inset-0 bg-[#e6f3ff] rounded-2xl transform shadow-sm border border-white"></div>
                             <div className="absolute inset-2 bg-white rounded-2xl overflow-hidden shadow-md transform -translate-x-4 translate-y-4">
                                 <Image
-                                    src="/images/reconstruction-of-the-maxilla-and-mandible/Rectangle-41929.png"
+                                    src="/images/reconstruction-of-the-maxilla-and-mandible/Frame-427319419-3-2.png"
                                     alt="Pre Planned Dental Implants"
                                     fill
                                     className="object-contain p-4"

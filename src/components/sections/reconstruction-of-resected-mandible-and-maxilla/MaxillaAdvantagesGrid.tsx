@@ -39,7 +39,7 @@ const MaxillaAdvantagesGrid = () => {
                         <div className="relative w-full aspect-square max-w-[400px]">
                             <Image
                                 // Substituting with 5-3, likely maps to the image in the screenshot
-                                src="/images/reconstruction-of-resected-mandible-and-maxilla/5-3.png"
+                                src="/images/reconstruction-of-resected-mandible-and-maxilla/2-1.png"
                                 alt="Advantages of 3D-Printed Patient-Specific Implants"
                                 fill
                                 className="object-contain drop-shadow-md mix-blend-multiply"

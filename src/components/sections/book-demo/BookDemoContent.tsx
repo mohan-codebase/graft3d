@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from "next/image";
 import { Button } from '@/components/ui/Button';
 import { InlineWidget } from "react-calendly";
 
@@ -18,14 +19,36 @@ const BookDemoContent = () => {
     };
 
     return (
-        <section className="w-full py-16 bg-white">
-            <div className="max-w-[1400px] mx-auto px-4">
-                <h1 className="text-2xl font-bold mb-12 text-[#166AAF] uppercase tracking-wide">Book Demo</h1>
+        <>
+      {/* Top hero band with image, matching reference layout */}
+      <section className="w-full bg-[#e6f3ff]">
+        <div className="max-w-[1400px] mx-auto px-4 py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold text-[#166AAF] tracking-wide">
+              BOOK DEMO
+            </h1>
+          </div>
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[860px] aspect-[16/9]">
+              <Image
+                src="/images/book-demo/Group-107.png"
+                alt="Scanner and facial prosthesis for demo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    {/* Left Side: Form */}
-                    <div className="space-y-8">
-                        <form className="space-y-6">
+      {/* Form + Calendly section */}
+      <section className="w-full py-12 md:py-16 bg-white">
+        <div className="max-w-[1400px] mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Side: Form */}
+            <div className="space-y-8">
+              <form className="space-y-6">
                             <div className="space-y-1">
                                 <label className="text-sm text-gray-500">First Name *</label>
                                 <input
@@ -79,24 +102,25 @@ const BookDemoContent = () => {
                             </div>
 
                             <Button
-                                type="submit"
-                                className="bg-[#00AEEF] hover:bg-[#00AEEF]/90 text-white rounded-none px-8 py-2 h-auto text-sm font-normal"
+                              type="submit"
+                              className="bg-[#00AEEF] hover:bg-[#00AEEF]/90 text-white rounded-none px-8 py-2 h-auto text-sm font-normal"
                             >
-                                Send Message
+                              Send Message
                             </Button>
-                        </form>
-                    </div>
+                          </form>
+                        </div>
 
-                    {/* Right Side: Calendly */}
-                    <div className="h-[600px] border border-gray-100 rounded-lg overflow-hidden shadow-sm">
-                        <InlineWidget
-                            url="https://calendly.com/sales-graft3d/30min"
-                            styles={{ height: '100%' }}
-                        />
-                    </div>
-                </div>
+            {/* Right Side: Calendly */}
+            <div className="h-[600px] border border-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <InlineWidget
+                url="https://calendly.com/sales-graft3d/30min"
+                styles={{ height: '100%' }}
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+    </>
     );
 };
 

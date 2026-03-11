@@ -4,29 +4,40 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Video, CheckCircle2 } from 'lucide-react';
 
 const FacialBoneHeroSection = () => {
     return (
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-white via-[#f0f7fb] to-white py-16 lg:py-24">
-            <div className="container mx-auto px-4 lg:px-12 max-w-[1400px]">
+        <section className="relative w-full overflow-hidden bg-[#d9effc] py-16 lg:py-20">
+            {/* Background Wave Pattern */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/reconstruction-of-the-maxilla-and-mandible/Line-6.png"
+                    alt=""
+                    fill
+                    className="object-cover opacity-20 pointer-events-none"
+                    priority
+                />
+            </div>
+
+            <div className="container mx-auto px-4 lg:px-20 max-w-[1400px] relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
                     {/* Left Content Area */}
-                    <div className="w-full lg:w-1/2 flex flex-col items-start z-20">
-                        <h1 className="text-4xl lg:text-[50px] font-extrabold text-[#1a5b9e] mb-6 leading-tight">
+                    <div className="w-full lg:w-1/2 flex flex-col items-start">
+                        <h1 className="text-4xl lg:text-[34px] font-extrabold text-[#1a5b9e] mb-10 leading-[1.1]">
                             Facial Bone Augmentation<br />
                             Using 3D Printing
                         </h1>
 
                         {/* Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
-                            <Button asChild className="rounded-full bg-[#1a5b9e] hover:bg-[#124275] text-white font-bold px-8 py-6 w-fit shadow-md text-[15px] transition-colors">
-                                <Link href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09" target="_blank">
-                                    Meet Us Live Online
+                        <div className="flex flex-col sm:flex-row gap-5 mb-12 w-full sm:w-auto">
+                            <Button asChild className="rounded-full bg-[#1a5b9e] hover:bg-[#124275] text-white font-bold px-10 py-7 w-fit shadow-lg text-[16px] transition-all flex items-center gap-2">
+                                <Link href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09" target="_blank" className="flex items-center gap-2">
+                                    Meet Us Live Online <Video className="w-5 h-5" />
                                 </Link>
                             </Button>
-                            <Button asChild className="rounded-full border-2 border-[#1a5b9e] bg-transparent text-[#1a5b9e] hover:bg-[#f0f7fb] font-bold px-8 py-6 w-fit shadow-md text-[15px] transition-colors">
+                            <Button asChild className="rounded-full border-2 border-[#1a5b9e] bg-white text-[#1a5b9e] hover:bg-[#f0f7fb] font-bold px-10 py-7 w-fit shadow-lg text-[16px] transition-all">
                                 <Link href="/get-quote">
                                     Get a Quote Now
                                 </Link>
@@ -34,24 +45,28 @@ const FacialBoneHeroSection = () => {
                         </div>
 
                         {/* Contact Info */}
-                        <div className="flex flex-col gap-4 text-[#1a5b9e] font-medium text-lg">
-                            <div className="flex items-center gap-3">
-                                <div className="bg-[#1a5b9e] rounded-full p-2 text-white">
-                                    <Phone className="w-5 h-5" />
+                        <div className="flex flex-col gap-6 text-[#1a5b9e]">
+                            <div className="flex items-center gap-4">
+                                <div className="bg-[#1a5b9e] rounded-full p-3 text-white shadow-md">
+                                    <Phone className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <div className="font-bold">Call us now</div>
-                                    <a href="tel:+916374410703" className="hover:underline opacity-90">+91 6374410703 | +91 98404 78347</a>
+                                    <div className="font-bold text-[18px]">Call us now</div>
+                                    <div className="text-[17px] font-semibold">
+                                        <a href="tel:+916374410703" className="hover:underline">+91 6374410703</a>
+                                        <span className="mx-2 text-gray-400">|</span>
+                                        <a href="tel:+919840478347" className="hover:underline">+91 98404 78347</a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-3 mt-2">
-                                <div className="bg-[#1a5b9e] rounded-full p-2 text-white">
-                                    <Mail className="w-5 h-5" />
+                            <div className="flex items-center gap-4">
+                                <div className="bg-[#1a5b9e] rounded-full p-3 text-white shadow-md">
+                                    <Mail className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <div className="font-bold">Email Us at</div>
-                                    <a href="mailto:info@graft3d.com" className="hover:underline opacity-90">info@graft3d.com</a>
+                                    <div className="font-bold text-[18px]">Email Us at</div>
+                                    <a href="mailto:sales@graft3d.com" className="text-[17px] font-semibold hover:underline">sales@graft3d.com</a>
                                 </div>
                             </div>
                         </div>
@@ -59,18 +74,26 @@ const FacialBoneHeroSection = () => {
                     </div>
 
                     {/* Right Image Area */}
-                    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end z-10 mt-12 lg:mt-0 relative">
-                        <div className="relative w-full max-w-[600px] aspect-square">
+                    <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0">
+                        <div className="relative w-full max-w-[650px] aspect-[4/3]">
                             <Image
-                                src="/images/acial-bone-augmentation-using-3d-printing/Frame9.png"
+                                src="/images/acial-bone-augmentation-using-3d-printing/Group-1171275183-1.png"
                                 alt="Facial Bone Augmentation 3D Model"
                                 fill
-                                className="object-contain"
+                                className="object-contain drop-shadow-2xl"
                                 priority
                             />
                         </div>
                     </div>
 
+                </div>
+
+                {/* Branding Footer */}
+                <div className="mt-16 lg:mt-24 flex items-center justify-center gap-2 text-[#1a5b9e] font-semibold text-[15px]">
+                    <CheckCircle2 className="w-5 h-5 text-[#1a5b9e]" />
+                    <p>
+                        Designed by <span className="text-[#1a5b9e]">Zoriox Innovation Labs</span>, Marketed by <span className="text-[#1a5b9e]">Graft3D Healthcare Solutions</span>
+                    </p>
                 </div>
             </div>
         </section>

@@ -13,7 +13,7 @@ const MaxillaOverview = () => {
                     <div className="w-full lg:w-[45%] flex justify-center">
                         <div className="relative w-full max-w-[450px] aspect-square rounded-2xl overflow-hidden">
                             <Image
-                                src="/images/reconstruction-of-resected-mandible-and-maxilla/1-3.png"
+                                src="/images/reconstruction-of-resected-mandible-and-maxilla/Frame-427319434.png"
                                 alt="Overview of Oral and Maxillofacial Surgery defects"
                                 fill
                                 className="object-contain"
