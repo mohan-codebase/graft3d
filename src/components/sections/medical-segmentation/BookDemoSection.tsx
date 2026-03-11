@@ -2,8 +2,14 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/Button';
+import { useLeadForm } from '@/lib/useLeadForm';
 
 const BookDemoSection = () => {
+    const { status, feedback, handleSubmit } = useLeadForm({
+        subject: 'Medical Segmentation Demo Request',
+        successMessage: 'Thanks. Your demo booking request has been submitted.'
+    });
+
     return (
         <section className="w-full py-16 bg-white">
             <div className="container mx-auto px-4 max-w-[1200px]">
@@ -17,7 +23,7 @@ const BookDemoSection = () => {
                             </h2>
                             <p className="text-gray-600 leading-relaxed">
                                 Set up an online meeting with our team to explore the medical scan
-                                segmentation process and pricing alternatives, whether it's a one-
+                                segmentation process and pricing alternatives, whether it&apos;s a one-
                                 time project or a recurring monthly service
                             </p>
                         </div>
@@ -36,11 +42,13 @@ const BookDemoSection = () => {
 
                     {/* Right Side: Form */}
                     <div className="bg-[#f0f9ff] p-8 rounded-2xl w-full">
-                        <form className="space-y-4">
+                        <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="space-y-1">
                                 <label className="text-gray-500 text-sm pl-1">Name:</label>
                                 <input
                                     type="text"
+                                    name="name"
+                                    required
                                     className="w-full px-4 py-3 rounded-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-[#0f6cbd]"
                                 />
                             </div>
@@ -49,6 +57,7 @@ const BookDemoSection = () => {
                                 <label className="text-gray-500 text-sm pl-1">Hospital | Company name :</label>
                                 <input
                                     type="text"
+                                    name="company"
                                     className="w-full px-4 py-3 rounded-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-[#0f6cbd]"
                                 />
                             </div>
@@ -57,6 +66,8 @@ const BookDemoSection = () => {
                                 <label className="text-gray-500 text-sm pl-1">Email Address:</label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    required
                                     className="w-full px-4 py-3 rounded-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-[#0f6cbd]"
                                 />
                             </div>
@@ -65,6 +76,8 @@ const BookDemoSection = () => {
                                 <label className="text-gray-500 text-sm pl-1">Mobile number :</label>
                                 <input
                                     type="tel"
+                                    name="phone"
+                                    required
                                     className="w-full px-4 py-3 rounded-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-[#0f6cbd]"
                                 />
                             </div>
@@ -73,6 +86,7 @@ const BookDemoSection = () => {
                                 <label className="text-gray-500 text-sm pl-1">Choose Date:</label>
                                 <input
                                     type="date"
+                                    name="appointmentDate"
                                     className="w-full px-4 py-3 rounded-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-[#0f6cbd]"
                                 />
                             </div>
@@ -82,7 +96,7 @@ const BookDemoSection = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                     <div className="space-y-1">
                                         <label className="text-xs text-gray-400 pl-1">Hours</label>
-                                        <select className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
+                                        <select name="hours" className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
                                             <option>Select</option>
                                             {[...Array(12)].map((_, i) => (
                                                 <option key={i} value={i + 1}>{i + 1}</option>
@@ -91,7 +105,7 @@ const BookDemoSection = () => {
                                     </div>
                                     <div className="space-y-1">
                                         <label className="text-xs text-gray-400 pl-1">Minutes</label>
-                                        <select className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
+                                        <select name="minutes" className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
                                             <option>Select</option>
                                             {[...Array(60)].map((_, i) => (
                                                 <option key={i} value={i.toString().padStart(2, '0')}>{i.toString().padStart(2, '0')}</option>
@@ -100,7 +114,7 @@ const BookDemoSection = () => {
                                     </div>
                                     <div className="space-y-1">
                                         <label className="text-xs text-gray-400 pl-1 opacity-0">AM/PM</label>
-                                        <select className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
+                                        <select name="period" className="w-full px-4 py-3 rounded-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0f6cbd] bg-white">
                                             <option>AM</option>
                                             <option>PM</option>
                                         </select>
@@ -109,10 +123,19 @@ const BookDemoSection = () => {
                             </div>
 
                             <div className="pt-4 flex justify-center">
-                                <Button className="bg-[#1EA0D9] hover:bg-[#188ac0] text-white px-12 py-3 text-lg rounded font-medium">
-                                    Book Now
+                                <Button
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                    className="bg-[#1EA0D9] hover:bg-[#188ac0] text-white px-12 py-3 text-lg rounded font-medium disabled:opacity-60"
+                                >
+                                    {status === 'loading' ? 'Submitting...' : 'Book Now'}
                                 </Button>
                             </div>
+                            {feedback && (
+                                <p className={`text-sm ${status === 'error' ? 'text-red-600' : 'text-green-700'}`}>
+                                    {feedback}
+                                </p>
+                            )}
 
                         </form>
                     </div>

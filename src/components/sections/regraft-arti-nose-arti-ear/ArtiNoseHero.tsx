@@ -39,7 +39,7 @@ const ArtiNoseHero = () => {
                                 <Link href="/get-quote">Enquire now</Link>
                             </Button>
                             <Button asChild className="rounded bg-[#3b6dcc] hover:bg-[#2d56a6] text-white font-semibold px-7 py-5 w-fit shadow-md text-[15px] transition-colors">
-                                <Link href="#Appointment">Book 3D Scanning Appointment</Link>
+                                <Link href="#consultation-form">Book 3D Scanning Appointment</Link>
                             </Button>
                         </div>
                     </div>

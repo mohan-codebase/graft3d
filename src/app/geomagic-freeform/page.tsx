@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import FaqAccordion from "@/components/common/FaqAccordion";
+import { useLeadForm } from "@/lib/useLeadForm";
 
 /* ------------------------------------------------------------------ */
 /*  Static data                                                         */
@@ -166,6 +167,22 @@ export default function GeomagicFreeformPage() {
         country: "",
         industry: "",
         comment: "",
+    });
+    const { status, feedback, handleSubmit } = useLeadForm({
+        subject: "Geomagic Freeform Trial Request",
+        successMessage: "Thanks. Your free-trial request has been submitted.",
+        onSuccess: () =>
+            setFormData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                company: "",
+                country: "",
+                industry: "",
+                comment: "",
+            }),
+        resetOnSuccess: false,
     });
 
     const menuItems = [
@@ -430,7 +447,7 @@ export default function GeomagicFreeformPage() {
 
                                     <form
                                         className="space-y-6 rounded-2xl bg-white p-8 shadow-sm border border-blue-50"
-                                        onSubmit={(e) => e.preventDefault()}
+                                        onSubmit={handleSubmit}
                                     >
                                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                             {[
@@ -447,6 +464,7 @@ export default function GeomagicFreeformPage() {
                                                     </label>
                                                     <input
                                                         type={type}
+                                                        name={key}
                                                         required={required}
                                                         value={formData[key as keyof typeof formData]}
                                                         onChange={(e) =>
@@ -462,6 +480,7 @@ export default function GeomagicFreeformPage() {
                                             <label className="text-sm font-semibold text-gray-700">Industry</label>
                                             <input
                                                 type="text"
+                                                name="industry"
                                                 value={formData.industry}
                                                 onChange={(e) =>
                                                     setFormData((prev) => ({ ...prev, industry: e.target.value }))
@@ -473,6 +492,7 @@ export default function GeomagicFreeformPage() {
                                         <div className="space-y-2">
                                             <label className="text-sm font-semibold text-gray-700">Comment</label>
                                             <textarea
+                                                name="comment"
                                                 rows={4}
                                                 value={formData.comment}
                                                 onChange={(e) =>
@@ -484,10 +504,16 @@ export default function GeomagicFreeformPage() {
 
                                         <button
                                             type="submit"
+                                            disabled={status === "loading"}
                                             className="rounded-md bg-[#00AEEF] px-8 py-3 text-base font-bold text-white transition-all hover:bg-[#008dca] hover:shadow-lg active:scale-95"
                                         >
-                                            Send Message
+                                            {status === "loading" ? "Sending..." : "Send Message"}
                                         </button>
+                                        {feedback && (
+                                            <p className={`text-sm ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+                                                {feedback}
+                                            </p>
+                                        )}
                                     </form>
                                 </div>
 

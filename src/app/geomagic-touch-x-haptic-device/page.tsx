@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight, Scissors, Zap, Activity, Heart, BookOpen, Cp
 import Link from "next/link";
 
 import FaqAccordion from '@/components/common/FaqAccordion';
+import { useLeadForm } from '@/lib/useLeadForm';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -111,6 +112,10 @@ const features: string[] = [
 
 export default function GeomagicTouchXPage() {
   const [activeSection, setActiveSection] = React.useState("overview");
+  const { status, feedback, handleSubmit } = useLeadForm({
+    subject: "Geomagic Touch X Free Trial Request",
+    successMessage: "Thanks. Your free-trial request has been submitted."
+  });
 
   const menuItems = [
     { name: "Overview", id: "overview" },
@@ -403,7 +408,7 @@ export default function GeomagicTouchXPage() {
                 <div id="free-trial" className="space-y-12 pt-16 scroll-mt-32">
                   <h2 className="text-3xl font-bold uppercase text-[#005696]">Request a Free Trial</h2>
 
-                  <form className="space-y-8 bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
+                  <form className="space-y-8 bg-white p-8 rounded-2xl shadow-sm border border-blue-50" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
                       {/* First Name */}
                       <div className="space-y-2">
@@ -412,6 +417,7 @@ export default function GeomagicTouchXPage() {
                         </label>
                         <input
                           type="text"
+                          name="firstName"
                           required
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
@@ -424,6 +430,7 @@ export default function GeomagicTouchXPage() {
                         </label>
                         <input
                           type="text"
+                          name="lastName"
                           required
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
@@ -436,6 +443,7 @@ export default function GeomagicTouchXPage() {
                         </label>
                         <input
                           type="email"
+                          name="email"
                           required
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
@@ -448,6 +456,7 @@ export default function GeomagicTouchXPage() {
                         </label>
                         <input
                           type="tel"
+                          name="phone"
                           required
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
@@ -458,6 +467,7 @@ export default function GeomagicTouchXPage() {
                         <label className="text-sm font-semibold text-gray-700">Company Name</label>
                         <input
                           type="text"
+                          name="company"
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
                       </div>
@@ -467,6 +477,7 @@ export default function GeomagicTouchXPage() {
                         <label className="text-sm font-semibold text-gray-700">Country</label>
                         <input
                           type="text"
+                          name="country"
                           className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                         />
                       </div>
@@ -477,6 +488,7 @@ export default function GeomagicTouchXPage() {
                       <label className="text-sm font-semibold text-gray-700">Industry</label>
                       <input
                         type="text"
+                        name="industry"
                         className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all"
                       />
                     </div>
@@ -485,6 +497,7 @@ export default function GeomagicTouchXPage() {
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-gray-700">Comment</label>
                       <textarea
+                        name="message"
                         rows={4}
                         className="w-full rounded-md border-none bg-gray-100 px-4 py-3 placeholder:text-gray-400 focus:ring-2 focus:ring-[#005696]/20 transition-all resize-none"
                       ></textarea>
@@ -494,11 +507,17 @@ export default function GeomagicTouchXPage() {
                     <div className="pt-4">
                       <button
                         type="submit"
+                        disabled={status === "loading"}
                         className="rounded-md bg-[#00AEEF] px-8 py-3 text-lg font-bold text-white transition-all hover:bg-[#008dca] hover:shadow-lg active:scale-95"
                       >
-                        Send Message
+                        {status === "loading" ? "Sending..." : "Send Message"}
                       </button>
                     </div>
+                    {feedback && (
+                      <p className={`text-sm ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+                        {feedback}
+                      </p>
+                    )}
                   </form>
                 </div>
 

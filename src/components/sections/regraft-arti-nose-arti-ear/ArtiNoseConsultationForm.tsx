@@ -2,13 +2,17 @@
 
 import React, { useState } from 'react';
 import { Calendar } from 'lucide-react';
-import Image from 'next/image';
+import { useLeadForm } from '@/lib/useLeadForm';
 
 const ArtiNoseConsultationForm = () => {
     const [messageLength, setMessageLength] = useState(0);
+    const { status, feedback, handleSubmit } = useLeadForm({
+        subject: 'Arti Nose Consultation Request',
+        successMessage: 'Thanks. Your consultation request has been submitted.'
+    });
 
     return (
-        <section className="bg-white py-16 lg:py-24">
+        <section id="consultation-form" className="bg-white py-16 lg:py-24">
             <div className="container mx-auto px-4 max-w-[1400px]">
 
                 <div className="max-w-xl mx-auto">
@@ -16,11 +20,13 @@ const ArtiNoseConsultationForm = () => {
                         Book a Consultation
                     </h2>
 
-                    <form className="flex flex-col gap-5">
+                    <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                         {/* Name */}
                         <div>
                             <input
                                 type="text"
+                                name="name"
+                                required
                                 placeholder="Name"
                                 className="w-full bg-[#f9f9f9] text-gray-700 placeholder-gray-400 py-3.5 px-4 outline-none focus:ring-1 focus:ring-[#5bc0de] transition-shadow"
                             />
@@ -30,6 +36,8 @@ const ArtiNoseConsultationForm = () => {
                         <div>
                             <input
                                 type="email"
+                                name="email"
+                                required
                                 placeholder="Email Address"
                                 className="w-full bg-[#f9f9f9] text-gray-700 placeholder-gray-400 py-3.5 px-4 outline-none focus:ring-1 focus:ring-[#5bc0de] transition-shadow"
                             />
@@ -39,6 +47,8 @@ const ArtiNoseConsultationForm = () => {
                         <div className="relative">
                             <input
                                 type="tel"
+                                name="phone"
+                                required
                                 placeholder="Phone Number"
                                 className="w-full bg-[#f9f9f9] text-gray-700 placeholder-gray-400 py-3.5 pl-4 pr-12 outline-none focus:ring-1 focus:ring-[#5bc0de] transition-shadow"
                             />
@@ -62,6 +72,7 @@ const ArtiNoseConsultationForm = () => {
                             </div>
                             <input
                                 type="text"
+                                name="appointmentDate"
                                 placeholder="Choose Date"
                                 onFocus={(e) => e.target.type = 'date'}
                                 onBlur={(e) => {
@@ -82,6 +93,7 @@ const ArtiNoseConsultationForm = () => {
                                     <label className="block text-[#777] font-bold text-sm mb-1.5">Hours</label>
                                     <input
                                         type="number"
+                                        name="hours"
                                         min="1"
                                         max="12"
                                         defaultValue=""
@@ -93,6 +105,7 @@ const ArtiNoseConsultationForm = () => {
                                     <label className="block text-[#777] font-bold text-sm mb-1.5">Minutes</label>
                                     <input
                                         type="number"
+                                        name="minutes"
                                         min="0"
                                         max="59"
                                         defaultValue=""
@@ -102,7 +115,7 @@ const ArtiNoseConsultationForm = () => {
 
                                 <div>
                                     <div className="relative">
-                                        <select className="w-full bg-[#eaeaea] appearance-none text-black font-medium text-lg py-3.5 px-4 outline-none cursor-pointer">
+                                        <select name="period" className="w-full bg-[#eaeaea] appearance-none text-black font-medium text-lg py-3.5 px-4 outline-none cursor-pointer">
                                             <option value="AM">AM</option>
                                             <option value="PM">PM</option>
                                         </select>
@@ -119,6 +132,7 @@ const ArtiNoseConsultationForm = () => {
                         {/* Message */}
                         <div className="mt-2 relative">
                             <textarea
+                                name="message"
                                 placeholder="Enter your message..."
                                 rows={6}
                                 maxLength={180}
@@ -134,11 +148,17 @@ const ArtiNoseConsultationForm = () => {
                         <div className="mt-4">
                             <button
                                 type="submit"
+                                disabled={status === 'loading'}
                                 className="bg-[#1ca6ea] hover:bg-[#128bbc] text-white font-medium text-[15px] py-3 px-6 transition-colors"
                             >
-                                Send Message
+                                {status === 'loading' ? 'Sending...' : 'Send Message'}
                             </button>
                         </div>
+                        {feedback && (
+                            <p className={`text-sm ${status === 'error' ? 'text-red-600' : 'text-green-700'}`}>
+                                {feedback}
+                            </p>
+                        )}
 
                     </form>
                 </div>

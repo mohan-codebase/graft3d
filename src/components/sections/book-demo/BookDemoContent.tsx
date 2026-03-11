@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import { Button } from '@/components/ui/Button';
 import { InlineWidget } from "react-calendly";
+import { useLeadForm } from '@/lib/useLeadForm';
 
 const BookDemoContent = () => {
     const [formData, setFormData] = useState({
@@ -17,6 +18,18 @@ const BookDemoContent = () => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
+
+    const { status, feedback, handleSubmit } = useLeadForm({
+        subject: 'Book Demo Request',
+        successMessage: 'Thanks. Your demo request has been sent.',
+        onSuccess: () => setFormData({
+            firstName: '',
+            email: '',
+            phone: '',
+            product: ''
+        }),
+        resetOnSuccess: false
+    });
 
     return (
         <>
@@ -48,7 +61,7 @@ const BookDemoContent = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side: Form */}
             <div className="space-y-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="space-y-1">
                                 <label className="text-sm text-gray-500">First Name *</label>
                                 <input
@@ -103,10 +116,16 @@ const BookDemoContent = () => {
 
                             <Button
                               type="submit"
+                              disabled={status === 'loading'}
                               className="bg-[#00AEEF] hover:bg-[#00AEEF]/90 text-white rounded-none px-8 py-2 h-auto text-sm font-normal"
                             >
-                              Send Message
+                              {status === 'loading' ? 'Sending...' : 'Send Message'}
                             </Button>
+                            {feedback && (
+                              <p className={`text-sm ${status === 'error' ? 'text-red-600' : 'text-green-700'}`}>
+                                {feedback}
+                              </p>
+                            )}
                           </form>
                         </div>
 

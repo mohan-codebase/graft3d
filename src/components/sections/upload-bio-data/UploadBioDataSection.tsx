@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
+import { useLeadForm } from "@/lib/useLeadForm";
 
 export default function UploadBioDataSection() {
     const [activeTab, setActiveTab] = useState<"email" | "link">("email");
+    const { status, feedback, handleSubmit } = useLeadForm({
+        subject: "Upload BioCAD Data Request",
+        successMessage: "Thanks. Your BioCAD upload request has been submitted.",
+        fieldAliases: {
+            message: ["message", "link", "remarks", "details"],
+        },
+    });
 
     return (
         <section className="w-full">
@@ -72,28 +79,33 @@ export default function UploadBioDataSection() {
 
                 {/* Form Container */}
                 <div className="bg-transparent rounded-lg">
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                        <input type="hidden" name="submissionType" value={activeTab} />
 
                         {/* Conditional Main Input */}
                         {activeTab === "email" ? (
                             <div className="space-y-4">
                                 <input
                                     type="email"
+                                    name="toEmail"
                                     defaultValue="sales@graft3d.com"
                                     readOnly
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500"
                                 />
                                 <input
                                     type="email"
+                                    name="fromEmail"
                                     placeholder="From (email)"
                                     className="w-full px-4 py-3 bg-white border border-blue-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="text"
+                                    name="subjectLine"
                                     placeholder="Subject"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <textarea
+                                    name="message"
                                     placeholder="Write a message or drop the files here"
                                     rows={4}
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"
@@ -102,6 +114,7 @@ export default function UploadBioDataSection() {
                         ) : (
                             <div className="space-y-4">
                                 <textarea
+                                    name="link"
                                     placeholder="Add your link here..."
                                     rows={4}
                                     className="w-full px-4 py-3 bg-white border border-blue-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"
@@ -115,7 +128,7 @@ export default function UploadBioDataSection() {
                             <div className="flex items-center gap-3">
                                 <label className="bg-[#1f5f99] hover:bg-blue-800 text-white px-4 py-2 rounded cursor-pointer text-sm font-medium transition-colors">
                                     Choose File
-                                    <input type="file" className="hidden" />
+                                    <input type="file" name="attachment" className="hidden" />
                                 </label>
                                 <span className="text-xs text-gray-500">No file chosen</span>
                             </div>
@@ -128,31 +141,39 @@ export default function UploadBioDataSection() {
                                 <h3 className="text-[#1f5f99] text-xl font-bold mb-6">Contact Information</h3>
                                 <input
                                     type="text"
+                                    name="doctorName"
                                     placeholder="Doctor name"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="text"
+                                    name="hospitalName"
                                     placeholder="Hospital name"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="tel"
+                                    name="phone"
                                     placeholder="Mobile number"
+                                    required
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="Email"
+                                    required
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="text"
+                                    name="city"
                                     placeholder="city"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="text"
+                                    name="patientName"
                                     placeholder="Patient Name"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
@@ -163,18 +184,19 @@ export default function UploadBioDataSection() {
                                 <h3 className="text-[#1f5f99] text-xl font-bold mb-6">Additional Information</h3>
                                 <input
                                     type="text"
+                                    name="anatomy"
                                     placeholder="Anatomy"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
-                                <select className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500 appearance-none">
-                                    <option value="" disabled selected>Specialization</option>
+                                <select name="specialization" defaultValue="" className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500 appearance-none">
+                                    <option value="" disabled>Specialization</option>
                                     <option value="orthopedics">Orthopedics</option>
                                     <option value="cardiology">Cardiology</option>
                                     <option value="neurology">Neurology</option>
                                     <option value="other">Other</option>
                                 </select>
-                                <select className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500 appearance-none">
-                                    <option value="" disabled selected>Application</option>
+                                <select name="application" defaultValue="" className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500 appearance-none">
+                                    <option value="" disabled>Application</option>
                                     <option value="surgical-guide">Surgical Guide</option>
                                     <option value="anatomical-model">Anatomical Model</option>
                                     <option value="implant">Implant</option>
@@ -182,11 +204,13 @@ export default function UploadBioDataSection() {
                                 </select>
                                 <input
                                     type="number"
+                                    name="quantity"
                                     placeholder="Quantity you needed"
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <input
                                     type="text"
+                                    name="deliveryDate"
                                     placeholder="Delivery date"
                                     onFocus={(e) => (e.target.type = "date")}
                                     onBlur={(e) => {
@@ -195,6 +219,7 @@ export default function UploadBioDataSection() {
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 />
                                 <textarea
+                                    name="remarks"
                                     placeholder="Remarks"
                                     rows={4}
                                     className="w-full px-4 py-3 bg-white border border-blue-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"
@@ -208,7 +233,7 @@ export default function UploadBioDataSection() {
                                 {/* Mockup for reCAPTCHA widget to match screenshot visually */}
                                 <div className="flex items-center gap-4 bg-[#f9f9f9] border border-gray-300 rounded-sm p-3 pr-4 shadow-sm w-[300px]">
                                     <div className="w-7 h-7 bg-white border-2 border-gray-300 rounded-sm"></div>
-                                    <span className="text-sm font-medium flex-1">I'm not a robot</span>
+                                    <span className="text-sm font-medium flex-1">I&apos;m not a robot</span>
                                     <div className="flex flex-col items-center">
                                         <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" className="w-8 h-8 opacity-80" />
                                         <span className="text-[10px] text-gray-500 mt-1">reCAPTCHA</span>
@@ -219,11 +244,17 @@ export default function UploadBioDataSection() {
                             <div>
                                 <button
                                     type="submit"
+                                    disabled={status === "loading"}
                                     className="bg-[#2ebbf0] hover:bg-[#1f9edb] text-white px-8 py-3 rounded font-medium transition-colors"
                                 >
-                                    Submit
+                                    {status === "loading" ? "Submitting..." : "Submit"}
                                 </button>
                             </div>
+                            {feedback && (
+                                <p className={`text-sm ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+                                    {feedback}
+                                </p>
+                            )}
                         </div>
 
                     </form>

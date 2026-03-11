@@ -12,7 +12,7 @@ const blogs = [
         author: "Admin",
         date: "June 28 2021",
         image: "/images/regraft-bonerip/bone-blog1.png", // Using existing blog images for now
-        link: "/blogs/virtual-surgical-planning-face-transplant"
+        link: "/virtual-surgical-planning-mandibular-reconstruction"
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const blogs = [
         author: "Admin",
         date: "June 28 2021",
         image: "/images/regraft-bonerip/bone-blog2.png",
-        link: "/blogs/case-study-nose-prosthesis"
+        link: "/artificial-nasal-prosthesis-case-study"
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const blogs = [
         author: "Admin",
         date: "June 28 2021",
         image: "/images/regraft-bonerip/bone-blog3.png",
-        link: "/blogs/geomagic-phantom-haptic-devices"
+        link: "/phantom-premium-haptic-device"
     }
 ];
 
