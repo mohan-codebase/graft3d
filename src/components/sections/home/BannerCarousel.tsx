@@ -215,7 +215,7 @@ const BannerContactInfo = () => (
       <div className="text-left">
         <p className="text-primary font-bold text-lg">Email Us at</p>
         <p className="text-gray-700 text-sm font-medium">
-          <a href="mailto:sales@graft3d.com" className="hover:text-primary transition-colors">sales@graft3d.com</a>
+          <a href="mailto:sales@graft3d.com" className="hover:text-primary transition-colors">DEEP DIVE</a>
         </p>
       </div>
     </div>

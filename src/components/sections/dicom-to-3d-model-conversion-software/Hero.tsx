@@ -29,7 +29,7 @@ const Hero = () => {
                     {/* Button Grid 2x2 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[550px]">
                         <a
-                            href="https://graft3d.com/wp-content/uploads/2025/02/DICOM-to-print-Brochure.pdf"
+                            href="/brochures/DICOM-to-print-Brochure.pdf"
                             target="_blank"
                             className="flex items-center justify-center bg-[#1e73be] text-white px-4 py-3 rounded font-bold text-[15px] hover:bg-[#165a94] transition-all shadow-sm"
                         >

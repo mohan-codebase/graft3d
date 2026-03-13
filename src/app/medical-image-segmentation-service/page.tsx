@@ -59,7 +59,7 @@ export default function MedicalImageSegmentationServicePage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full pt-8">
                             <div className="flex-1 bg-white p-4 rounded-lg shadow-md border border-gray-100 flex items-center justify-center text-center">
-                                <span className="text-[#1e73be] font-medium">Email your scans to <a href="mailto:sales@graft3d.com" className="underline">sales@graft3d.com</a></span>
+                                <span className="text-[#1e73be] font-medium">Email your scans to <a href="mailto:sales@graft3d.com" className="underline">DEEP DIVE</a></span>
                             </div>
                             <div className="flex-1 bg-white p-4 rounded-lg shadow-md border border-gray-100 flex items-center justify-center text-center">
                                 <span className="text-[#1e73be] font-medium">Talk to us now at <a href="tel:+919840478347" className="underline">+91 9840478347</a></span>

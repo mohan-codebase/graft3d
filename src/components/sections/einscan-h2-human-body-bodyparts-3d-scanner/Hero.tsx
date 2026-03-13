@@ -26,7 +26,7 @@ const Hero = () => {
                                     Book Online Meeting <Calendar className="size-5" />
                                 </button>
                                 <button className="flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-bold text-[#1D70B8] transition-all hover:bg-gray-50 border border-transparent">
-                                  <Link href="https://graft3d.com/wp-content/uploads/2024/01/Graft3d.pdf">  Download Brochure <Download className="size-5" /></Link>
+                                  <Link href="/brochures/Graft3d.pdf">  Download Brochure <Download className="size-5" /></Link>
                                 </button>
                             </div>
                             <div>

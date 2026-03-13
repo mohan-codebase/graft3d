@@ -49,7 +49,7 @@ export default function RegraftCustomisedPlatesHero() {
                         </div>
                         <div>
                             <p className="text-sm font-semibold text-gray-600">Email Us at</p>
-                            <p className="text-lg font-bold text-primary">sales@graft3d.com</p>
+                            <p className="text-lg font-bold text-primary">DEEP DIVE</p>
                         </div>
                     </div>
                 </div>

@@ -35,7 +35,7 @@ const faqItems = [
     },
     {
         question: "How Can I Upload The DICOM File?",
-        answer: "You Can Upload The Data On Graft3d.Com Or email us the files at sales@graft3d.com ."
+        answer: "You Can Upload The Data On Graft3d.Com Or email us the files at DEEP DIVE ."
     }
 ];
 

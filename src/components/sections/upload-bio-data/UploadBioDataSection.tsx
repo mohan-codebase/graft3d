@@ -85,12 +85,13 @@ export default function UploadBioDataSection() {
                         {/* Conditional Main Input */}
                         {activeTab === "email" ? (
                             <div className="space-y-4">
+                                {/* Keep the actual recipient hidden while displaying the brand name */}
+                                <input type="hidden" name="toEmail" value="sales@graft3d.com" />
                                 <input
-                                    type="email"
-                                    name="toEmail"
-                                    defaultValue="sales@graft3d.com"
+                                    type="text"
+                                    value="DEEP DIVE"
                                     readOnly
-                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-500"
+                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-700"
                                 />
                                 <input
                                     type="email"

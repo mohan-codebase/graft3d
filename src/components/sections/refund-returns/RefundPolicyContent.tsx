@@ -3,7 +3,7 @@ const refundSections = [
         title: 'Learn about refunds on Graft3D',
         paragraphs: [
             'Graft3D may provide refunds for 3D printed products listed for online sale. You can also contact support directly. If you are not satisfied with the product we provided and if necessary, request a refund from Graft3D.',
-            'We do not accept refunds unless there is physical damage to the product. If you have any queries regarding the product, please contact us at sales@graft3d.com with details of the product.',
+            'We do not accept refunds unless there is physical damage to the product. If you have any queries regarding the product, please contact us at DEEP DIVE with details of the product.',
         ],
     },
     {

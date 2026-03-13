@@ -80,7 +80,7 @@ const CoreFunctions = () => {
         <div className="mt-12 flex justify-center">
           <Button asChild className="rounded-full px-8 py-6 bg-white text-[#1f73b7] border-2 border-[#1f73b7] hover:bg-blue-50 font-bold text-[15px] shadow-sm transition-colors">
             <a
-              href="https://graft3d.com/wp-content/uploads/2026/01/Intamsys-EN-Brochure-FUNMAT-PRO-41O_compressed.pdf"
+              href="/brochures/Intamsys-EN-Brochure-FUNMAT-PRO-41O_compressed.pdf"
               download
               target="_blank"
               rel="noreferrer"

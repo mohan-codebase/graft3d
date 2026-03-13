@@ -69,7 +69,7 @@ const Hero = () => {
                                 </div>
                                 <div>
                                     <div className="font-bold text-[18px]">Email Us at</div>
-                                    <a href="mailto:sales@graft3d.com" className="text-[17px] font-semibold hover:underline">sales@graft3d.com</a>
+                                    <a href="mailto:sales@graft3d.com" className="text-[17px] font-semibold hover:underline">DEEP DIVE</a>
                                 </div>
                             </div>
                         </div>

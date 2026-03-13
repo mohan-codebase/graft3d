@@ -10,7 +10,7 @@ const faqItems = [
         The cost of training 3D-printed models varies depending on the no of the bone model, types
         of bone etc ..you can email{" "}
         <a href="mailto:sales@graft3d.com" className="text-primary underline">
-          sales@graft3d.com
+          DEEP DIVE
         </a>
       </span>
     ),
@@ -21,7 +21,7 @@ const faqItems = [
       <span>
         You can buy them directly by placing an order with us at{" "}
         <a href="mailto:sales@graft3d.com" className="text-primary underline">
-          sales@graft3d.com
+          DEEP DIVE
         </a>{" "}
         or buy them online from our website.
       </span>

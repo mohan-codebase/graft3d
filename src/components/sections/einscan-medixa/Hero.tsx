@@ -64,7 +64,7 @@ const Hero = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-[#0066b2] font-bold text-[17px]">Email Us at</p>
-                                    <a href="mailto:sales@graft3d.com" className="text-gray-800 text-[15px] mt-0.5 hover:text-[#0066b2] transition-colors">sales@graft3d.com</a>
+                                    <a href="mailto:sales@graft3d.com" className="text-gray-800 text-[15px] mt-0.5 hover:text-[#0066b2] transition-colors">DEEP DIVE</a>
                                 </div>
                             </div>
                         </div>

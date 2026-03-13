@@ -270,7 +270,7 @@ export default function GeomagicFreeformPage() {
                                     onClick={() => scrollToSection("download-trial")}
                                     className="inline-flex items-center gap-2 rounded-sm bg-[#005696] px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-[#004274] hover:shadow-md"
                                 >
-                                    <Link href="https://graft3d.com/wp-content/uploads/2025/02/Freefrom-Brochure.pdf">Download Free Trial</Link>
+                                    <Link href="/brochures/Freefrom-Brochure.pdf">Download Free Trial</Link>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
                                         <path fillRule="evenodd" d="M10 3a1 1 0 011 1v9.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 13.586V4a1 1 0 011-1z" clipRule="evenodd" />
                                     </svg>
@@ -292,7 +292,7 @@ export default function GeomagicFreeformPage() {
                                     onClick={() => scrollToSection("download-trial")}
                                     className="inline-flex items-center gap-2 rounded-sm bg-[#005696] px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-[#004274] hover:shadow-md"
                                 >
-                                    <Link href="https://graft3d.com/wp-content/uploads/2022/08/Group-1.pdf">Download Software Brochure</Link>
+                                    <Link href="/brochures/Group-1.pdf">Download Software Brochure</Link>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
                                         <path fillRule="evenodd" d="M10 3a1 1 0 011 1v9.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 13.586V4a1 1 0 011-1z" clipRule="evenodd" />
                                     </svg>

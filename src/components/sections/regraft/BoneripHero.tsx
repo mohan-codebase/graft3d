@@ -76,7 +76,7 @@ const BoneripHero = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-[#1e73be] font-bold text-lg">Email Us at</p>
-                                    <a href="mailto:sales@graft3d.com" className="text-gray-700 text-sm font-semibold hover:text-[#1e73be] transition-colors">sales@graft3d.com</a>
+                                    <a href="mailto:sales@graft3d.com" className="text-gray-700 text-sm font-semibold hover:text-[#1e73be] transition-colors">DEEP DIVE</a>
                                 </div>
                             </div>
                         </div>

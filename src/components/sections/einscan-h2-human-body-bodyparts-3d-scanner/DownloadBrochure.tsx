@@ -16,7 +16,7 @@ const DownloadBrochure = () => {
                     asChild
                     className="bg-[#009bca] hover:bg-[#007da8] text-white font-bold py-6 px-6 rounded-full text-base flex items-center gap-2"
                 >
-                    <Link href="https://graft3d.com/wp-content/uploads/2024/01/Graft3d.pdf" target="_blank" rel="noopener noreferrer">
+                    <Link href="/brochures/Graft3d.pdf" target="_blank" rel="noopener noreferrer">
                         Download Brochure
                         <Download size={20} strokeWidth={2.5} />
                     </Link>
