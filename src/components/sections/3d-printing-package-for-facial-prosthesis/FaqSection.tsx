@@ -40,7 +40,7 @@ const faqs = [
     question:
       "How can hospitals get started with setting up a 3D printing lab?",
     answer:
-      "To get started with setting up a 3D printing lab for prosthetic and orthotic devices, hospitals can reach out to our team at DEEP DIVE. We offer comprehensive consulting and support services, guiding hospitals through the entire process, from selecting the right 3D printing technologies to training staff and implementing the lab.",
+      "To get started with setting up a 3D printing lab for prosthetic and orthotic devices, hospitals can reach out to our team at sales@graft3d.com. We offer comprehensive consulting and support services, guiding hospitals through the entire process, from selecting the right 3D printing technologies to training staff and implementing the lab.",
   },
 ];
 

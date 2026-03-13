@@ -67,7 +67,7 @@ const ArtiboneHero = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-gray-900 text-lg">Email Us at</p>
-                                    <p className="text-[#005696] font-medium">DEEP DIVE</p>
+                                    <p className="text-[#005696] font-medium">sales@graft3d.com</p>
                                 </div>
                             </div>
                         </div>

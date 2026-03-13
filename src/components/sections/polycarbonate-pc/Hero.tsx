@@ -65,7 +65,7 @@ const Hero = () => {
                   href="mailto:sales@graft3d.com"
                   className="text-gray-700 text-sm font-medium hover:underline"
                 >
-                  DEEP DIVE
+                  sales@graft3d.com
                 </a>
               </div>
             </div>

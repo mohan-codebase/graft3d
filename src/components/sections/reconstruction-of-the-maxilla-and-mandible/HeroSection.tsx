@@ -64,7 +64,7 @@ const HeroSection = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-xl font-bold text-[#005696]">Email Us at</p>
-                                    <p className="text-lg font-medium text-gray-700">DEEP DIVE</p>
+                                    <p className="text-lg font-medium text-gray-700">sales@graft3d.com</p>
                                 </div>
                             </div>
                         </div>

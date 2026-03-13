@@ -52,7 +52,7 @@ const HeroSection = () => {
               <div>
                 <p className="text-primary font-bold text-base">Email Us at</p>
                 <a href="mailto:sales@graft3d.com" className="text-gray-700 text-sm font-medium hover:underline">
-                  DEEP DIVE
+                  sales@graft3d.com
                 </a>
               </div>
             </div>

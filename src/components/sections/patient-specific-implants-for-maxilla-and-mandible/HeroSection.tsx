@@ -75,7 +75,7 @@ const HeroSection = () => {
                       href="mailto:sales@graft3d.com"
                       className="hover:text-[#005696]"
                     >
-                      DEEP DIVE
+                      sales@graft3d.com
                     </a>
                   </p>
                 </div>

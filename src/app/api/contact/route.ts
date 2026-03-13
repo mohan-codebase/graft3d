@@ -148,33 +148,60 @@ function normalizePayload(rawBody: Record<string, unknown>): ContactPayload | { 
 }
 
 function buildEmailHtml(payload: ContactPayload): string {
+  const primaryColor = "#1e73be";
+  const lightBgColor = "#F0F7FF";
+  const textColor = "#1f2937";
+
   return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-      <h2 style="color: #1e73be;">New Website Enquiry Received</h2>
-      <p>You have received a new enquiry from the Graft3D website.</p>
-      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-        <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold; width: 140px;">Name</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(payload.name)}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Email</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(payload.email || "Not provided")}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(payload.phone || "Not provided")}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">City</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(payload.city || "Not provided")}</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold; vertical-align: top;">Message</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">${escapeHtml(payload.message).replace(/\n/g, "<br>")}</td>
-        </tr>
-      </table>
-      <p style="margin-top: 30px; font-size: 12px; color: #777;">This email was generated automatically from the website.</p>
+    <div style="background-color: ${lightBgColor}; padding: 40px 10px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: ${textColor};">
+      <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <!-- Header -->
+        <div style="background-color: ${primaryColor}; padding: 30px; text-align: center;">
+          <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600; letter-spacing: 0.5px;">New Website Enquiry</h1>
+        </div>
+
+        <!-- Body -->
+        <div style="padding: 40px 30px;">
+          <p style="margin-top: 0; font-size: 16px; line-height: 1.5;">You have received a new enquiry through the <strong>Graft3D</strong> website. Here are the details:</p>
+          
+          <div style="margin-top: 30px; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse; background-color: #F9FAFB;">
+              <tr>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; width: 120px; font-weight: 600; color: ${primaryColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Name</td>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; color: ${textColor}; font-size: 15px;">${escapeHtml(payload.name)}</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; font-weight: 600; color: ${primaryColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Email</td>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; color: ${textColor}; font-size: 15px;">${escapeHtml(payload.email || "Not provided")}</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; font-weight: 600; color: ${primaryColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Phone</td>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; color: ${textColor}; font-size: 15px;">${escapeHtml(payload.phone || "Not provided")}</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; font-weight: 600; color: ${primaryColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">City</td>
+                <td style="padding: 15px; border-bottom: 1px solid #E5E7EB; color: ${textColor}; font-size: 15px;">${escapeHtml(payload.city || "Not provided")}</td>
+              </tr>
+              <tr>
+                <td style="padding: 15px; font-weight: 600; color: ${primaryColor}; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: top;">Message</td>
+                <td style="padding: 15px; color: ${textColor}; font-size: 15px; line-height: 1.6;">${escapeHtml(payload.message).replace(/\n/g, "<br>")}</td>
+              </tr>
+            </table>
+          </div>
+
+          <div style="margin-top: 30px; text-align: center;">
+            <p style="font-size: 14px; color: #6B7280;">Please respond to this enquiry at your earliest convenience.</p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="background-color: #F3F4F6; padding: 20px; text-align: center; border-top: 1px solid #E5E7EB;">
+          <p style="margin: 0; font-size: 12px; color: #9CA3AF; line-height: 1.4;">
+            &copy; ${new Date().getFullYear()} Graft3D Health Care Solutions Pvt. Ltd.<br>
+            This is an automated message from the Graft3D website contact form.
+          </p>
+        </div>
+      </div>
     </div>
   `;
 }

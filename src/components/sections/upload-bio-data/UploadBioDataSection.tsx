@@ -89,7 +89,7 @@ export default function UploadBioDataSection() {
                                 <input type="hidden" name="toEmail" value="sales@graft3d.com" />
                                 <input
                                     type="text"
-                                    value="DEEP DIVE"
+                                    value="sales@graft3d.com"
                                     readOnly
                                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-700"
                                 />

@@ -71,7 +71,7 @@ export default function VirtualSurgicalPlanningHero() {
                                 </div>
                                 <div>
                                     <h3 className="text-[#1f5f99] font-bold text-lg mb-1">Email Us at</h3>
-                                    <p className="text-gray-600 font-medium">DEEP DIVE</p>
+                                    <p className="text-gray-600 font-medium">sales@graft3d.com</p>
                                 </div>
                             </div>
                         </div>

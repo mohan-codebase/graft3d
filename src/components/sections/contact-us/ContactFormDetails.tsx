@@ -111,7 +111,7 @@ const ContactFormDetails = () => {
                                 <Mail className="w-5 h-5 text-[#166AAF]" /> Email Us
                             </h4>
                             <div className="font-medium text-[#166AAF] hover:underline cursor-pointer">
-                                DEEP DIVE
+                                sales@graft3d.com
                             </div>
                         </div>
 
