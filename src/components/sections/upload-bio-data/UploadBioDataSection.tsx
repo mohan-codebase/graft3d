@@ -6,12 +6,17 @@ import { useLeadForm } from "@/lib/useLeadForm";
 
 export default function UploadBioDataSection() {
     const [activeTab, setActiveTab] = useState<"email" | "link">("email");
+    const [selectedFileName, setSelectedFileName] = useState<string>("No file chosen");
+    
     const { status, feedback, handleSubmit } = useLeadForm({
         subject: "Upload BioCAD Data Request",
         successMessage: "Thanks. Your BioCAD upload request has been submitted.",
         fieldAliases: {
             message: ["message", "link", "remarks", "details"],
         },
+        onSuccess: () => {
+            setSelectedFileName("No file chosen");
+        }
     });
 
     return (
@@ -129,9 +134,21 @@ export default function UploadBioDataSection() {
                             <div className="flex items-center gap-3">
                                 <label className="bg-[#1f5f99] hover:bg-blue-800 text-white px-4 py-2 rounded cursor-pointer text-sm font-medium transition-colors">
                                     Choose File
-                                    <input type="file" name="attachment" className="hidden" />
+                                    <input
+                                        type="file"
+                                        name="attachment"
+                                        className="hidden"
+                                        onChange={(e) => {
+                                            const file = e.target.files?.[0];
+                                            if (file) {
+                                                setSelectedFileName(file.name);
+                                            } else {
+                                                setSelectedFileName("No file chosen");
+                                            }
+                                        }}
+                                    />
                                 </label>
-                                <span className="text-xs text-gray-500">No file chosen</span>
+                                <span className="text-xs text-gray-500">{selectedFileName}</span>
                             </div>
                         </div>
 
@@ -228,20 +245,8 @@ export default function UploadBioDataSection() {
                             </div>
                         </div>
 
-                        {/* reCAPTCHA placeholder & Submit */}
+                        {/* Submit */}
                         <div className="pt-8">
-                            <div className="mb-6 inline-block">
-                                {/* Mockup for reCAPTCHA widget to match screenshot visually */}
-                                <div className="flex items-center gap-4 bg-[#f9f9f9] border border-gray-300 rounded-sm p-3 pr-4 shadow-sm w-[300px]">
-                                    <div className="w-7 h-7 bg-white border-2 border-gray-300 rounded-sm"></div>
-                                    <span className="text-sm font-medium flex-1">I&apos;m not a robot</span>
-                                    <div className="flex flex-col items-center">
-                                        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" className="w-8 h-8 opacity-80" />
-                                        <span className="text-[10px] text-gray-500 mt-1">reCAPTCHA</span>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div>
                                 <button
                                     type="submit"
@@ -252,7 +257,7 @@ export default function UploadBioDataSection() {
                                 </button>
                             </div>
                             {feedback && (
-                                <p className={`text-sm ${status === "error" ? "text-red-600" : "text-green-700"}`}>
+                                <p className={`text-sm mt-4 ${status === "error" ? "text-red-600" : "text-green-700"}`}>
                                     {feedback}
                                 </p>
                             )}
