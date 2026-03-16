@@ -54,7 +54,11 @@ const HeroSection = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-xl font-bold text-[#005696]">Call us now</p>
-                                    <p className="text-lg font-medium text-gray-700">+91 6374410703 | +91 98404 78347</p>
+                                    <div className="flex flex-wrap gap-x-2">
+                                        <a href="tel:+916374410703" className="text-lg font-medium text-gray-700 hover:text-[#005696] hover:underline transition-all">+91 6374410703</a>
+                                        <span className="text-gray-400">|</span>
+                                        <a href="tel:+919840478347" className="text-lg font-medium text-gray-700 hover:text-[#005696] hover:underline transition-all">+91 98404 78347</a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -64,7 +68,7 @@ const HeroSection = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-xl font-bold text-[#005696]">Email Us at</p>
-                                    <p className="text-lg font-medium text-gray-700">sales@graft3d.com</p>
+                                    <a href="mailto:sales@graft3d.com" className="text-lg font-medium text-gray-700 hover:text-[#005696] hover:underline transition-all">sales@graft3d.com</a>
                                 </div>
                             </div>
                         </div>

@@ -61,7 +61,7 @@ const products = [
         link: "/get-quote"
     },
     {
-        name: "Head Splints",
+        name: "Hand splints",
         image: "/images/healthcare-3d-printed-products/head-splints.png",
         isComingSoon: false,
         link: "/get-quote"

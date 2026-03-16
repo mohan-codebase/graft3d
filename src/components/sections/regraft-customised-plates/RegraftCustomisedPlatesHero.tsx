@@ -32,7 +32,11 @@ export default function RegraftCustomisedPlatesHero() {
                         </div>
                         <div>
                             <p className="text-sm font-semibold text-gray-600">Call us now</p>
-                            <p className="text-lg font-bold text-primary">+91 63744 10703 | +91 98404 78347</p>
+                            <div className="flex flex-wrap gap-x-2">
+                                <a href="tel:+916374410703" className="text-lg font-bold text-primary hover:underline transition-all">+91 63744 10703</a>
+                                <span className="text-gray-400">|</span>
+                                <a href="tel:+919840478347" className="text-lg font-bold text-primary hover:underline transition-all">+91 98404 78347</a>
+                            </div>
                         </div>
                     </div>
 
@@ -49,7 +53,7 @@ export default function RegraftCustomisedPlatesHero() {
                         </div>
                         <div>
                             <p className="text-sm font-semibold text-gray-600">Email Us at</p>
-                            <p className="text-lg font-bold text-primary">sales@graft3d.com</p>
+                            <a href="mailto:sales@graft3d.com" className="text-lg font-bold text-primary hover:underline transition-all">sales@graft3d.com</a>
                         </div>
                     </div>
                 </div>

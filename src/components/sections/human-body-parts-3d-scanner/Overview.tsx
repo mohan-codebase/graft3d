@@ -27,29 +27,26 @@ const Overview = () => {
                 <div className="grid grid-cols-2 gap-4">
                     <div className="relative rounded-xl overflow-hidden shadow-md border border-gray-100 aspect-[4/3]">
                         <Image
-                            src="https://graft3d.com/wp-content/uploads/2021/12/einscan-hx-02.png"
+                            src="/images/einscan-h2/ein8.png"
                             alt="EinScan H Scanner"
                             fill
                             className="object-contain p-4"
-                            unoptimized
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden shadow-md border border-gray-100 aspect-[4/3]">
                         <Image
-                            src="https://graft3d.com/wp-content/uploads/2021/12/einscan-hx-03.png"
+                            src="/images/einscan-h2/ein15.jpg"
                             alt="EinScan H Scanning Process"
                             fill
                             className="object-contain p-4"
-                            unoptimized
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden shadow-md border border-gray-100 aspect-[4/3] col-span-2">
                         <Image
-                            src="https://graft3d.com/wp-content/uploads/2021/12/KF-3-A-1.png"
+                            src="/images/einscan-h2/ein9.png"
                             alt="3D Scanned Human Head"
                             fill
                             className="object-contain p-4"
-                            unoptimized
                         />
                     </div>
                 </div>

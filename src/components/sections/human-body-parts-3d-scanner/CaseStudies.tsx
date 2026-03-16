@@ -5,15 +5,15 @@ import { ArrowRightCircle } from 'lucide-react';
 const cases = [
     {
         title: 'Virtual Surgical Planning Assists With Full Face Transplant',
-        image: 'https://graft3d.com/wp-content/uploads/2021/12/CaseStudy1.jpg'
+        image: '/images/einscan-h2/ein17.jpg'
     },
     {
         title: 'Geomagic Freeform Puts a Face To Missing Children',
-        image: 'https://graft3d.com/wp-content/uploads/2021/12/CaseStudy2.jpg'
+        image: '/images/einscan-h2/ein18.jpg'
     },
     {
         title: 'Geomagic Phantom Haptic Devices Allow Surgeons To Practice',
-        image: 'https://graft3d.com/wp-content/uploads/2021/12/casestudy3.jpg'
+        image: '/images/einscan-h2/ein11.png'
     },
 ];
 
@@ -32,7 +32,6 @@ const CaseStudies = () => {
                                 alt={item.title}
                                 fill
                                 className="object-cover"
-                                unoptimized
                             />
                         </div>
                         <h3 className="text-[17px] text-[#777777] italic font-medium leading-relaxed mb-6 min-h-[3rem]">

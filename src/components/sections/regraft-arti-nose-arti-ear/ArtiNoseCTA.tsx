@@ -13,7 +13,7 @@ const ArtiNoseCTA = () => {
                     asChild
                     className="bg-[#5cb85c] hover:bg-[#4cae4c] text-white font-bold py-4 px-10 rounded text-[16px] shadow-sm transform transition-transform hover:scale-105"
                 >
-                    <Link href="#consultation-form">
+                    <Link href="/get-quote">
                         Book a Consultation
                     </Link>
                 </Button>

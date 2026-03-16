@@ -30,14 +30,14 @@ const features = [
         subtitle: "Soft Tissue Replicas for Surgical Simulation",
         description: "Regraft extends its expertise beyond bone replicas to develop soft organ replicas designed for advanced surgical simulation and preoperative planning. Created using flexible, medical grade plastic materials, these models replicate the look and feel of real organs. By offering tactile and visual accuracy, Organrip or soft organ replicas help improve surgical performance, reduce intraoperative complications, and support better clinical outcomes.",
         image: "/images/regraft/reg-4.png",
-        link: "#"
+        link: "/regraft-organrip"
     },
     {
         title: "Regraft - Digiprun",
         subtitle: "Digital Cutting Guides for Precision Bone Surgery",
         description: "Digiprun is an advanced digital cutting guide designed to bring accuracy and control to complex bone surgeries. Developed using patient-specific imaging and virtual surgical planning, Digiproon enables surgeons to define and execute bone cuts with confidence. Digiprun helps preserve healthy tissue and improve surgical outcomes by guiding surgeons to remove the affected or infected bone.",
         image: "/images/regraft/reg-5.png",
-        link: "#"
+        link: "/regraft-digiprun"
     },
     {
         title: "Regraft - Digilumin",
@@ -58,7 +58,7 @@ const features = [
         subtitle: "Adaptive Silicone Interface for Prosthetics",
         description: "Silicone-based artificial leg and socket grafts create a soft, adaptive interface between the limb and prosthesis. They ensure even load distribution, minimize skin irritation, and enhance stability. This leads to improved comfort, control, and long-term prosthetic performance.",
         image: "/images/regraft/reg-8.png",
-        link: "#"
+        link: "/contact-us"
     }
 ];
 

@@ -4,11 +4,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const photos = [
-    { src: 'https://graft3d.com/wp-content/uploads/2023/08/Rectangle-33.png', alt: '3D scanning patient', rowSpan: true },
-    { src: 'https://graft3d.com/wp-content/uploads/2023/08/Rectangle-34.png', alt: 'Patient standing' },
-    { src: 'https://graft3d.com/wp-content/uploads/2023/08/image-6.png', alt: '3D prosthetic design' },
-    { src: 'https://graft3d.com/wp-content/uploads/2023/08/Rectangle-35.png', alt: 'Design software demo' },
-    { src: 'https://graft3d.com/wp-content/uploads/2023/08/image-7.png', alt: 'Researcher reviewing 3D skull' },
+    { src: '/images/3d-printing-packagefor-po-devices/Rectangle-33.png', alt: '3D scanning patient', rowSpan: true },
+    { src: '/images/3d-printing-packagefor-po-devices/Rectangle-34.png', alt: 'Patient standing' },
+    { src: '/images/3d-printing-packagefor-po-devices/image-6.png', alt: '3D prosthetic design' },
+    { src: '/images/3d-printing-packagefor-po-devices/Rectangle-35.png', alt: 'Design software demo' },
+    { src: '/images/3d-printing-packagefor-po-devices/image-7.png', alt: 'Researcher reviewing 3D skull' },
 ];
 
 const videos = [
@@ -54,7 +54,6 @@ const GallerySection = () => {
                                 src={photos[0].src}
                                 alt={photos[0].alt}
                                 fill
-                                unoptimized
                                 className="object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -64,7 +63,6 @@ const GallerySection = () => {
                                 src={photos[1].src}
                                 alt={photos[1].alt}
                                 fill
-                                unoptimized
                                 className="object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -74,7 +72,6 @@ const GallerySection = () => {
                                 src={photos[2].src}
                                 alt={photos[2].alt}
                                 fill
-                                unoptimized
                                 className="object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -84,7 +81,6 @@ const GallerySection = () => {
                                 src={photos[3].src}
                                 alt={photos[3].alt}
                                 fill
-                                unoptimized
                                 className="object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>
@@ -94,7 +90,6 @@ const GallerySection = () => {
                                 src={photos[4].src}
                                 alt={photos[4].alt}
                                 fill
-                                unoptimized
                                 className="object-cover hover:scale-105 transition-transform duration-300"
                             />
                         </div>

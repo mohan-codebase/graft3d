@@ -43,7 +43,7 @@ const products = [
     {
         id: 4,
         title: 'Geomagic CX: Quality Control & Inspection of Medical Devices.',
-        image: 'https://graft3d.com/wp-content/uploads/2023/08/image-6.png',
+        image: '/images/3d-printing-packagefor-po-devices/image-6.png',
         imageLeft: false,
         features: [
             '3D inspect the final P&O devices after production.',
@@ -75,7 +75,6 @@ const ProductBundles = () => {
                                     src={product.image}
                                     alt={product.title}
                                     fill
-                                    unoptimized
                                     className="object-cover"
                                 />
                             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const products = [
     { id: 1, title: 'Temporomandibular Joint', image: '/images/regraft-product/regraft-pro1.png' },
@@ -21,7 +22,7 @@ const ProductsGrid = () => {
             <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     {products.map((product) => (
-                        <div key={product.id} className="flex flex-col items-center group cursor-pointer">
+                        <Link key={product.id} href="/contact-us" className="flex flex-col items-center group">
                             {/* Image Container */}
                             <div className="w-full aspect-[4/3] relative bg-[#8CBDE4] overflow-hidden rounded-sm mb-4 transition-transform duration-300 group-hover:scale-[1.02] shadow-sm">
                                 <Image
@@ -35,7 +36,7 @@ const ProductsGrid = () => {
                             <div className="w-full sm:w-[90%] bg-[#1560A1] text-white text-center py-3 px-4 font-semibold text-sm md:text-base rounded-sm shadow-md transition-colors duration-300 group-hover:bg-[#114b80]">
                                 {product.title}
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

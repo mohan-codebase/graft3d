@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 
 const items = [
-    { title: 'Full Body Color 3D Scanning', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-24-2.png' },
-    { title: '3D Scanning of Facial Prosthesis', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-25-2.png' },
-    { title: 'Facial Prosthesis Fitting', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-26-1.png' },
-    { title: '3D Scanning for Prosthetics', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-27-1.png' },
-    { title: '3D Scanning of Body Parts', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-28-1.png' },
-    { title: '3D Scanning of Human Face', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-30-2.png' },
+    { title: 'Full Body Color 3D Scanning', image: '/images/einscan-h2/ein10.png' },
+    { title: '3D Scanning of Facial Prosthesis', image: '/images/einscan-h2/ein11.png' },
+    { title: 'Facial Prosthesis Fitting', image: '/images/einscan-h2/ein12.png' },
+    { title: '3D Scanning for Prosthetics', image: '/images/einscan-h2/ein13.png' },
+    { title: '3D Scanning of Body Parts', image: '/images/einscan-h2/ein14.png' },
+    { title: '3D Scanning of Human Face', image: '/images/einscan-h2/ein16.jpg' },
 ];
 
 const Applications = () => {
@@ -25,7 +25,6 @@ const Applications = () => {
                                 alt={item.title}
                                 fill
                                 className="object-cover"
-                                unoptimized
                             />
                         </div>
                         <div className="p-5 bg-white flex items-center justify-center text-center">

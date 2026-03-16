@@ -4,17 +4,17 @@ import Image from 'next/image';
 const products = [
     {
         title: 'D2P - Bone,Vascular,Teeth',
-        image: 'https://graft3d.com/wp-content/uploads/2022/02/D2P-Image-for-Related-Product.png',
+        image: '/images/einscan-h2/ein12.png',
         href: '/dicom-to-3d-model-conversion-software'
     },
     {
         title: 'Einscan HX',
-        image: 'https://graft3d.com/wp-content/uploads/2022/03/Einscan-Hx-e1651750527325.png',
+        image: '/images/einscan-h2/ein1.png',
         href: '/einscan-h2-human-body-bodyparts-3d-scanner'
     },
     {
         title: 'Haptic Device',
-        image: 'https://graft3d.com/wp-content/uploads/2021/12/HapticDevice-1.jpg',
+        image: '/images/einscan-h2/ein13.png',
         href: '/geomagic-touch-x-haptic-device'
     }
 ];
@@ -35,7 +35,6 @@ const RelatedProducts = () => {
                                     alt={product.title}
                                     fill
                                     className="object-contain"
-                                    unoptimized
                                 />
                             </div>
                             <a

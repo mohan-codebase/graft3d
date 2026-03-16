@@ -6,7 +6,7 @@ const Hero = () => {
         <section
             className="w-full min-h-[500px] flex items-center relative overflow-hidden bg-cover bg-center"
             style={{
-                backgroundImage: "url('https://graft3d.com/wp-content/uploads/2021/12/Group-21.png')",
+                backgroundImage: "url('/images/einscan-h2/ein1.png')",
                 backgroundRepeat: 'no-repeat',
                 backgroundColor: '#f0f7ff'
             }}

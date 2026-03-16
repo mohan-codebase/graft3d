@@ -55,8 +55,10 @@ const ArtiboneHero = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-gray-900 text-lg">Call us now</p>
-                                    <p className="text-[#005696] font-medium">+91 6374410703</p>
-                                    <p className="text-[#005696] font-medium">+91 98404 78347</p>
+                                    <div className="flex flex-col">
+                                        <a href="tel:+916374410703" className="text-[#005696] font-medium hover:underline transition-all">+91 6374410703</a>
+                                        <a href="tel:+919840478347" className="text-[#005696] font-medium hover:underline transition-all">+91 98404 78347</a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -67,7 +69,7 @@ const ArtiboneHero = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-gray-900 text-lg">Email Us at</p>
-                                    <p className="text-[#005696] font-medium">sales@graft3d.com</p>
+                                    <a href="mailto:sales@graft3d.com" className="text-[#005696] font-medium hover:underline transition-all">sales@graft3d.com</a>
                                 </div>
                             </div>
                         </div>

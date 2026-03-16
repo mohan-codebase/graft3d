@@ -204,9 +204,9 @@ export default function GeomagicTouchXPage() {
               </div>
 
               <div className="pl-[2.75rem] md:pl-[3.75rem]">
-                <button className="rounded-sm bg-[#355475] px-6 py-2 text-lg font-semibold text-white transition-all hover:bg-[#2a435d] hover:shadow-lg">
+                <Link href="/get-quote" className="rounded-sm bg-[#355475] px-6 py-2 text-lg font-semibold text-white transition-all hover:bg-[#2a435d] hover:shadow-lg">
                   Enquire Now
-                </button>
+                </Link>
               </div>
             </div>
 
