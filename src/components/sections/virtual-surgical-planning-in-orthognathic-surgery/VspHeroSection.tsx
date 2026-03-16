@@ -54,7 +54,7 @@ const VspHeroSection = () => {
                                 </div>
                                 <div>
                                     <div className="font-bold">Email Us at</div>
-                                    <a href="mailto:info@graft3d.com" className="hover:underline opacity-90">info@graft3d.com</a>
+                                    <a href="mailto:sales@graft3d.com" className="hover:underline opacity-90">sales@graft3d.com</a>
                                 </div>
                             </div>
                         </div>

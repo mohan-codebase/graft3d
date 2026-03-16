@@ -54,7 +54,7 @@ const CranialHeroSection = () => {
                                 </div>
                                 <div className="leading-tight">
                                     <div className="font-extrabold text-[15px] mb-1">Email Us at</div>
-                                    <a href="mailto:info@graft3d.com" className="hover:underline font-bold text-gray-800">info@graft3d.com</a>
+                                    <a href="mailto:sales@graft3d.com" className="hover:underline font-bold text-gray-800">sales@graft3d.com</a>
                                 </div>
                             </div>
                         </div>
