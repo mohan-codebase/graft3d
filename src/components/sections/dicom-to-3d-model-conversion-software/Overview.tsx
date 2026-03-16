@@ -24,12 +24,11 @@ const Overview = () => {
                 </div>
                 <div className="relative rounded-xl overflow-hidden shadow-2xl border border-gray-100">
                     <Image
-                        src="https://graft3d.com/wp-content/uploads/2021/12/D2pIMG-1.png"
+                        src="/images/healthcare-3d-tech-products/d2p.jpg"
                         alt="D2P Software User Interface"
                         width={600}
                         height={400}
                         className="w-full h-auto"
-                        unoptimized
                     />
                 </div>
             </div>
@@ -43,12 +42,11 @@ const Overview = () => {
                 </p>
                 <div className="flex justify-center">
                     <Image
-                        src="https://graft3d.com/wp-content/uploads/2021/12/2021-12-17-10_07_48-D2p.png"
+                        src="/images/healthcare-3d-products/d2p-medical-conversion.jpg"
                         alt="End-to-End Solution Flowchart"
                         width={1000}
                         height={400}
                         className="w-full h-auto max-w-4xl"
-                        unoptimized
                     />
                 </div>
             </div>

@@ -2,19 +2,19 @@ import React from 'react';
 import Image from 'next/image';
 
 const features = [
-    { text: 'D2P minimizes the need for technical expertise.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-12.png' },
-    { text: 'Ideal for pre-operative surgical planning and diagnostic evaluation.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-13.png' },
-    { text: 'DICOM images can be viewed instantly in VR without segmentation.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-14.png' },
-    { text: 'Effortless and instant 3D model segmentation using deep learning tools.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-15.png' },
-    { text: 'One creation suite to support all model preparation steps.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-16.png' },
-    { text: 'Create 3D model in minutes using automatic segmentation tools.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-17.png' },
-    { text: 'Instant transfer of 3D files to various applications such as 3D printers and VR.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-18.png' },
-    { text: 'Supports all popular 3D mesh formats for 3D printers, CAD and VR.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-19.png' },
-    { text: 'Enhanced 3D visualization and complete freedom of model control in VR.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-20.png' },
-    { text: 'Seamlessly connects to advanced 3D visualization technologies.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-21.png' },
-    { text: 'Results are overlaid on patient scan to ensure precision.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-22.png' },
-    { text: 'Intuitive editing tools including auto model coloration.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-23.png' },
-    { text: 'Easy control of data management.', icon: 'https://graft3d.com/wp-content/uploads/2021/12/Group-24.png' },
+    { text: 'D2P minimizes the need for technical expertise.', icon: '/images/medical-segmentation/seg1.png' },
+    { text: 'Ideal for pre-operative surgical planning and diagnostic evaluation.', icon: '/images/medical-segmentation/seg2.png' },
+    { text: 'DICOM images can be viewed instantly in VR without segmentation.', icon: '/images/medical-segmentation/seg3.png' },
+    { text: 'Effortless and instant 3D model segmentation using deep learning tools.', icon: '/images/medical-segmentation/seg4.png' },
+    { text: 'One creation suite to support all model preparation steps.', icon: '/images/medical-segmentation/seg5.png' },
+    { text: 'Create 3D model in minutes using automatic segmentation tools.', icon: '/images/medical-segmentation/seg6.png' },
+    { text: 'Instant transfer of 3D files to various applications such as 3D printers and VR.', icon: '/images/medical-segmentation/seg7.png' },
+    { text: 'Supports all popular 3D mesh formats for 3D printers, CAD and VR.', icon: '/images/medical-segmentation/seg1.png' },
+    { text: 'Enhanced 3D visualization and complete freedom of model control in VR.', icon: '/images/medical-segmentation/seg2.png' },
+    { text: 'Seamlessly connects to advanced 3D visualization technologies.', icon: '/images/medical-segmentation/seg3.png' },
+    { text: 'Results are overlaid on patient scan to ensure precision.', icon: '/images/medical-segmentation/seg4.png' },
+    { text: 'Intuitive editing tools including auto model coloration.', icon: '/images/medical-segmentation/seg5.png' },
+    { text: 'Easy control of data management.', icon: '/images/medical-segmentation/seg6.png' },
 ];
 
 const Features = () => {
@@ -33,7 +33,6 @@ const Features = () => {
                                 width={48}
                                 height={48}
                                 className="object-contain"
-                                unoptimized
                             />
                         </div>
                         <p className="text-gray-700 text-[15px] pt-1 leading-relaxed">

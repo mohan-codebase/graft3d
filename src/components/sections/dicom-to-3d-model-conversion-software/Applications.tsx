@@ -2,15 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 
 const apps = [
-    { title: 'Tumor Segmentation', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-2.png' },
-    { title: 'Orthopedic', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-3.png' },
-    { title: 'Post Surgical Planning', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-4.png' },
-    { title: 'Vessel Segmentation', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-5.png' },
-    { title: 'Mandible Reconstruction', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-6.png' },
-    { title: 'Basilar aneurysm', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-7.png' },
-    { title: 'Oral And Maxillo Facial', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-8.png' },
-    { title: 'Virtual Reality', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-9.png' },
-    { title: 'Virtual Surgical Planning', image: 'https://graft3d.com/wp-content/uploads/2021/12/Group-10.png' },
+    { title: 'Tumor Segmentation', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-25-q5h1xhcq50ulk4iwmc895ibfxpsfbqfyys4kx7f45g.png' },
+    { title: 'Orthopedic', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-11-q5h1x7yc8ohqc0wk585zgkotzv2r6renlhlq4ft1vo.png' },
+    { title: 'Post Surgical Planning', image: '/images/asthi-bone-like-3d-printed-training-models/img.png' },
+    { title: 'Vessel Segmentation', image: '/images/asthi-bone-like-3d-printed-training-models/image-22.png' },
+    { title: 'Mandible Reconstruction', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-12-q5h1x8w6fij0nmv6zqkm12gal8y4egidxm97lprnpg.png' },
+    { title: 'Basilar aneurysm', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-13-q5h1xarut6llausgordv61z7s0outupulvk6k9ovd0.png' },
+    { title: 'Oral And Maxillo Facial', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-15-q5h1xcnj6uo5y2pqds74b1i4ysfl98xba4v5itm30k.png' },
+    { title: 'Virtual Reality', image: '/images/asthi-bone-like-3d-printed-training-models/Rectangle-18-q5h1xfh1rcs0wwlmxbf00isiqy1owc8iaitlynhwhw.png' },
+    { title: 'Virtual Surgical Planning', image: '/images/asthi-bone-like-3d-printed-training-models/case-study.png' },
 ];
 
 const Applications = () => {
@@ -28,7 +28,6 @@ const Applications = () => {
                                 alt={app.title}
                                 fill
                                 className="object-cover"
-                                unoptimized
                             />
                         </div>
                         <div className="p-5 bg-white flex items-center justify-center text-center">

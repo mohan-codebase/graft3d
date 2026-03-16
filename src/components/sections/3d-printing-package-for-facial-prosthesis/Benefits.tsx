@@ -38,10 +38,9 @@ const Benefits = () => {
                     <div className="w-full lg:w-[42%] flex justify-center items-center">
                         <div className="relative w-full max-w-[340px] h-[340px]">
                             <Image
-                                src="https://graft3d.com/wp-content/uploads/2023/08/image-7.png"
+                                src="/images/3d-printing-packagefor-po-devices/image-7.png"
                                 alt="Benefits illustration"
                                 fill
-                                unoptimized
                                 className="object-contain rounded-2xl"
                             />
                             {/* Blue overlay curve decorations */}

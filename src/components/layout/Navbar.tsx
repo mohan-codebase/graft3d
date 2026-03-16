@@ -3,15 +3,26 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Button } from '../ui/Button';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const router = useRouter();
+    const [searchTerm, setSearchTerm] = React.useState('');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null);
     const [activeSubDropdown, setActiveSubDropdown] = React.useState<string | null>(null);
     const [activeSubSubDropdown, setActiveSubSubDropdown] = React.useState<string | null>(null);
+
+    const handleSearch = (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        if (searchTerm.trim()) {
+            router.push(`/contact-us?search=${encodeURIComponent(searchTerm.trim())}`);
+            setSearchTerm('');
+            setIsMobileMenuOpen(false);
+        }
+    };
 
     const toggleDropdown = (name: string) => {
         if (activeDropdown === name) {
@@ -59,48 +70,57 @@ const Navbar = () => {
                 <div className="w-full lg:w-auto flex items-center justify-between">
                     {/* Logo Section */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="flex items-center gap-2">
-                            <div className="relative w-[180px] h-[50px]">
-                                <Image
-                                    src="/images/logo/logo.png"
-                                    alt="Graft Logo Horizontal"
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
-                        </Link>
-                    </div>
-
-                    {/* Hamburger Menu Button */}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="lg:hidden text-primary focus:outline-none p-2 w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:bg-transparent"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                        <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                        <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-                    </Button>
+                    <Link href="/" className="flex items-center gap-2">
+                        <div className="relative w-[180px] h-[50px]">
+                            <Image
+                                src="/images/logo/logo.png"
+                                alt="Graft Logo Horizontal"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
+                    </Link>
                 </div>
 
-                {/* Mobile Menu Overlay */}
-                <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:hidden w-full absolute top-full left-0 bg-white shadow-lg border-t border-gray-100 py-4 px-4 flex flex-col gap-4 z-40`}>
-                    {/* Mobile Search Bar */}
-                    <div className="flex items-center w-full mb-2 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-                        <div className="relative w-full">
-                            <input
-                                type="text"
-                                placeholder="SEARCH"
-                                className="border border-gray-200 rounded-l px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-black placeholder-gray-400"
-                            />
-                            <Button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                            </Button>
-                        </div>
+                {/* Hamburger Menu Button */}
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="lg:hidden text-primary focus:outline-none p-2 w-10 h-10 flex flex-col justify-center items-center gap-1.5 hover:bg-transparent"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                    <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                </Button>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} lg:hidden w-full absolute top-full left-0 bg-white shadow-lg border-t border-gray-100 py-4 px-4 flex flex-col gap-4 z-40`}>
+                {/* Mobile Search Bar */}
+                <form 
+                    onSubmit={handleSearch}
+                    className="flex items-center w-full mb-2 animate-fade-in-up" 
+                    style={{ animationDelay: '100ms' }}
+                >
+                    <div className="relative w-full">
+                        <input
+                            type="text"
+                            placeholder="SEARCH"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="border border-gray-200 rounded-l px-4 py-2 text-sm w-full focus:outline-none focus:border-primary text-black placeholder-gray-400"
+                        />
+                        <Button 
+                            type="submit"
+                            className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </Button>
                     </div>
+                </form>
 
                     <Link href="/" className={`font-bold ${isActive('/') ? 'text-primary' : 'text-black'} animate-fade-in-up`} style={{ animationDelay: '150ms' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
 
@@ -437,16 +457,21 @@ const Navbar = () => {
 
                 {/* Search Bar */}
                 <div className="hidden lg:flex items-center">
-                    <div className="relative">
+                    <form onSubmit={handleSearch} className="relative">
                         <input
                             type="text"
                             placeholder="SEARCH"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
                             className="border border-gray-200 rounded-l px-4 py-2 text-sm w-[200px] focus:outline-none focus:border-primary text-black placeholder-gray-400"
                         />
-                        <Button className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto">
+                        <Button 
+                            type="submit"
+                            className="absolute right-0 top-0 h-full bg-primary text-white px-3 rounded-r rounded-l-none hover:bg-primary/80 transition-colors flex items-center justify-center w-auto"
+                        >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </Button>
-                    </div>
+                    </form>
                 </div>
 
             </div>

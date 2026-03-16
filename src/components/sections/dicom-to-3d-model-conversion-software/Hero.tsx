@@ -6,7 +6,7 @@ const Hero = () => {
         <section
             className="w-full min-h-[500px] flex items-center relative overflow-hidden bg-cover bg-right lg:bg-center"
             style={{
-                backgroundImage: "url('https://graft3d.com/wp-content/uploads/2021/12/CoverPhoto-1.png')",
+                backgroundImage: "url('/images/healthcare-3d-tech-products/hero-bg.png')",
                 backgroundRepeat: 'no-repeat',
                 backgroundColor: '#f0f7ff'
             }}
@@ -36,19 +36,19 @@ const Hero = () => {
                             Download Brochure
                         </a>
                         <a
-                            href="#request-trial"
+                            href="/contact-us"
                             className="flex items-center justify-center bg-[#1e73be] text-white px-4 py-3 rounded font-bold text-[15px] hover:bg-[#165a94] transition-all shadow-sm"
                         >
                             Request A Free Trial
                         </a>
                         <a
-                            href="#get-quote"
+                            href="/contact-us"
                             className="flex items-center justify-center bg-[#1e73be] text-white px-4 py-3 rounded font-bold text-[15px] hover:bg-[#165a94] transition-all shadow-sm"
                         >
                             Get Quote
                         </a>
                         <a
-                            href="#book-meeting"
+                            href="/contact-us"
                             className="flex items-center justify-center gap-2 bg-[#1e73be] text-white px-4 py-3 rounded font-bold text-[15px] hover:bg-[#165a94] transition-all shadow-sm"
                         >
                             Book Online Meeting <Calendar size={18} />

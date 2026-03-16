@@ -18,13 +18,13 @@ const Hero = () => {
             <p className="text-[24px] text-black mt-4">Plan .Train .Visualize.</p>
             <div className="mt-6 grid grid-cols-2 gap-4 w-full max-w-[360px]">
               <a
-                href="#"
+                href="/contact-us"
                 className="bg-primary text-white text-[18px] font-medium py-2.5 px-6 text-center rounded"
               >
                 Buy
               </a>
               <a
-                href="#"
+                href="/brochures/Graft3d.pdf"
                 className="bg-primary text-white text-[18px] font-medium py-2.5 px-6 text-center rounded"
               >
                 Download
