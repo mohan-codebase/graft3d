@@ -50,7 +50,7 @@ const HeroSection = () => {
                         <div className="flex flex-col space-y-6 pt-8">
                             <div className="flex items-center gap-4">
                                 <div className="flex size-14 items-center justify-center rounded-full bg-[#005696] text-white">
-                                    <Phone className="size-7 fill-white" />
+                                    <Phone className="size-7" />
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-xl font-bold text-[#005696]">Call us now</p>
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
                             <div className="flex items-center gap-4">
                                 <div className="flex size-14 items-center justify-center rounded-full bg-[#005696] text-white">
-                                    <Mail className="size-7 fill-white" />
+                                    <Mail className="size-7" />
                                 </div>
                                 <div className="flex flex-col">
                                     <p className="text-xl font-bold text-[#005696]">Email Us at</p>
@@ -74,7 +74,7 @@ const HeroSection = () => {
                         </div>
 
                         <div className="flex items-center gap-2 pt-12">
-                            <CheckCircle2 className="size-5 text-[#005696] fill-[#005696] text-white" />
+                            <CheckCircle2 className="size-5 text-[#005696] fill-white" />
                             <p className="text-sm font-semibold text-gray-700">
                                 <span className="text-gray-600">Designed by </span>
                                 <span className="text-[#005696]">Zoriox Innovation Labs</span>

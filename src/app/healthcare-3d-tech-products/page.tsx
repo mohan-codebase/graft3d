@@ -37,9 +37,9 @@ export default function Healthcare3DTechProductsPage() {
                         <p className="text-base md:text-lg text-[#0f6cbd] mb-8 font-medium">
                             Get detailed information, quotes, and demos on 3D scanners, 3D printers, and software exclusively designed for advanced healthcare 3D printing applications.
                         </p>
-                        <Button asChild className="bg-[#8abadd] hover:bg-[#7aa0c6] text-[#1a3b5c] px-8 py-2 text-base font-semibold rounded shadow-sm border border-[#7aa0c6]">
+                        {/* <Button asChild className="bg-[#8abadd] hover:bg-[#7aa0c6] text-[#1a3b5c] px-8 py-2 text-base font-semibold rounded shadow-sm border border-[#7aa0c6]">
                             <Link href="#tech-products">Explore</Link>
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
             </section>

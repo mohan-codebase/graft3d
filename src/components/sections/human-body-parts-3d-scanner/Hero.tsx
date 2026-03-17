@@ -35,7 +35,7 @@ const Hero = () => {
                             Get Quote Now
                         </a>
                         <a
-                            href="#book-demo"
+                            href="https://us02web.zoom.us/j/5903189768?pwd=T3VucDArMUY1NGxNRU1NMnJMYnVuQT09#success"
                             className="flex items-center justify-center gap-2 bg-[#1e73be] text-white px-4 py-3 rounded font-bold text-[15px] hover:bg-[#165a94] transition-all shadow-sm"
                         >
                             Book Online Demo <Calendar size={18} />
