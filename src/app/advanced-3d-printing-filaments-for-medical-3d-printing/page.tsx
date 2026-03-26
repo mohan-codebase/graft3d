@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Hero from '@/components/sections/advanced-3d-printing-filaments/Hero';
 import MaterialsCatalog from '@/components/sections/advanced-3d-printing-filaments/MaterialsCatalog';
 import WhyChooseUs from '@/components/sections/advanced-3d-printing-filaments/WhyChooseUs';
+import PolyurethaneCard from '@/components/sections/advanced-3d-printing-filaments/PolyurethaneCard';
 import ClinicalApplications from '@/components/sections/advanced-3d-printing-filaments/ClinicalApplications';
 import ServicePrecision from '@/components/sections/advanced-3d-printing-filaments/ServicePrecision';
 
@@ -13,10 +14,11 @@ export const metadata: Metadata = {
 
 export default function Advanced3DPrintingFilamentsPage() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-white">
       <Hero />
       <MaterialsCatalog />
       <WhyChooseUs />
+      <PolyurethaneCard />
       <ClinicalApplications />
       <ServicePrecision />
     </main>

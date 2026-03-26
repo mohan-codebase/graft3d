@@ -208,7 +208,7 @@ const Navbar = () => {
                                     {/* Medical Filaments Section */}
                                     <div>
                                         <div className="flex items-center justify-between w-full border-b border-gray-800 pb-2">
-                                            <Link href="/polyetheretherketone-peek" className=" font-bold transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Medical Filaments</Link>
+                                            <Link href="/advanced-3d-printing-filaments-for-medical-3d-printing" className=" font-bold transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Medical Filaments</Link>
                                             <button onClick={() => toggleSubDropdown('filaments')} className="p-2">
                                                 <svg className={`w-3 h-3 transition-transform ${activeSubDropdown === 'filaments' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -382,7 +382,7 @@ const Navbar = () => {
 
                                 {/* Medical Filaments */}
                                 <div className="group/sub relative border-b border-gray-800 last:border-0 bg-white">
-                                    <Link href="/polyetheretherketone-peek" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
+                                    <Link href="/advanced-3d-printing-filaments-for-medical-3d-printing" className="flex items-center justify-between px-6 py-4 text-[15px] font-medium  transition-colors">
                                         <span className='font-bold'>Medical Filaments</span>
                                         <svg className="w-4 h-4 -rotate-90 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                                     </Link>
