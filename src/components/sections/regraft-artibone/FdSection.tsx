@@ -21,7 +21,7 @@ const FdSection = () => {
 
                         <div className="pt-4">
                             <Link
-                                href="/asthi-bone-like-3d-printed-training-models"
+                                href="/regraft-bonerip-bone-like-printed-training-models"
                                 className="group inline-flex items-center gap-2 text-lg font-semibold text-[#005696] transition-colors hover:text-[#004274]"
                             >
                                 Know more

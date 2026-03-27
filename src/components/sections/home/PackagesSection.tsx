@@ -6,7 +6,7 @@ const packages = [
     {
         title: "Anatomical Model Package (AMP)",
         image: "/images/home/our-3d-packages/image-1.png", // Placeholder - Replace with actual image
-        link: "/asthi-bone-like-3d-printed-training-models"
+        link: "/regraft-bonerip-bone-like-printed-training-models"
     },
     {
         title: "P&O Device Package",

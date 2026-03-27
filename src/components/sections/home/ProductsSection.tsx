@@ -11,7 +11,7 @@ const packages = [
     {
         title: "Asthi Anatomical Models",
         image: "/images/home/our-3d-printed-products/image-2.png", // Placeholder - Replace with actual image
-        link: "/asthi-bone-like-3d-printed-training-models"
+        link: "/regraft-bonerip-bone-like-printed-training-models"
     },
     {
         title: "Patient Specific Implant",

@@ -11,7 +11,7 @@ const products = [
     {
         name: "Arti Bone and Arti ear",
         image: "/images/home/our-3d-printed-products/image-2.png",
-        link: "/asthi-bone-like-3d-printed-training-models"
+        link: "/regraft-bonerip-bone-like-printed-training-models"
     },
     {
         name: "Patient Specific Implant",

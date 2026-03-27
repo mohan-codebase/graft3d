@@ -6,7 +6,7 @@ const packages = [
     {
         name: "Anatomical Model Package (AMP)",
         image: "/images/home/our-3d-packages/image-1.png",
-        link: "/asthi-bone-like-3d-printed-training-models"
+        link: "/regraft-bonerip-bone-like-printed-training-models"
     },
     {
         name: "R&D Device Package",
