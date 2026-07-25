@@ -32,19 +32,19 @@ const FaqAccordion: React.FC<FaqAccordionProps> = ({ items }) => {
     };
 
     return (
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col" itemScope itemType="https://schema.org/FAQPage">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             {items.map((item, index) => (
-                <div key={index} className="border-b border-gray-200">
+                <div key={index} className="border-b border-gray-200" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                     {/* Header */}
                     <button
                         onClick={() => toggleAccordion(index)}
                         className="w-full flex items-center justify-between py-5 text-left transition-colors duration-300 group"
                     >
-                        <span className="font-bold text-base lg:text-lg pr-4 text-[#005696] group-hover:text-[#003c6e]">
+                        <span className="font-bold text-base lg:text-lg pr-4 text-[#005696] group-hover:text-[#003c6e]" itemProp="name">
                             {item.question}
                         </span>
                         <span className="text-[#005696] shrink-0 font-medium text-2xl leading-none">
@@ -56,8 +56,9 @@ const FaqAccordion: React.FC<FaqAccordionProps> = ({ items }) => {
                     <div
                         className={`transition-all duration-300 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-200 opacity-100 pb-5' : 'max-h-0 opacity-0'
                             }`}
+                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
                     >
-                        <div className="text-gray-600 text-sm lg:text-base leading-relaxed pr-8">
+                        <div className="text-gray-600 text-sm lg:text-base leading-relaxed pr-8" itemProp="text">
                             {item.answer}
                         </div>
                     </div>
