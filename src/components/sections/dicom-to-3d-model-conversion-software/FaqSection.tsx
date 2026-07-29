@@ -55,7 +55,7 @@ const FaqSection = () => {
     };
 
     return (
-        <section className="py-20 bg-[#f8fbff]">
+        <section className="py-20 bg-[#f8fbff]" itemScope itemType="https://schema.org/FAQPage">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -70,12 +70,13 @@ const FaqSection = () => {
                         <div
                             key={index}
                             className="bg-white rounded-xl border border-blue-50 shadow-sm overflow-hidden transition-all duration-300"
+                            itemScope itemProp="mainEntity" itemType="https://schema.org/Question"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
                             >
-                                <span className="font-bold text-[#1a365d] pr-8">{faq.question}</span>
+                                <span className="font-bold text-[#1a365d] pr-8" itemProp="name">{faq.question}</span>
                                 {openIndex === index ? (
                                     <Minus className="text-[#1e73be] shrink-0" size={20} />
                                 ) : (
@@ -87,8 +88,8 @@ const FaqSection = () => {
                                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                                     }`}
                             >
-                                <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-50">
-                                    {faq.answer}
+                                <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-50" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                                    <span itemProp="text">{faq.answer}</span>
                                 </div>
                             </div>
                         </div>

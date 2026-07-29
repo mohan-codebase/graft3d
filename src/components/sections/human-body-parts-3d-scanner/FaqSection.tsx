@@ -30,7 +30,7 @@ const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-20 bg-gray-50/50">
+        <section className="py-20 bg-gray-50/50" itemScope itemType="https://schema.org/FAQPage">
             <div className="max-w-[1200px] mx-auto px-4">
                 <h2 className="text-3xl font-extrabold text-[#1171bd] mb-12 uppercase tracking-tight text-center">
                     Frequently Asked Questions
@@ -40,17 +40,17 @@ const FaqSection = () => {
                         <div
                             key={index}
                             className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-                        >
+                         itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between p-6 text-left"
                             >
-                                <span className="font-bold text-[#1a365d] pr-4">{faq.question}</span>
+                                <span className="font-bold text-[#1a365d] pr-4" itemProp="name">{faq.question}</span>
                                 {openIndex === index ? <ChevronUp className="text-[#1e73be] shrink-0" /> : <ChevronDown className="text-gray-400 shrink-0" />}
                             </button>
                             {openIndex === index && (
-                                <div className="px-6 pb-6 text-gray-600 leading-relaxed text-sm animate-in fade-in slide-in-from-top-1 duration-200">
-                                    {faq.answer}
+                                <div className="px-6 pb-6 text-gray-600 leading-relaxed text-sm animate-in fade-in slide-in-from-top-1 duration-200" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                                    <span itemProp="text">{faq.answer}</span>
                                 </div>
                             )}
                         </div>
@@ -62,3 +62,4 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+

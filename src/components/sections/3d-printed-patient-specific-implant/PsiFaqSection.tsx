@@ -33,20 +33,20 @@ const faqs = [
 
 export default function PsiFaqSection() {
     return (
-        <section className="bg-white py-12">
+        <section className="bg-white py-12" itemScope itemType="https://schema.org/FAQPage">
             <div className="mx-auto w-full max-w-[1200px] px-4">
                 <h2 className="text-center text-4xl font-bold text-primary">FAQs</h2>
                 <div className="mt-8 divide-y divide-gray-200 border-y border-gray-200">
                     {faqs.map((faq) => (
                         <details key={faq.question} className="group py-4">
                             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-[#1B6DB1] md:text-base">
-                                <span>{faq.question}</span>
+                                <span itemProp="name">{faq.question}</span>
                                 <span className="text-xl leading-none text-primary transition-transform group-open:rotate-45">
                                     +
                                 </span>
                             </summary>
                             <p className="mt-3 pr-8 text-sm leading-7 text-gray-700 md:text-[15px]">
-                                {faq.answer}
+                                <span itemProp="text">{faq.answer}</span>
                             </p>
                         </details>
                     ))}
@@ -55,3 +55,4 @@ export default function PsiFaqSection() {
         </section>
     );
 }
+

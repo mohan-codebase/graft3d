@@ -136,7 +136,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-12" itemScope itemType="https://schema.org/FAQPage">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -152,20 +152,20 @@ const FaqSection = () => {
           {faqItems.map((item, index) => {
             const isOpen = activeIndex === index;
             return (
-              <div key={item.question}>
+              <div key={item.question} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
                   className="w-full flex items-center justify-between text-left py-[15px] px-[15px] border-b border-[#d5d8dc] text-[#1B6DB1] text-[16px] font-semibold"
                 >
-                  <span>{item.question}</span>
+                  <span itemProp="name">{item.question}</span>
                   <span className="text-[#1B6DB1] text-lg font-semibold">
                     {isOpen ? "-" : "+"}
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="border-b border-[#d5d8dc] px-[15px] py-[15px] text-[16px] text-gray-700">
-                    {item.answer}
+                  <div className="border-b border-[#d5d8dc] px-[15px] py-[15px] text-[16px] text-gray-700" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <span itemProp="text">{item.answer}</span>
                   </div>
                 )}
               </div>

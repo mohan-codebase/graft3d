@@ -50,7 +50,7 @@ const Faq = () => {
     };
 
     return (
-        <section className="w-full bg-white">
+        <section className="w-full bg-white" itemScope itemType="https://schema.org/FAQPage">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
                 <h2 className="text-center text-[26px] lg:text-[32px] font-bold text-[#1A1B23] mb-10">
                     Frequently Asked Questions
@@ -67,7 +67,7 @@ const Faq = () => {
                                         ? "bg-white border-[#1B6DB1] shadow-[0_8px_30px_rgba(27,109,177,0.06)]"
                                         : "bg-white border-[#E4ECF3] hover:border-[#1B6DB1]/40 hover:shadow-[0_4px_12px_rgba(16,80,140,0.03)]"
                                 }`}
-                            >
+                             itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                                 <button
                                     onClick={() => toggle(i)}
                                     aria-expanded={isOpen}
@@ -107,3 +107,4 @@ const Faq = () => {
 };
 
 export default Faq;
+

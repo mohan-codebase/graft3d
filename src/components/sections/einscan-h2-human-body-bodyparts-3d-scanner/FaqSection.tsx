@@ -69,19 +69,19 @@ const FaqSection = () => {
     };
 
     return (
-        <section className="bg-[#E6F3FF] py-12 md:py-20">
+        <section className="bg-[#E6F3FF] py-12 md:py-20" itemScope itemType="https://schema.org/FAQPage">
             <div className="container mx-auto px-4 md:px-8">
                 <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-[#1D70B8] md:text-4xl">
                     FAQs
                 </h2>
                 <div className="mx-auto max-w-4xl space-y-4">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="overflow-hidden rounded-xl bg-white shadow-sm border border-blue-50">
+                        <div key={index} className="overflow-hidden rounded-xl bg-white shadow-sm border border-blue-50" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                             <button
                                 onClick={() => toggleFaq(index)}
                                 className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50"
                             >
-                                <span className="text-lg font-bold text-gray-800">{faq.question}</span>
+                                <span className="text-lg font-bold text-gray-800" itemProp="name">{faq.question}</span>
                                 {openIndex === index ? (
                                     <ChevronUp className="size-5 text-[#1D70B8]" />
                                 ) : (
@@ -91,8 +91,8 @@ const FaqSection = () => {
                             <div
                                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] border-t border-gray-100' : 'max-h-0'}`}
                             >
-                                <div className="px-6 py-5 text-gray-600 leading-relaxed">
-                                    {faq.answer}
+                                <div className="px-6 py-5 text-gray-600 leading-relaxed" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                                    <span itemProp="text">{faq.answer}</span>
                                 </div>
                             </div>
                         </div>
@@ -104,3 +104,4 @@ const FaqSection = () => {
 };
 
 export default FaqSection;
+

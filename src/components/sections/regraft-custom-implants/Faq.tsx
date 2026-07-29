@@ -66,7 +66,7 @@ const Faq = () => {
     };
 
     return (
-        <section className="w-full bg-white py-14 lg:py-20">
+        <section className="w-full bg-white py-14 lg:py-20" itemScope itemType="https://schema.org/FAQPage">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -83,12 +83,13 @@ const Faq = () => {
                             className={`rounded-xl border transition-all overflow-hidden ${
                                 open === i ? "border-[#166aaf]/40 shadow-sm" : "border-slate-200"
                             }`}
+                            itemScope itemProp="mainEntity" itemType="https://schema.org/Question"
                         >
                             <button
                                 onClick={() => setOpen(open === i ? null : i)}
                                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-[#f8fbff] transition-colors"
                             >
-                                <span className="font-semibold text-[#1e1e1e] text-base leading-snug">{faq.q}</span>
+                                <span className="font-semibold text-[#1e1e1e] text-base leading-snug" itemProp="name">{faq.q}</span>
                                 {open === i ? (
                                     <ChevronUp className="w-5 h-5 text-[#166aaf] shrink-0" />
                                 ) : (
@@ -96,8 +97,8 @@ const Faq = () => {
                                 )}
                             </button>
                             {open === i && (
-                                <div className="px-5 pb-4 bg-white">
-                                    <p className="text-[#1e1e1e] text-sm leading-relaxed">{faq.a}</p>
+                                <div className="px-5 pb-4 bg-white" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                                    <p className="text-[#1e1e1e] text-sm leading-relaxed" itemProp="text">{faq.a}</p>
                                 </div>
                             )}
                         </div>
