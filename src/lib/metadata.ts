@@ -7,6 +7,7 @@ function meta(title: string, description: string, slug: string, keywords?: strin
         title,
         description,
         keywords,
+        robots: { index: true, follow: true },
         alternates: { canonical: `${BASE_URL}${slug}` },
     };
 }
@@ -53,7 +54,7 @@ export const PAGE_METADATA = {
 
     healthcarePrintedProducts: meta(
         'healthcare 3D Printed Products | Graft3D Healthcare',
-        'Explore healthcare 3D printed products in India using medical-grade PEEK. Biocompatible, high-performance solutions for implants, R&D & manufacturing. Discover more.',
+        'Explore Graft3D\'s healthcare 3D printed products, including patient-specific implants, anatomical models, surgical guides, and prosthetic solutions.',
         '/healthcare-3d-printed-products',
         [
             'healthcare 3d tech product',
@@ -89,7 +90,7 @@ export const PAGE_METADATA = {
     ),
 
     geomagicTouchX: meta(
-        '3D SYSTEMS Touch Haptic Devices',
+        'Geomagic Touch X Haptic Device for Medical Design | Graft3D',
         'Professional Geomagic Touch X haptic device for advanced 3D design, modeling, and simulation with accurate force feedback technology.',
         '/geomagic-touch-x-haptic-device',
         [
@@ -102,13 +103,13 @@ export const PAGE_METADATA = {
     ),
 
     phantomPremium: meta(
-        'Phantom Premium Haptic Device in India',
+        'Medical Image Segmentation Services | Graft3D Healthcare',
         'Phantom Premium haptic device for 3D simulation, virtual prototyping, research labs, advanced training and medical use. Get Quote',
         '/phantom-premium-haptic-device'
     ),
 
     geomagicFreeform: meta(
-        'Geomagic Freeform software in India',
+        'Geomagic Freeform Software for Medical 3D Design | Graft3D',
         'Book a Demo & Get a Quote for Geomagic Freeform in India from an authorised Hexagon Platinum partner and distributor',
         '/geomagic-freeform',
         [
@@ -134,7 +135,7 @@ export const PAGE_METADATA = {
 
     funmatPro410: meta(
         'FUNMAT Pro 410 | Medical PEEK 3D Printer',
-        'Explore the Graft3D Healthcare FUNMAT Pro 410, an advanced medical PEEK 3D printer engineered for high-strength, heat-resistant, and biocompatible applications. Ideal for healthcare and medical devices, with medical-grade certification',
+        'Discover the FUNMAT PRO 410 high-temperature medical 3D printer for PEEK, PEKK, surgical guides, implants, and precision healthcare applications.',
         '/funmat-pro-410',
         [
             'Funmat Pro 410 3D printer',
@@ -194,7 +195,7 @@ export const PAGE_METADATA = {
     ),
 
     pmma: meta(
-        'PMMA -medical grade filament In India',
+        'Polymethyl Methacrylate (PMMA) Medical Material | Graft3D',
         'Medical grade PMMA for healthcare & industrial use in India—optical clarity, biocompatible, durable. Ideal for precision 3D printing. Explore now.',
         '/polymethyl-methacrylate-pmma',
         [
@@ -241,7 +242,7 @@ export const PAGE_METADATA = {
     ),
 
     regraftArtibone: meta(
-        'Custom 3D Printed Implants that replace the actual bone inside the human body -Know more about our all kind of implants',
+        'Regraft Artibone Patient-Specific Bone Implants | Graft3D',
         'Advanced PEEK medical polymer for orthopaedic applications in India. Durable, biocompatible & stable. Discover Regraft Artibone.',
         '/regraft-artibone',
         [
@@ -254,7 +255,7 @@ export const PAGE_METADATA = {
     ),
 
     regraftBonerip: meta(
-        'Regraft- Bonerip',
+        'Regraft Bonerip Bone Models for Surgical Training | Graft3D',
         'High-quality custom 3D-printed anatomical models designed for training, simulation, and mock-up surgeries.',
         '/regraft-bonerip',
         [
@@ -324,7 +325,7 @@ export const PAGE_METADATA = {
     // ── Surgical Planning & Reconstruction ───────────────────────────────────
     vspOrthognathic: meta(
         'Virtual Surgical Planning in Orthognathic Surgery | Graft3D',
-        'Virtual surgical planning for orthognathic surgery in India.',
+        'Improve orthognathic surgery with virtual surgical planning, 3D anatomical models, precise treatment planning, and patient-specific surgical solutions by Graft3D.',
         '/virtual-surgical-planning-in-orthognathic-surgery',
         [
             'Virtual Surgical Planning (VSP) plates',
@@ -378,7 +379,7 @@ export const PAGE_METADATA = {
 
     facialTraumaVsp: meta(
         'Facial Trauma VSP & Plates | Graft3D Healthcare',
-        'Virtual surgical planning & custom plates for facial trauma in India. High-precision, biocompatible PEEK solutions for improved surgical accuracy. Discover more.',
+        'Plan facial trauma surgeries with virtual surgical planning, custom fixation plates, 3D anatomical models, and patient-specific solutions from Graft3D.',
         '/virtual-surgical-planning-and-plates-for-facial-trauma',
         [
             'Virtual Surgical Planning and Plates for Facial Trauma',

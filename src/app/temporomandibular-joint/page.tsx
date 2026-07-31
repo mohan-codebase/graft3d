@@ -15,6 +15,7 @@ export const metadata = {
     title: "TMJ Reconstruction with 3D Printed Prosthesis | Graft3D",
     description:
         "Advanced TMJ reconstruction using custom 3D-printed prosthesis for precision, durability, and improved patient outcomes.",
+    robots: { index: true, follow: true },
 };
 
 export default function TMJPage() {

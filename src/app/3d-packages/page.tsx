@@ -1,24 +1,30 @@
-import React from 'react';
-import type { Metadata } from 'next';
-import PageHero from '@/components/common/PageHero';
-import PackagesGrid from '@/components/sections/3d-packages/PackagesGrid';
-import PackagesFaq from '@/components/sections/3d-packages/PackagesFaq';
+import React from "react";
+import type { Metadata } from "next";
+import PageHero from "@/components/common/PageHero";
+import PackagesGrid from "@/components/sections/3d-packages/PackagesGrid";
+import PackagesFaq from "@/components/sections/3d-packages/PackagesFaq";
 
 export const metadata: Metadata = {
-    title: '3D Packages - Medical 3D Printing Solutions | Graft3D',
-    description: 'Explore our comprehensive 3D printing packages for healthcare including Digital Dentistry, PSI, Orthotic Devices, HD Prosthesis, Anatomical Models, and Surgical Planning solutions.',
+    title: "3D Packages - Medical 3D Printing Solutions | Graft3D",
+    description:
+        "Explore Graft3D's 3D Packages for advanced medical 3D printing, surgical planning, implant design, and healthcare visualization solutions with expert support.",
+    robots: {
+        index: true,
+        follow: true,
+    },
     alternates: {
-        canonical: '/3d-packages',
+        canonical: "/3d-packages",
     },
     openGraph: {
-        title: '3D Packages - Medical 3D Printing Solutions | Graft3D',
-        description: 'Comprehensive 3D printing packages for hospitals and surgeons with end-to-end digital workflow solutions.',
+        title: "3D Packages - Medical 3D Printing Solutions | Graft3D",
+        description:
+            "Comprehensive 3D printing packages for hospitals and surgeons with end-to-end digital workflow solutions.",
         images: [
             {
-                url: '/opengraph-image.png',
+                url: "/opengraph-image.png",
                 width: 1200,
                 height: 630,
-                alt: '3D Packages - Graft3D Healthcare Solutions',
+                alt: "3D Packages - Graft3D Healthcare Solutions",
             },
         ],
     },
@@ -39,7 +45,6 @@ export default function ThreeDPackagesPage() {
 
             {/* FAQs Section */}
             <PackagesFaq />
-
         </main>
     );
 }

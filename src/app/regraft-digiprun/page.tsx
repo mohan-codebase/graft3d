@@ -9,6 +9,7 @@ export const metadata = {
   },
     title: 'ReGraft Digiprun | Patient-Specific Bone Reconstruction | Graft3D',
     description: 'Digiprun represents the next generation of digitally planned, patient-specific bone regrafts designed to restore anatomy, function, and aesthetics.',
+    robots: { index: true, follow: true },
 };
 
 export default function RegraftDigiprunPage() {

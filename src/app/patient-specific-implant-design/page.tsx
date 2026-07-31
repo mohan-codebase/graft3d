@@ -10,7 +10,8 @@ export const metadata = {
     canonical: '/patient-specific-implant-design',
   },
     title: 'Patient-Specific Implant Design | Graft3D',
-    description: 'Patient-Specific Implant Design Made Faster and Easier. A centralized digital platform that transforms medical imaging into high precision patient specific implant designs.',
+    description: 'Design precise patient-specific implants with Graft3D using CT, MRI, and CBCT data for surgical planning, custom implants, and advanced medical 3D printing.',
+    robots: { index: true, follow: true },
 };
 
 export default function PatientSpecificImplantDesignPage() {

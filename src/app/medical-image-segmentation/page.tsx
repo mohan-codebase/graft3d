@@ -13,7 +13,8 @@ import Faq from "@/components/sections/medical-image-segmentation/Faq";
 export const metadata: Metadata = {
     title: "Medical Image Segmentation — Convert DICOM Scans to 3D Models | Graft3D",
     description:
-        "Upload CT, MRI or CBCT scans and get accurate, ready-to-use 3D anatomical models. AI + expert segmentation with 24–48 hour turnaround for surgical planning, implant design and research.",
+        "Convert CT, MRI, and CBCT scans into accurate 3D models with Graft3D's medical image segmentation services for surgical planning and implants.",
+    robots: { index: true, follow: true },
     alternates: { canonical: "/medical-image-segmentation" },
     openGraph: {
         title: "Medical Image Segmentation — Convert DICOM Scans to 3D Models",

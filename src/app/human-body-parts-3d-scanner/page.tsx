@@ -17,6 +17,7 @@ export const metadata = {
   },
     title: 'Einscan Human - Human Body and Body Parts 3D Scanner | Graft3D',
     description: 'The EinScan H / HX series pioneers a hybrid light source technology, integrating LED and invisible infrared light for high-quality human body 3D scanning.',
+    robots: { index: true, follow: true },
 };
 
 export default function HumanScannerPage() {

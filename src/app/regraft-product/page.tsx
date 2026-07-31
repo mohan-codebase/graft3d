@@ -7,8 +7,9 @@ export const metadata = {
   alternates: {
     canonical: '/regraft-product',
   },
-    title: 'ReGraft Products & FAQ | Graft3D',
+    title: 'ReGraft Products for Digital Surgical Solutions | Graft3D',
     description: 'Explore the range of ReGraft products including patient-specific implants, surgical guides, and anatomical models.',
+    robots: { index: true, follow: true },
 };
 
 export default function RegraftProductsPage() {

@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import UploadBioDataSection from "@/components/sections/upload-bio-data/UploadBioDataSection";
 
 export const metadata: Metadata = {
-    title: 'Upload Bio Data | Graft3D',
+    title: 'Upload Bio Data for Medical 3D Solutions | Graft3D',
     description: 'Securely upload your patient bio-CAD data and medical specifications to Graft3D Healthcare Solutions.',
+    robots: { index: true, follow: true },
     alternates: {
         canonical: '/upload-bio-data',
     },

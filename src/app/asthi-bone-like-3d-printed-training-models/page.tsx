@@ -10,7 +10,8 @@ export const metadata = {
     canonical: '/asthi-bone-like-3d-printed-training-models',
   },
   title: "Asthi - Bone-Like 3D Printed Training Models - Graft 3D",
-  description: "Asthi- 3D Printed Anatomical Models Plan .Train .Visualize.",
+  description: "Discover Asthi bone-like 3D printed training models for realistic surgical education, orthopedic training, medical simulation, and hands-on clinical practic",
+  robots: { index: true, follow: true },
 };
 
 export default function AsthiTrainingModelsPage() {

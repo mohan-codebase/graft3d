@@ -9,6 +9,7 @@ export const metadata = {
   },
     title: 'ReGraft Organrip | Soft Tissue Replicas | Graft3D',
     description: 'Organrip uses advanced 3D printing to create lifelike soft organ replicas for surgical simulation, preoperative planning, and educational training.',
+    robots: { index: true, follow: true },
 };
 
 export default function RegraftOrganripPage() {

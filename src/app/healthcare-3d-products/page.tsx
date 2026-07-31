@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     canonical: '/healthcare-3d-products',
   },
     title: 'Healthcare 3D Products | Medical 3D Scanners, Printers & Software | Graft3D',
-    description: 'Explore our comprehensive range of healthcare 3D products including medical 3D scanners, 3D printers, and specialized software for hospitals and medical professionals.',
+    description: 'Explore Graft3D\'s healthcare 3D products for surgical planning, patient-specific implants, anatomical models, medical devices, and advanced 3D printing solutions.',
+    robots: { index: true, follow: true },
     openGraph: {
         title: 'Healthcare 3D Products | Graft3D',
         description: 'Medical 3D scanners, printers, and software for healthcare professionals.',

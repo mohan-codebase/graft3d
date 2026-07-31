@@ -8,7 +8,8 @@ import Faq from "@/components/sections/inverse3/Faq";
 export const metadata: Metadata = {
     title: "Inverse3 — High-Performance 3D Haptic Device | Graft3D",
     description:
-        "Inverse3 is a high-performance 3D haptic device delivering ultra-fine force feedback and motion control for medical simulation, surgical training, robotics, research, and virtual prototyping.",
+        "Experience Inverse3, a high-performance 3D haptic device for surgical simulation, robotics, virtual prototyping, and precision force feedback applications.",
+    robots: { index: true, follow: true },
     alternates: { canonical: "/inverse3" },
     openGraph: {
         title: "Inverse3 — High-Performance 3D Haptic Device",

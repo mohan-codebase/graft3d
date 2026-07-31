@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: "MinVerse — Compact High-Performance Haptic Device | Graft3D",
     description:
         "MinVerse is a compact, high-precision 3D haptic device delivering real-time force feedback and ultra-fine motion control for medical simulation, surgical planning, design, and robotics.",
+    robots: { index: true, follow: true },
     alternates: { canonical: "/minverse" },
     openGraph: {
         title: "MinVerse — Compact High-Performance Haptic Device",

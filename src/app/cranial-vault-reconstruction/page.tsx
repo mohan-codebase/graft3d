@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   },
     title: 'Cranial Vault Reconstruction with Custom 3D Implants | Graft3D',
     description: 'Advanced cranial vault reconstruction using custom 3D-printed implants and planning. Improve surgical precision and outcomes.',
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function CranialVaultReconstructionPage() {

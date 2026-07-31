@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     canonical: '/upload-dicom-data',
   },
     title: 'Upload DICOM Data | Secure 3D Model Delivery | Graft3D',
-    description: 'Upload your DICOM imaging files securely up to 5 GB. Fast and secure delivery of 3D bio models from your CT/MRI scans. Send as email or share via cloud link.',
+    description: 'Upload DICOM data securely to Graft3D for medical image segmentation, 3D model creation, surgical planning, and patient-specific implant solutions.',
+    robots: { index: true, follow: true },
 };
 
 export default function UploadDicomDataPage() {

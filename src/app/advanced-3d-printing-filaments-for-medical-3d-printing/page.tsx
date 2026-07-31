@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     canonical: '/advanced-3d-printing-filaments-for-medical-3d-printing',
   },
   title: 'Advanced 3D Printing Filaments for Medical 3D Printing - Graft 3D',
-  description: 'Precision. Performance. Biocompatibility. At Graft 3D, we’re transforming the future of craniofacial and orthopedic reconstruction through high performance 3D printing filaments engineered for safety, strength, and seamless biological integration.',
+  description: 'Explore advanced 3D printing filaments for medical applications, including biocompatible materials for surgical guides, models, and healthcare innovation',
+  robots: { index: true, follow: true },
 };
 
 export default function Advanced3DPrintingFilamentsPage() {
