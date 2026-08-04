@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: 'Get Advanced 3D Printed Patient Specific Implants in India | Graft3D',
     description:
         'Graft3D offers titanium and PEEK 3D printed patient-specific implants with surgeon collaboration, digital planning, and fast delivery workflows.',
+    robots: { index: true, follow: true },
     openGraph: {
         title: '3D Printed Patient Specific Implants in India | Graft3D',
         description:

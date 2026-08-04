@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   },
   title: '3D Printed Models in the Medical Field for Healthcare - Graft 3D',
   description: 'Explore 3D printed models in the medical field for surgical planning, training, and patient education. Get accurate anatomical 3D models and Get Quote Now.',
+  robots: { index: true, follow: true },
 };
 
 export default function PrintedModelsPage() {
