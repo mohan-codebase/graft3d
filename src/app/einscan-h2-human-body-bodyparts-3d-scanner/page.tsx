@@ -14,6 +14,7 @@ export const metadata = {
   },
     title: 'Einscan H2 - Human Body & Body Parts 3D Scanner | Graft3D',
     description: 'Exclusive HumanBody 3D scanner with advanced algorithm for body scan. Hybrid LED and Infrared VCSEL Light Source for high-quality human body 3D scanning.',
+    robots: { index: true, follow: true },
 };
 
 export default function EinscanH2Page() {
