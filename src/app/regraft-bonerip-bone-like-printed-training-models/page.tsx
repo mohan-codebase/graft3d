@@ -9,8 +9,9 @@ export const metadata = {
   alternates: {
     canonical: '/regraft-bonerip-bone-like-printed-training-models',
   },
-  title: "ReGraft Bonerip - Bone-Like 3D Printed Training Models - Graft 3D",
-  description: "ReGraft Bonerip- 3D Printed Anatomical Models Plan .Train .Visualize.",
+  title: "ReGraft Bonerip Bone-Like 3D Printed Training Models",
+  description: "ReGraft Bonerip is a bone-like 3D Printed standard Anatomical training model designed to provide medical professors and students with a lifelike and engaging surgical planning experience.",
+  robots: { index: true, follow: true },
 };
 
 export default function RegraftBoneripTrainingModelsPage() {

@@ -9,8 +9,9 @@ export const metadata = {
   alternates: {
     canonical: '/regraft-bonerip-transparent-3d-printed-models',
   },
-  title: "ReGraft Bonerip - Transparent 3D Printed Models - Graft 3D",
-  description: "ReGraft Bonerip- Transparent 3D Printed Anatomical Models Plan .Train .Visualize.",
+  title: "ReGraft Bonerip Transparent 3D Printed Anatomical Models",
+  description: "Discover ReGraft Bonerip transparent 3D printed anatomical models for enhanced visualization, surgical training and understanding of complex anatomy.",
+  robots: { index: true, follow: true },
 };
 
 export default function RegraftBoneripTransparentPage() {

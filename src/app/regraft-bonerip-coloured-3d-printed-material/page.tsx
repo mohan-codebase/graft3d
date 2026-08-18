@@ -9,8 +9,9 @@ export const metadata = {
   alternates: {
     canonical: '/regraft-bonerip-coloured-3d-printed-material',
   },
-  title: "ReGraft Bonerip - Coloured 3D Printed Material - Graft 3D",
-  description: "ReGraft Bonerip- Coloured 3D Printed Anatomical Models Plan .Train .Visualize.",
+  title: "ReGraft Bonerip Coloured 3D Printed Anatomical Models",
+  description: "Explore ReGraft Bonerip coloured 3D printed anatomical models designed for clear anatomical visualization, medical education and surgical training.",
+  robots: { index: true, follow: true },
 };
 
 export default function RegraftBoneripColouredPage() {

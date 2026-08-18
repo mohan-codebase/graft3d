@@ -9,8 +9,9 @@ export const metadata = {
   alternates: {
     canonical: '/regraft-bonerip-patient-specific-3d-printed-models',
   },
-  title: "ReGraft Bonerip - Patient Specific 3D Printed Models - Graft 3D",
-  description: "ReGraft Bonerip- 3D Printed Anatomical Models Plan .Train .Visualize.",
+  title: "ReGraft Bonerip Patient-Specific 3D Printed Models",
+  description: "ReGraft Bonerip patient-specific 3D printed models help surgeons visualize anatomy, plan complex procedures and practice surgical techniques.",
+  robots: { index: true, follow: true },
 };
 
 export default function RegraftBoneripPatientSpecificPage() {
