@@ -7,8 +7,9 @@ import Hero from "@/components/sections/3d-printing-packagefor-po-devices/Hero";
 import Overview from "@/components/sections/3d-printing-packagefor-po-devices/Overview";
 import ProductBundles from "@/components/sections/3d-printing-packagefor-po-devices/ProductBundles";
 import WorkflowPortfolio from "@/components/sections/3d-printing-packagefor-po-devices/WorkflowPortfolio";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
     alternates: {
         canonical: "/3d-printing-packagefor-po-devices",
     },

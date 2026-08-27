@@ -8,8 +8,9 @@ import About from "@/components/sections/elucis-go/About";
 import Testimonials from "@/components/sections/elucis-go/Testimonials";
 import PilotProgram from "@/components/sections/elucis-go/PilotProgram";
 import ElucisGoFaq from "@/components/sections/elucis-go/ElucisGoFaq";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
     title: "Elucis Go - VR Surgical Planning Without Complex Infrastructure",
     description:
         "Experience patient-specific anatomy anywhere using an untethered VR headset. Review, discuss and plan complex cases with unmatched clarity and ease.",

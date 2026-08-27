@@ -5,11 +5,12 @@ import Workflow from "@/components/sections/elucis/Workflow";
 import ProductVariations from "@/components/sections/elucis/ProductVariations";
 import Applications from "@/components/sections/elucis/Applications";
 import Benefits from "@/components/sections/elucis/Benefits";
+import { Metadata } from "next";
 
 /**
  * Metadata for Elucis XR Platform Page
  */
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/elucis',
   },

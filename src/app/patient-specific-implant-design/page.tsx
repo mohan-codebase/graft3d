@@ -4,8 +4,9 @@ import PatientSpecificImplantPrecision from '@/components/sections/patient-speci
 import WhySurgeonsChooseUs from '@/components/sections/patient-specific-implant-design/WhySurgeonsChooseUs';
 import PatientSpecificImplantHowItWorks from '@/components/sections/patient-specific-implant-design/PatientSpecificImplantHowItWorks';
 import PatientSpecificImplantCTA from '@/components/sections/patient-specific-implant-design/PatientSpecificImplantCTA';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/patient-specific-implant-design',
   },

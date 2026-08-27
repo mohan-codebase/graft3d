@@ -4,8 +4,9 @@ import RangeSection from "@/components/sections/asthi-bone-like-3d-printed-train
 import VideosSection from "@/components/sections/asthi-bone-like-3d-printed-training-models/VideosSection";
 import BlogsSection from "@/components/sections/asthi-bone-like-3d-printed-training-models/BlogsSection";
 import FaqSection from "@/components/sections/asthi-bone-like-3d-printed-training-models/FaqSection";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/asthi-bone-like-3d-printed-training-models',
   },

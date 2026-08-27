@@ -2,8 +2,9 @@ import React from 'react';
 import DigitalImageConversionHeroSection from '@/components/sections/digital-image-conversion/DigitalImageConversionHeroSection';
 import DigitalImageConversionPageContent from '@/components/sections/digital-image-conversion/DigitalImageConversionPageContent';
 import DigitalImageConversionFaq from '@/components/sections/digital-image-conversion/DigitalImageConversionFaq';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/digital-image-conversion-service',
   },

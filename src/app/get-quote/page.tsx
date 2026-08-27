@@ -1,7 +1,8 @@
 import Hero from "@/components/sections/get-quote/Hero";
 import EnquirySection from "@/components/sections/get-quote/EnquirySection";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Get quote - Graft 3D",
   description: "For any information please Call us at +91 98404 78347 | +91 63744 10703",
   alternates: {

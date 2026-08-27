@@ -7,8 +7,9 @@ import MaterialAdvantagesSection from "@/components/sections/temporomandibular-j
 import AdvantagesOf3DPrintedTMJ from "@/components/sections/temporomandibular-joint/AdvantagesOf3DPrintedTMJ";
 import FaqSection from "@/components/sections/temporomandibular-joint/FaqSection";
 import BottomCta from "@/components/sections/reconstruction-of-the-maxilla-and-mandible/BottomCta";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/temporomandibular-joint',
   },

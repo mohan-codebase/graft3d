@@ -8,8 +8,9 @@ import Testimonials from "@/components/sections/elucis-next/Testimonials";
 import AcademicLicensing from "@/components/sections/elucis-next/AcademicLicensing";
 import localFont from "next/font/local";
 import ElucisNextFaq from "@/components/sections/elucis-next/ElucisNextFaq";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
     title: "Elucis Next - Research & Education Edition | Graft3D",
     description: "Convert DICOM imaging into immersive 3D anatomy for research, teaching, training and methodology development.",
     alternates: {

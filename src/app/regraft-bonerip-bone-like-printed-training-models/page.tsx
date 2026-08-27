@@ -4,8 +4,9 @@ import RangeSection from "@/components/sections/regraft-bonerip-bone-like-printe
 import VideosSection from "@/components/sections/regraft-bonerip-bone-like-printed-training-models/VideosSection";
 import BlogsSection from "@/components/sections/regraft-bonerip-bone-like-printed-training-models/BlogsSection";
 import FaqSection from "@/components/sections/regraft-bonerip-bone-like-printed-training-models/FaqSection";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/regraft-bonerip-bone-like-printed-training-models',
   },

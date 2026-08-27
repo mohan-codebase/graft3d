@@ -10,8 +10,9 @@ import CaseStudies from '@/components/sections/human-body-parts-3d-scanner/CaseS
 import TrialForm from '@/components/sections/human-body-parts-3d-scanner/TrialForm';
 import RelatedProducts from '@/components/sections/human-body-parts-3d-scanner/RelatedProducts';
 import FaqSection from '@/components/sections/human-body-parts-3d-scanner/FaqSection';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/human-body-parts-3d-scanner',
   },
@@ -24,8 +25,8 @@ export default function HumanScannerPage() {
     return (
         <main className="min-h-screen bg-white">
             <Hero />
-            <div className="max-w-[1200px] mx-auto px-4 lg:flex lg:gap-12 py-10">
-                <div className="hidden lg:block w-[280px] shrink-0">
+            <div className="max-w-300 mx-auto px-4 lg:flex lg:gap-12 py-10">
+                <div className="hidden lg:block w-70 shrink-0">
                     <JumpNavigation />
                 </div>
                 <div className="flex-1">

@@ -2,8 +2,9 @@ import React from 'react';
 import OrganripHero from '@/components/sections/regraft/OrganripHero';
 import OrganripAbout from '@/components/sections/regraft/OrganripAbout';
 import OrganripInfoCards from '@/components/sections/regraft/OrganripInfoCards';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/regraft-organrip',
   },

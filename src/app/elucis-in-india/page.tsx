@@ -11,6 +11,7 @@ import TrustBadges from "@/components/sections/elucis-in-india/TrustBadges";
 import Testimonials from "@/components/sections/elucis-in-india/Testimonials";
 import LocalPartner from "@/components/sections/elucis-in-india/LocalPartner";
 import ElucisInIndiaFaq from "@/components/sections/elucis-in-india/ElucisInIndiaFaq";
+import { Metadata } from "next";
 
 const inter = localFont({
     src: "../../../public/fonts/inter/Inter-VariableFont_opsz,wght.ttf",
@@ -18,7 +19,7 @@ const inter = localFont({
     display: "swap",
 });
 
-export const metadata = {
+export const metadata : Metadata = {
     title: "Elucis Family | Graft3D",
     description: "Advanced 3D VR Surgical Planning Platform for Hospitals in India.",
     alternates: {

@@ -7,8 +7,9 @@ import FaqSection from '@/components/sections/einscan-h2-human-body-bodyparts-3d
 import BookingSection from '@/components/sections/einscan-h2-human-body-bodyparts-3d-scanner/BookingSection';
 import RelatedProducts from '@/components/sections/einscan-h2-human-body-bodyparts-3d-scanner/RelatedProducts';
 import DownloadBrochure from '@/components/sections/einscan-h2-human-body-bodyparts-3d-scanner/DownloadBrochure';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/einscan-h2-human-body-bodyparts-3d-scanner',
   },
@@ -22,7 +23,7 @@ export default function EinscanH2Page() {
         <main className="min-h-screen bg-white">
             <Hero />
             <DownloadBrochure />
-            <div className="max-w-[1200px] mx-auto px-4 py-10">
+            <div className="max-w-300 mx-auto px-4 py-10">
                 <section id="features-benefits">
                     <Features />
                 </section>

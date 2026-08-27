@@ -4,8 +4,9 @@ import RangeSection from "@/components/sections/regraft-bonerip-transparent-3d-p
 import VideosSection from "@/components/sections/regraft-bonerip-transparent-3d-printed-models/VideosSection";
 import BlogsSection from "@/components/sections/regraft-bonerip-transparent-3d-printed-models/BlogsSection";
 import FaqSection from "@/components/sections/regraft-bonerip-transparent-3d-printed-models/FaqSection";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/regraft-bonerip-transparent-3d-printed-models',
   },

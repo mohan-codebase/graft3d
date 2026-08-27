@@ -2,8 +2,9 @@ import React from 'react';
 import ProductsHero from '@/components/sections/regraft/ProductsHero';
 import ProductsGrid from '@/components/sections/regraft/ProductsGrid';
 import ProductFAQ from '@/components/sections/regraft/ProductFAQ';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/regraft-product',
   },

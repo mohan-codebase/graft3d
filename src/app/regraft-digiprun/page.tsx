@@ -2,8 +2,9 @@ import React from 'react';
 import DigiprunHero from '@/components/sections/regraft/DigiprunHero';
 import DigiprunAbout from '@/components/sections/regraft/DigiprunAbout';
 import DigiprunInfoCards from '@/components/sections/regraft/DigiprunInfoCards';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata : Metadata = {
   alternates: {
     canonical: '/regraft-digiprun',
   },
