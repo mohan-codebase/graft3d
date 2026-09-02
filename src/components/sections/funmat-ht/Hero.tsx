@@ -39,13 +39,13 @@ export default function Hero() {
                         <div className="flex flex-col gap-4 w-full max-w-125">
                             {/* Top Row Buttons */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <Link href="/contact" className="w-full">
+                                <Link href="/get-quote" className="w-full">
                                     <div className="w-full h-14 bg-[#1F88DD] rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-[#166AAF] transition-colors">
                                         <Phone className="w-5 h-5 text-white" />
                                         <span className="text-white font-bold text-[1.25rem]">Get a Quote</span>
                                     </div>
                                 </Link>
-                                <Link href="/contact" className="w-full">
+                                <Link href="/book-demo" className="w-full">
                                     <div className="w-full h-14 border border-white rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-white/10 transition-colors">
                                         <CirclePlay className="w-5 h-5 text-white" />
                                         <span className="text-white font-bold text-[1.25rem]">Request Demo</span>
@@ -54,7 +54,7 @@ export default function Hero() {
                             </div>
                             
                             {/* Bottom Row Button */}
-                            <Link href="/contact" className="w-full">
+                            <Link href="/brochures/Graft3d.pdf" className="w-full">
                                 <div className="w-full h-14 border border-white rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-white/10 transition-colors">
                                     <CirclePlay className="w-5 h-5 text-white" />
                                     <span className="text-white font-bold text-[1.25rem]">Download Brochure</span>
