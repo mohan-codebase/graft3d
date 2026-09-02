@@ -44,11 +44,11 @@ export default function Hero() {
                 Book a Live Demo
               </Link>
               <Link 
-                href="#" 
+                href="/contact-us" 
                 className="flex items-center justify-center gap-3 border border-white text-white font-bold text-[1.25rem] px-8 py-4 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <PlayCircle size={24} />
-                Take to Graft 3D India
+                Talk to Graft 3D India
               </Link>
             </div>
           </div>

@@ -47,7 +47,7 @@ const Hero = () => {
                         <button className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-base md:text-lg font-bold py-3.5 px-8 rounded-lg hover:bg-white/20 transition-all hover:-translate-y-0.5">
                             <a href="/contact-us" className="flex items-center gap-2">
                                 <CirclePlay className="w-5 h-5" />
-                                Take to Graft 3D India
+                                Talk to Graft 3D India
                             </a>
                         </button>
                     </div>
