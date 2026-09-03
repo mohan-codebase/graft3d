@@ -22,12 +22,15 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const form = e.currentTarget;
         setIsSubmitting(true);
         setStatus(null);
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
         if (file) {
             formData.set("file", file); // Ensure the file state is appended if they selected via middle block
+        } else {
+            formData.delete("file");
         }
 
         try {
@@ -39,13 +42,14 @@ export default function ContactForm() {
             
             if (data.success) {
                 setStatus({ type: 'success', message: data.message });
-                e.currentTarget.reset();
+                form.reset();
                 setFile(null);
                 setPhone("");
             } else {
                 setStatus({ type: 'error', message: data.message });
             }
-        } catch {
+        } catch (error) {
+            console.error("Form submission error:", error);
             setStatus({ type: 'error', message: "Something went wrong. Please try again." });
         } finally {
             setIsSubmitting(false);

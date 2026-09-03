@@ -106,14 +106,14 @@ export async function POST(req: NextRequest) {
                 </table>
               </div>
               
-              ${file && file.size > 0 ? `<p style="margin-top: 20px; font-size: 14px; color: #166AAF; font-weight: 600;">📎 CAD File Attached: ${escapeHtml(file.name)}</p>` : `<p style="margin-top: 20px; font-size: 14px; color: #6B7280;">No CAD File attached.</p>`}
+              ${file && file.name ? `<p style="margin-top: 20px; font-size: 14px; color: #166AAF; font-weight: 600;">📎 CAD File Attached: ${escapeHtml(file.name)}</p>` : `<p style="margin-top: 20px; font-size: 14px; color: #6B7280;">No CAD File attached.</p>`}
             </div>
           </div>
         </div>
         `;
 
         const attachments = [];
-        if (file && file.size > 0) {
+        if (file && file.name) {
             const buffer = Buffer.from(await file.arrayBuffer());
             attachments.push({
                 filename: file.name,
